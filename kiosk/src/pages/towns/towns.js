@@ -1,5 +1,5 @@
 import React from "react"
-import "./towns.css"
+import "./towns.scss"
 
 function towns() {
   //this list will be converted into a grid of cards where you can click on a card and view information
