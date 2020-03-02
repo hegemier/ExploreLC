@@ -1,0 +1,35 @@
+#top{
+    margin:0px;
+    height: auto;
+    background-color: black;
+    
+    #navLogo{
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+        padding:20px;
+
+        img{
+            height: auto;
+            max-height: 100px;
+            width: auto;
+            max-width: 100%;
+        }
+    }
+
+    #headerNav{
+        border-bottom:1px solid white;
+        width:100%;
+        
+        .floatR{
+            vertical-align: middle;
+            
+            .nav{   
+                margin:0 20px 0 0;
+    
+                .nav-item{
+                    margin:0px 10px 0px 10px;
+                }
+            } 
+        }       
+    }
+}
