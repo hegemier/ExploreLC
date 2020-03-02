@@ -1,0 +1,1 @@
+export {towns} from "./towns"
