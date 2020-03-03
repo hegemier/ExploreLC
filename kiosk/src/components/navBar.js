@@ -47,29 +47,44 @@ const NavBar = (props)=>{
                 <div className="floatR">
                     <ul className="nav">
                         <li className="nav-item">
-                            <a onClick={()=>onGuides()}>
+                            <button
+                                type="button"
+                                onClick={()=>onGuides()}
+                                class="btn btn-outline-light btn-lg">
                                 Guides
-                            </a>
+                            </button>
                         </li>
                         <li className="nav-item">
-                            <a onClick={()=>onTowns()}>
+                            <button
+                                type="button"
+                                onClick={()=>onTowns()}
+                                class="btn btn-outline-light btn-lg">
                                 Towns
-                            </a>
+                            </button>
                         </li>
                         <li className="nav-item">
-                            <a onClick={()=>onEvents()}>
+                            <button
+                                type="button"
+                                onClick={()=>onEvents()}
+                                class="btn btn-outline-light btn-lg">
                                 Events
-                            </a>
+                            </button>
                         </li>
                         <li className="nav-item">
-                            <a onClick={()=>onDirectory()}>
+                            <button
+                                type="button"
+                                onClick={()=>onDirectory()}
+                                class="btn btn-outline-light btn-lg">
                                 Directory
-                            </a>
+                            </button>
                         </li>
                         <li className="nav-item">
-                            <a onClick={()=>onAbout()}>
-                                About
-                            </a>
+                            <button
+                                type="button"
+                                onClick={()=>onAbout()}
+                                class="btn btn-outline-light btn-lg">
+                                 About
+                            </button>
                         </li>
                     </ul>    
                 </div>
