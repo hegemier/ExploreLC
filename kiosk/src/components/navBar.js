@@ -11,9 +11,11 @@ import { NAVLOGO } from '../assets';
         3. onEvents    :  button event when pushed onEvents navlink
         4. onDirectory :  button event when pushed onDirectory navlink
         5. onAbout     :  button event when pushed onAbout navlink
+        6. onHome      :  button event when clicked the logo
 
     usage example:
         <NavBar
+            onHome={()=>someFunc6()}
             onGuides={()=>someFunc1()}
             onTowns={()=>someFunc2()}
             onEvents={()=>someFunc3()}
@@ -27,6 +29,7 @@ import { NAVLOGO } from '../assets';
 
 const NavBar = (props)=>{
     const {
+        onHome,
         onGuides,         
         onTowns,
         onEvents,
@@ -38,6 +41,7 @@ const NavBar = (props)=>{
         <section id="top" className="displayFlex">
             <div id="navLogo">
               <img
+                onClick={()=>onHome()}
                 src={NAVLOGO}
                 alt="navLogo"
               />  
