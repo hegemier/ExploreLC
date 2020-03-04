@@ -1,1 +1,1 @@
-export {towns} from "./towns"
+export {Towns} from "./towns"

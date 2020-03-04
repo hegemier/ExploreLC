@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import {towns} from "./pages/towns/"
+import {Towns} from "./pages/towns/"
 function App() {
   return (
     <div>
-    <towns/>
-    hello
+    <Towns/>
     </div>
   );
 }
