@@ -1,5 +1,6 @@
 import React from 'react';
 import { NAVLOGO } from '../assets';
+// import { Events } from '../pages/events'
 
 /*
     This is navigation bar component to be included
@@ -30,7 +31,7 @@ import { NAVLOGO } from '../assets';
 const NavBar = (props)=>{
     const {
         onHome,
-        onGuides,         
+        onGuides,
         onTowns,
         onEvents,
         onDirectory,
@@ -44,7 +45,7 @@ const NavBar = (props)=>{
                 onClick={()=>onHome()}
                 src={NAVLOGO}
                 alt="navLogo"
-              />  
+              />
             </div>
             <div id="headerNav">
                 <div className="clearB"/>
@@ -90,9 +91,9 @@ const NavBar = (props)=>{
                                  About
                             </button>
                         </li>
-                    </ul>    
+                    </ul>
                 </div>
-                <div className="clearB"/>        
+                <div className="clearB"/>
             </div>
         </section>
     );
