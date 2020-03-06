@@ -7,11 +7,12 @@ import Modal from 'react-bootstrap/Modal';
 function Qrmodal(props) {
 
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false); //use React state for the open/close of the modal
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  //This modal can be integrated into any page, you simply have to pass in the link as a prop. 
   return (
     <>
       <Button variant="primary" onClick={handleShow}>

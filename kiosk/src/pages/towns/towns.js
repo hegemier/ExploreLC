@@ -89,7 +89,7 @@ function Towns() {
   ]
 
     const threeGrid = () => { //automatically returning component
-      return townarray.map(item=>{
+      return townarray.map(item=>{ //map the town data onto the cards and define classes for later modification
         const {id, img, name, boldtext, text, link} = item;
         return (
           <div key = {id} className="card floatL width33">
@@ -98,12 +98,12 @@ function Towns() {
             <h5 className="card-title">{name}</h5>
             <h6>{boldtext}</h6>
             <p>{text}</p>
-            <Qrmodal link = {link}/>
+            <Qrmodal link = {link}/> 
             </div>
           </div>
         )
       })
-    } //add navbar later
+    }
 
   return (
     <div>
