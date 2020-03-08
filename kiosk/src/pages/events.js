@@ -32,17 +32,13 @@ const Events = ()=>{
         </div>
       </div>
       <div className="event-date-text">Events starting from March 03, 2020</div>
-      <div className="container-fluid">
-        <div className="row">
+      <div class="card-deck">
+      <div className="col-md">{eventCard}</div>
           <div className="col-md">{eventCard}</div>
           <div className="col-md">{eventCard}</div>
-          <div className="col-md">{eventCard}</div>
-        </div>
       </div>
       <div className='sk-fb-event' data-embed-id='20253'>
         <div>
-          <a href="">
-          </a>
         </div>
       </div>
       <script src='https://www.sociablekit.com/app/embed/facebook-events/widget.js'></script>
