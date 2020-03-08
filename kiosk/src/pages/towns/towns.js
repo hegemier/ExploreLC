@@ -98,7 +98,7 @@ function Towns() {
             <h5 className="card-title">{name}</h5>
             <h6>{boldtext}</h6>
             <p>{text}</p>
-            <Qrmodal link = {link} buttonText = "More Information" modalText = "Explore on your device"/> 
+            <Qrmodal link = {link} buttonText = "More Information" modalText = "Explore on your device"/>
             </div>
           </div>
         )
