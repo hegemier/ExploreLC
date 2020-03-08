@@ -12,16 +12,16 @@ function Qrmodal(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  //This modal can be integrated into any page, you simply have to pass in the link as a prop. 
+  //This modal can be integrated into any page, you simply have to pass in the link as a prop.
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Explore more on your device
+        {props.buttonText}
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Explore on your device</Modal.Title>
+          <Modal.Title>{props.modalText}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <QRCode value = {props.link}/>
