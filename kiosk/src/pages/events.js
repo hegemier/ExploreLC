@@ -2,18 +2,15 @@ import React from 'react';
 import { NavBar } from '../components';
 import "../sass/events.scss"
 import "../sass/fonts.scss"
-
-// data-src="https://images.squarespace-cdn.com/content/v1/5bc6137be6666940992e5e76/1559500228057-LLABQMXYI35CLUH4Q7FG/ke17ZwdGBToddI8pDm48kIu3c6RI25Ef7RzjXQWq7X97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ua_gHjAqlkTAptD6YipitaW0yqs0Foy9-1vLCnclZojZAVle5px3XiuuAGKTYFVv9w/front-intro-bg-15.jpg"
-// data-image="https://images.squarespace-cdn.com/content/v1/5bc6137be6666940992e5e76/1559500228057-LLABQMXYI35CLUH4Q7FG/ke17ZwdGBToddI8pDm48kIu3c6RI25Ef7RzjXQWq7X97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ua_gHjAqlkTAptD6YipitaW0yqs0Foy9-1vLCnclZojZAVle5px3XiuuAGKTYFVv9w/front-intro-bg-15.jpg"s
+import Qrmodal from "../JS/qrmodal.js"
 
 const eventCard = (
   <div class="card">
     <div className="card-img-top event-card-img"></div>
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">Some example text. Some example text.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+      <strong class="card-title">Speaker Series - Ticks: updates on diseases and prevention</strong>
+      <p class="card-text">Apr 02, 2020 @ 7:00 pm<br/>Burton Morgan Hall, Denison University<br/>Partner: Licking Park District</p>
+      <Qrmodal link="https://www.facebook.com/508276569892107" className="card-link">View Event</Qrmodal>
     </div>
   </div>
 );
@@ -32,16 +29,12 @@ const Events = ()=>{
         </div>
       </div>
       <div className="event-date-text">Events starting from March 03, 2020</div>
+      <script></script>
       <div class="card-deck">
       <div className="col-md">{eventCard}</div>
           <div className="col-md">{eventCard}</div>
           <div className="col-md">{eventCard}</div>
       </div>
-      <div className='sk-fb-event' data-embed-id='20253'>
-        <div>
-        </div>
-      </div>
-      <script src='https://www.sociablekit.com/app/embed/facebook-events/widget.js'></script>
     </div>
   );
 }
