@@ -4,7 +4,6 @@ import { NAVLOGO } from '../assets';
 /*
     This is navigation bar component to be included
     in every page.
-
     How to use this component
         1. onGuides    :  button event when pushed onGuides navlink
         2. onTowns     :  button event when pushed onTowns navlink
@@ -12,7 +11,6 @@ import { NAVLOGO } from '../assets';
         4. onDirectory :  button event when pushed onDirectory navlink
         5. onAbout     :  button event when pushed onAbout navlink
         6. onHome      :  button event when clicked the logo
-
     usage example:
         <NavBar
             onHome={()=>someFunc6()}
@@ -22,7 +20,6 @@ import { NAVLOGO } from '../assets';
             onDirectory={()=>someFunc4()}
             onAbout={()=>someFunc5()}
         />
-
     font is not downloaded yet.
     Will be updated when getting info from Garret and Alex
 */
@@ -98,4 +95,4 @@ const NavBar = (props)=>{
     );
 };
 
-export {NavBar}
+export { NavBar };
