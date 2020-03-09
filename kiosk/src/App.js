@@ -1,5 +1,6 @@
 import React from 'react';
 import { Guides } from './pages';
+import {  } from './data';
 
 const App = ()=>{
   return (
