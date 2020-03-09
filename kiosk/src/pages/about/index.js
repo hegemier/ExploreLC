@@ -1,1 +1,1 @@
-export { Organization } from './about';
+export { About } from './about';

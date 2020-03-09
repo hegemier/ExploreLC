@@ -1,12 +1,24 @@
 import React from "react";
-import { Qrmodal } from "../../components/"
+import { Qrmodal, NavBar } from "../../components/"
 import travelGuideImg from "../pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
 import impactAwardImg from "../pics/iw-impact-award.jpg"
 //import exploreLCvid from "../videos/Explore Licking County.mp4"
 
-function Organization()
+function About(props)
 {
         return(
+          <div>
+          <section id="guideBanner">
+                <NavBar
+                    onHome={props.onHome}
+                    onGuides={props.onGuides}
+                    onTowns={props.onTowns}
+                    onEvents={props.onEvents}
+                    onDirectory={props.onDirectory}
+                    onAbout={props.onAbout}
+                />
+            </section>
+
             <div>
                 <div id="header">
                     <p align = "center"><strong>About our organization</strong></p>
@@ -69,6 +81,7 @@ function Organization()
                 <div id="footer">
                 </div>
             </div>
+          </div>
         )
 };
 
@@ -130,4 +143,4 @@ function Partners()
 }
 */}}
 
-export { Organization }
+export { About }

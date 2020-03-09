@@ -56,8 +56,8 @@ const App = ()=>{
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
             />;
-          /*else if (value === 'events')//change the component name to use different page
-            return <Events
+          else if (value === 'about')//change the component name to use different page
+            return <About
                 onHome={()=>updateState('home')}
                 onGuides={()=>updateState('guides')}
                 onTowns={()=>updateState('towns')}
@@ -65,7 +65,7 @@ const App = ()=>{
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
             />;
-          else if (value === 'directory')//change the component name to use different page
+          /*else if (value === 'directory')//change the component name to use different page
             return <Directory
                 onHome={()=>updateState('home')}
                 onGuides={()=>updateState('guides')}
