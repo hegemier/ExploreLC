@@ -7,20 +7,18 @@ import { Guides } from './pages';
 
   *** please format the page to take the props same as my Guides page. ***
   If still confused, please take refernce to my Guides page.
-  
+
   Keep the updateState function and simply change name of the page.
 
   ex)
-    return (
-        return <Towns
-            onHome={()=>updateState('home')}
-            onGuides={()=>updateState('guides')}
-            onTowns={()=>updateState('towns')}
-            onEvents={()=>updateState('events')}
-            onDirectory={()=>updateState('directory')}
-            onAbout={()=>updateState('about')}
-        />;
-    );
+    return <Towns
+        onHome={()=>updateState('home')}
+        onGuides={()=>updateState('guides')}
+        onTowns={()=>updateState('towns')}
+        onEvents={()=>updateState('events')}
+        onDirectory={()=>updateState('directory')}
+        onAbout={()=>updateState('about')}
+    />;
 */
 
 const App = ()=>{
