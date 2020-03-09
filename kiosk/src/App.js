@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Guides } from './pages/guides';
 import { Towns } from './pages/towns';
-import { About } from './pages/about'
+import { About } from './pages/about';
+import { Events} from './pages/events';
 /*
   I have made this page for other pages to fill in
   to the corresponding context.
@@ -65,8 +66,8 @@ const App = ()=>{
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
             />;
-          /*else if (value === 'directory')//change the component name to use different page
-            return <Directory
+          else if (value === 'events')//change the component name to use different page
+            return <Events
                 onHome={()=>updateState('home')}
                 onGuides={()=>updateState('guides')}
                 onTowns={()=>updateState('towns')}
@@ -74,7 +75,7 @@ const App = ()=>{
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
             />;
-          else if (value === 'about')//change the component name to use different page
+          /*else if (value === 'about')//change the component name to use different page
             return <About
                 onHome={()=>updateState('home')}
                 onGuides={()=>updateState('guides')}
