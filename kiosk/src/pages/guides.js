@@ -3,7 +3,11 @@ import { NavBar, ControlBar } from '../components';
 import Qrmodal from '../components/qrmodal';
 import { GuidesData } from '../data';
 
-const Guides = ()=>{
+const Guides = (props)=>{
+    const {
+        onHome, onGuides, onTowns,
+        onEvents, onDirectory, onAbout
+    } = props;
 
     const renderGuidesCards = ()=>{
         return GuidesData.map(each=>{
@@ -30,7 +34,14 @@ const Guides = ()=>{
     return (
         <div className="displayBlock">
             <section id="guideBanner">
-                <NavBar/>
+                <NavBar
+                    onHome={onHome}
+                    onGuides={onGuides}
+                    onTowns={onTowns}
+                    onEvents={onEvents}
+                    onDirectory={onDirectory}
+                    onAbout={onAbout}
+                />
             </section>
 
             <section className="displayFlex">
