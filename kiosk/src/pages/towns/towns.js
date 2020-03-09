@@ -1,5 +1,5 @@
 import React from "react"
-import Qrmodal from "./qrmodal"
+import { Qrmodal, NavBar } from "../../components/"
 import "./towns.scss"
 import newark from './townpics/newark.jpg'
 import granville from './townpics/granville.jpg'
@@ -11,7 +11,7 @@ import buckeyelake from './townpics/buckeyelake.jpg'
 import hartford from './townpics/hartford.jpg'
 import pataskala from './townpics/pataskala.jpg'
 
-function Towns() {
+function Towns(props) {
   //this list will be converted into a grid of cards where you can click on a card and view information
   const townarray = [
     {
@@ -107,6 +107,16 @@ function Towns() {
 
   return (
     <div>
+    <section id="guideBanner">
+          <NavBar
+              onHome={props.onHome}
+              onGuides={props.onGuides}
+              onTowns={props.onTowns}
+              onEvents={props.onEvents}
+              onDirectory={props.onDirectory}
+              onAbout={props.onAbout}
+          />
+      </section>
         <section className = "LRPadding10">
           <div className = "clearB"/>
             {
