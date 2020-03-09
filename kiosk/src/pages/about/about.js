@@ -2,7 +2,7 @@ import React from "react";
 import { Qrmodal } from "../../components/"
 import travelGuideImg from "../pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
 import impactAwardImg from "../pics/iw-impact-award.jpg"
-import exploreLCvid from "../videos/Explore Licking County.mp4"
+//import exploreLCvid from "../videos/Explore Licking County.mp4"
 
 function Organization()
 {
@@ -64,9 +64,7 @@ function Organization()
                         </p>
                     </div>
                     <br />
-                    <video src={exploreLCvid} align="center" controls>
-                        Your browser does not support the video tag.
-                    </video>
+                    PLACEHOLDER FOR VIDEO
                 </div>
                 <div id="footer">
                 </div>

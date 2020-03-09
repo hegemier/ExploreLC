@@ -24,6 +24,7 @@ const App = ()=>{
   const [state, updateState] = useState('guides');//you can change part
 
   return (
+    <div>
     <Provider value={{value:state, updateState}}>
       <Consumer>
         {props=>{
@@ -85,18 +86,8 @@ const App = ()=>{
         }}
       </Consumer>
     </Provider>
-    <div>
-    <NavBar/>
-    <Towns/>
-import { Guides, Organization } from './pages';
-
-const App = ()=>{
-  return (
-    <div className="displayBlock">
-      <Guides/>
-      <Organization/>
     </div>
-  );
+  )
 }
 
 export default App
