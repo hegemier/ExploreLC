@@ -1,10 +1,11 @@
 import React from 'react';
-import { Guides } from './pages';
-
-const App = ()=>{
+import {Towns} from "./pages/towns/"
+import {NavBar} from "./components"
+function App() {
   return (
-    <div className="displayBlock">
-      <Guides/>
+    <div>
+    <NavBar/>
+    <Towns/>
     </div>
   );
 }
