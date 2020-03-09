@@ -24,7 +24,6 @@ const App = ()=>{
   const [state, updateState] = useState('guides');//you can change part
 
   return (
-<<<<<<< HEAD
     <Provider value={{value:state, updateState}}>
       <Consumer>
         {props=>{
@@ -86,7 +85,6 @@ const App = ()=>{
         }}
       </Consumer>
     </Provider>
-=======
     <div>
     <NavBar/>
     <Towns/>
@@ -98,7 +96,6 @@ const App = ()=>{
       <Guides/>
       <Organization/>
     </div>
->>>>>>> a41f1d003cea6214459a4115c5b60b4353b16271
   );
 }
 
