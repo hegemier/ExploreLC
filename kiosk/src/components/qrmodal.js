@@ -10,7 +10,7 @@ function Qrmodal(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  //This modal can be integrated into any page, you simply have to pass in the link as a prop. 
+  //This modal can be integrated into any page, you simply have to pass in the link as a prop.
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -34,4 +34,4 @@ function Qrmodal(props) {
   );
 }
 
-export default Qrmodal;
+export {Qrmodal}

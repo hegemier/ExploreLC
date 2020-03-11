@@ -1,5 +1,24 @@
 import React, { useState } from 'react';
-import { Guides } from './pages';
+import { Guides } from './pages/guides';
+import { Towns } from './pages/towns';
+import { About } from './pages/about';
+import { Events} from './pages/events';
+/*
+  I have made this page for other pages to fill in
+  to the corresponding context.
+  *** please format the page to take the props same as my Guides page. ***
+  If still confused, please take refernce to my Guides page.
+  Keep the updateState function and simply change name of the page.
+  ex)
+    return <Towns
+        onHome={()=>updateState('home')}
+        onGuides={()=>updateState('guides')}
+        onTowns={()=>updateState('towns')}
+        onEvents={()=>updateState('events')}
+        onDirectory={()=>updateState('directory')}
+        onAbout={()=>updateState('about')}
+    />;
+*/
 
 /*
   I have made this page for other pages to fill in
@@ -26,6 +45,7 @@ const App = ()=>{
   const [state, updateState] = useState('guides');//you can change part
 
   return (
+    <div>
     <Provider value={{value:state, updateState}}>
       <Consumer>
         {props=>{
@@ -49,25 +69,7 @@ const App = ()=>{
                 onAbout={()=>updateState('about')}
             />;
           else if (value === 'towns')//change the component name to use different page
-            return <Guides
-                onHome={()=>updateState('home')}
-                onGuides={()=>updateState('guides')}
-                onTowns={()=>updateState('towns')}
-                onEvents={()=>updateState('events')}
-                onDirectory={()=>updateState('directory')}
-                onAbout={()=>updateState('about')}
-            />;
-          else if (value === 'events')//change the component name to use different page
-            return <Guides
-                onHome={()=>updateState('home')}
-                onGuides={()=>updateState('guides')}
-                onTowns={()=>updateState('towns')}
-                onEvents={()=>updateState('events')}
-                onDirectory={()=>updateState('directory')}
-                onAbout={()=>updateState('about')}
-            />;
-          else if (value === 'directory')//change the component name to use different page
-            return <Guides
+            return <Towns
                 onHome={()=>updateState('home')}
                 onGuides={()=>updateState('guides')}
                 onTowns={()=>updateState('towns')}
@@ -76,7 +78,7 @@ const App = ()=>{
                 onAbout={()=>updateState('about')}
             />;
           else if (value === 'about')//change the component name to use different page
-            return <Guides
+            return <About
                 onHome={()=>updateState('home')}
                 onGuides={()=>updateState('guides')}
                 onTowns={()=>updateState('towns')}
@@ -84,10 +86,29 @@ const App = ()=>{
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
             />;
+          else if (value === 'events')//change the component name to use different page
+            return <Events
+                onHome={()=>updateState('home')}
+                onGuides={()=>updateState('guides')}
+                onTowns={()=>updateState('towns')}
+                onEvents={()=>updateState('events')}
+                onDirectory={()=>updateState('directory')}
+                onAbout={()=>updateState('about')}
+            />;
+          /*else if (value === 'about')//change the component name to use different page
+            return <About
+                onHome={()=>updateState('home')}
+                onGuides={()=>updateState('guides')}
+                onTowns={()=>updateState('towns')}
+                onEvents={()=>updateState('events')}
+                onDirectory={()=>updateState('directory')}
+                onAbout={()=>updateState('about')}
+            />;*/
         }}
       </Consumer>
     </Provider>
-  );
+    </div>
+  )
 }
 
-export default App;
+export default App
