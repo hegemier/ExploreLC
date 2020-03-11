@@ -1,0 +1,41 @@
+.floatL{
+  float: left;
+}
+
+.floatR{
+  float: right;
+}
+
+.clearB{
+  clear: both;
+}
+
+.LRPadding10{
+  padding:5px 10px 5px 10px;
+}
+
+.displayBlock{
+  display:block
+}
+
+.width33{
+  width:33%;
+}
+
+.overflow{
+  overflow: auto;
+}
+
+.fixedheight{
+  height: 20%;
+}
+//these values will be changed to reflect the Kiosk's specific resolution, but for now are adapted for the development amchine.
+.imgprops{
+  height:250px;
+  width: 520px;
+}
+
+.card{
+  height: 800px;
+  width: 520px;
+}
