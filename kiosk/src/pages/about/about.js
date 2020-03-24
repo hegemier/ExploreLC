@@ -55,14 +55,17 @@ function About(props)
                     </div>
                     <br />
                     <div id="travelMagazine" className="container">
-                        <div id="travelMagHeader">
-                            2020 TRAVEL MAGAZINE
+                        <div className="row">
+                            <div id="travelMagImage" className="col-md-8">
+                                <img src={travelGuideImg} height="600px" width="600px"></img>
+                            </div>
+                            <div className="col-md-4">
+                                <span> 2020 TRAVEL MAGAZINE </span>
+                                <br />
+                                Whether or not you stay on the beaten path or venture off is up to you... It's all worth the trip.
+                                Check out our latest travel magazine and explore.
+                            </div>
                         </div>
-                        <img src={travelGuideImg}></img>
-                        <p>
-                            Whether or not you stay on the beaten path or venture off is up to you... It's all worth the trip.
-                            Check out our latest travel magazine and explore.
-                        </p>
                     <br />
                     </div>
                     <div id="impactAwards" className="container">
