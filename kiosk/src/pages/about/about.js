@@ -55,28 +55,42 @@ function About(props)
                     </div>
                     <br />
                     <div id="travelMagazine" className="container">
-                        <div id="travelMagHeader">
-                            2020 TRAVEL MAGAZINE
+                        <div className="row">
+                            <div id="travelMagImage" className="col-md-8">
+                                <img src={travelGuideImg} height="600px" width="600px"></img>
+                            </div>
+                            <div className="col-md-4">
+                                <span> 2020 TRAVEL MAGAZINE </span>
+                                <br />
+                                Whether or not you stay on the beaten path or venture off is up to you... It's all worth the trip.
+                                Check out our latest travel magazine and explore.
+                                <Qrmodal link={"https://explorelc.org/guide/2020-travel-magazine"} buttonText={"GET THE TRAVEL MAGAZINE"} modalText={"Request a copy of the travel magazine using your device"}/>
+                                {/*qr modal to push magazine to phone */}
+                            </div>
                         </div>
-                        <img src={travelGuideImg}></img>
-                        <p>
-                            Whether or not you stay on the beaten path or venture off is up to you... It's all worth the trip.
-                            Check out our latest travel magazine and explore.
-                        </p>
-                    <br />
                     </div>
+                    <br />
                     <div id="impactAwards" className="container">
-                        <div id="impactAwardsHeader">
-                            IMPACT AWARDS
+                        <div className="row">
+                            <div className="col-md-4">  
+                                <span> IMPACT AWARDS </span>
+                                <br />
+                                Every year the Impact Awards are presented by Explore Licking County to outstanding tourism partners.
+                                While we value all partners in our network, we wish to acknowledge those who go above and beyond.
+                            </div>              
+                            <div className="col-md-8">
+                                <img src={impactAwardImg}></img>
+                                {/*modal link to redirect to impact award page*/}
+                            </div>
                         </div>
-                        <img src={impactAwardImg}></img>
-                        <p>
-                            Every year the Impact Awards are presented by Explore Licking County to outstanding tourism partners.
-                            While we value all partners in our network, we wish to acknowledge those who go above and beyond.
-                        </p>
                     </div>
                     <br />
                     PLACEHOLDER FOR VIDEO
+                    {/*
+                        <video src="exploreLCvid" align="center" controls>
+                         Your browser does not support the video tag.
+                        </video>  
+                    */}
                 </div>
                 <div id="footer">
                 </div>
