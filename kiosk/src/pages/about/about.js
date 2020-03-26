@@ -2,6 +2,8 @@ import React from "react";
 import { Qrmodal, NavBar } from "../../components/"
 import travelGuideImg from "../pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
 import impactAwardImg from "../pics/iw-impact-award.jpg"
+import louisSullivanImg from "../pics/history-04-louisSullivan.jpg"
+import floorPlanImg from "../pics/193101_007-web-louisSullivan.jpg"
 //import exploreLCvid from "../videos/Explore Licking County.mp4"
 
 function About(props)
@@ -28,10 +30,15 @@ function About(props)
                 <div id="body">
                     <ul className="float-left">
                         <li>
-                            <a href="https://explorelc.org/organization">ORGANIZATION</a>
+                            ORGANIZATION
                         </li>
                         <li>
-                            <a href="https://explorelc.org/louis-sullivan">LOUIS SULLIVAN</a>
+                            <button>
+                                type="button"
+                                onClick={()=>onAbout_LouisSullivan()}
+                                class="btn btn-outline-light btn-lg">
+                                LOUIS SULLIVAN
+                            </button>
                         </li>
                         <li>
                             <a href="https://explorelc.org/leadership">LEADERSHIP</a>
@@ -85,12 +92,14 @@ function About(props)
                         </div>
                     </div>
                     <br />
+                    <div id="video" className="container">
                     PLACEHOLDER FOR VIDEO
                     {/*
                         <video src="exploreLCvid" align="center" controls>
                          Your browser does not support the video tag.
                         </video>  
                     */}
+                    </div>
                 </div>
                 <div id="footer">
                 </div>
@@ -109,9 +118,74 @@ function  LouisSullivan()
                 <br />
             </div>
             <div id="body">
-                <video src="kiosk/src/Sullivan Restoration Part One" align="center" controls>
-                    Your browser does not support the video tag.
-                </video>
+                <ul className="float-left">
+                    <li>
+                        <button>
+                        type="button"
+                        onClick={()=>onAbout()}
+                        class="btn btn-outline-light btn-lg">
+                        ORGANIZATION
+                        </button>
+                    </li>
+                    <li>
+                        LOUIS SULLIVAN
+                    </li>
+                    <li>
+                        <a href="https://explorelc.org/leadership">LEADERSHIP</a>
+                    </li>
+                    <li>
+                        <a href="https://explorelc.org/collaborators">COLLABORATORS</a>
+                    </li>
+                    <li>
+                        <Qrmodal link={"https://explorelc.org/contact"} buttonText={"CONTACT"} modalText={"Contact us using your mobile device"}/>
+                    </li>
+                    <li>
+                        <Qrmodal link={"https://explorelc.org/partners"} buttonText={"PARTNERS"} modalText={"See how you can partner with us using your mobile device"}/>
+                    </li>
+                </ul>
+                PLACEHOLDER FOR VIDEO
+                {/*
+                <div id="video">
+                    <video src="kiosk/src/Sullivan Restoration Part One" align="center" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                */}
+                <div id="about" className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <span>ABOUT</span>
+                            <br />
+                            The Louis Sullivan Building of Newark has graced the Courthouse Square for over a century
+                            at One North Third Street.  It was built in 1914 and opened its doors on August 25, 1915 
+                            as The Home Building Association Company, commonly known as “The Old Home”.  One of only eight 
+                            banks designed by noted American architect Louis Sullivan, it is both a national treasure and
+                             a treasured piece of Central Ohio’s heritage.  Through the years, the Sullivan Building was 
+                             also home to a butcher shop, a jewelry store and eventually an ice cream parlor. 
+                              With each new tenant the interior was altered, but the building’s historic and architectural
+                               significance never changed.  In 1973, it was added to the National Register of Historic Places.
+                        </div>
+                        <div id="imageOfLouisSullivanBuilding" className="col-md-6">
+                        <img src={louisSullivanImg}></img>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div id="imageOfFloorPlan" className="col-md-6">
+                                <img src={floorPlanImg}></img>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            In 2013, the building was generously gifted to the Licking County Foundation by Newark native,
+                             Stephen Jones.  Since early 2014, the Licking County Foundation and a team of community
+                              volunteers known as Team Sullivan have been working to develop a plan for the Louis 
+                              Sullivan Building of Newark’s restoration and reuse.  The vision has always been to 
+                              create a valuable space that is financially self-sustaining and open for the public to enjoy, 
+                              celebrate and study.  Today, the team continues to work with that goal in mind by creating a new 
+                              home for Explore Licking County.   
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="footer">
             </div>
@@ -124,6 +198,7 @@ function Leadership()
 {
     return(
         <div>
+
         </div>
     )
 }
@@ -133,6 +208,7 @@ function Collaborators()
 {
     return(
         <div>
+            
         </div>
     )
 }
