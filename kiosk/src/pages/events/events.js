@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavBar, Qrmodal } from '../../components';
-import "../../sass/events.scss"
+import "./events.scss"
 import "../../sass/fonts.scss"
 
 const eventCard = (
@@ -15,33 +15,33 @@ const eventCard = (
 );
 
 const Events = (props)=>{
+  const {onHome, onGuides, onTowns, onEvents, onDirectory, onAbout} = props;
+
   return (
     <div>
       <div className="event-bg">
         <div className="overlay-div"></div>
-        <img className="overlay-bg" src="https://static1.squarespace.com/static/ta/5bc6137be6666940992e5e76/230/assets/elc-topo-top-01.png"/>
-        <section id="guideBanner">
-              <NavBar
-                  onHome={props.onHome}
-                  onGuides={props.onGuides}
-                  onTowns={props.onTowns}
-                  onEvents={props.onEvents}
-                  onDirectory={props.onDirectory}
-                  onAbout={props.onAbout}
-              />
-          </section>
-          <div className="text-center">
+        <section id="eventNavBarImg">
+          <NavBar
+            onHome={onHome}
+            onGuides={onGuides}
+            onTowns={onTowns}
+            onEvents={onEvents}
+            onDirectory={onDirectory}
+            onAbout={onAbout}
+          />
+        </section>
+        <div className="text-center">
           <strong className="imgHeader">See what's happening</strong>
           <p className="imgHeader-2">Events happening in Licking County</p>
           <br/>
         </div>
       </div>
       <div className="event-date-text">Events starting from March 03, 2020</div>
-      <script></script>
       <div class="card-deck">
-      <div className="col-md">{eventCard}</div>
-          <div className="col-md">{eventCard}</div>
-          <div className="col-md">{eventCard}</div>
+        {eventCard}
+        {eventCard}
+        {eventCard}
       </div>
     </div>
   );

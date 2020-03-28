@@ -1,0 +1,80 @@
+.imgHeader {
+    display: block;
+    font-family: Libre Baskerville;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    letter-spacing: 0px;
+    text-transform: none;
+    line-height: 1em;
+    color: #ffffff;
+    margin: 20px;
+    margin-top: 2em;
+    margin-bottom: -5px;
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+  }
+  
+  .imgHeader-2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #fff;
+    margin: 20px;
+    margin-bottom: 8em;
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+  }
+  
+  .event-bg {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5bc6137be6666940992e5e76/1559500228057-LLABQMXYI35CLUH4Q7FG/ke17ZwdGBToddI8pDm48kIu3c6RI25Ef7RzjXQWq7X97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ua_gHjAqlkTAptD6YipitaW0yqs0Foy9-1vLCnclZojZAVle5px3XiuuAGKTYFVv9w/front-intro-bg-15.jpg?format=2500w");
+    background-position: 0% 54%;
+    background-size: cover;
+  }
+  
+  .overlay-div {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: 0.25);;
+    z-index: 50;
+  }
+  
+  .event-date-text {
+    color: rgb(85, 85, 85);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .event-card-img {
+    background-image: url("https://scontent.fmnl4-3.fna.fbcdn.net/v/t1.0-0/p403x403/86177130_10158073318008686_1738766266530791424_n.jpg?_nc_cat=109&_nc_sid=b386c4&_nc_eui2=AeEmLAg5P64_pc6iyhJlq8IJEFAxT2fksXoYYc4pQB0kZpE2wzp0G3Dw-sO-01pUKK0zhRex0hD_HvWbnkGmR-zsbeBCqdvP2ZigIeYzWob3-Q&_nc_ohc=HHZea1gS-W0AX-j5Rsx&_nc_ht=scontent.fmnl4-3.fna&_nc_tp=6&oh=240b07a980b310e51d52264abafdcfbf&oe=5E8071CD");
+    height: 200px;
+    background-size: cover;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card-deck {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .card {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+  }
+
+#eventNavBarImg {
+    background-image: url("https://static1.squarespace.com/static/ta/5bc6137be6666940992e5e76/230/assets/elc-topo-top-01.png");
+    background-size: cover;
+    width: 100%;
+}
