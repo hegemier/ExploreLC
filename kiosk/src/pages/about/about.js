@@ -1,10 +1,34 @@
 import React from "react";
 import { Qrmodal, NavBar } from "../../components/"
+
+//the following are all images used in the about pages
 import travelGuideImg from "../pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
 import impactAwardImg from "../pics/iw-impact-award.jpg"
 import louisSullivanImg from "../pics/history-04-louisSullivan.jpg"
 import floorPlanImg from "../pics/193101_007-web-louisSullivan.jpg"
+import bressoudS from "../pics/boardMembers/bressoudS.jpg"
+import bairdC from "../pics/boardMembers/bairdC.jpg"
+import baloghA from "../pics/boardMembers/baloghA.jpg"
+import birdB from "../pics/boardMembers/birdB.jpg"
+import dutcherC from "../pics/boardMembers/dutcherC.jpg"
+import flowersD from "../pics/boardMembers/flowersD.jpg"
+import fornataroM from "../pics/boardMembers/fornataroM.jpg"
+import hampshireJ from "../pics/boardMembers/hampshireJ.jpg"
+import harknessC from "../pics/boardMembers/harknessC.jpg"
+import harrisM from "../pics/boardMembers/HarrisM.jpg"
+import livingstonJ from "../pics/boardMembers/livingstonJ.jpg"
+import lorasoJ from "../pics/boardMembers/lorasoJ.jpg"
+import mcmanusS from "../pics/boardMembers/mcmanusS.jpg"
+import misnerB from "../pics/boardMembers/misnerB.jpg"
+import nelsonC from "../pics/boardMembers/nelsonC.jpg"
+import petreyD from "../pics/boardMembers/petreyD.jpg"
+import proudfitK from "../pics/boardMembers/proudfitK.jpg"
+import internalTeam from "../pics/boardMembers/theTeam.jpeg"
+import treciakA from "../pics/boardMembers/treciakA.jpg"
+import weaverB from "../pics/boardMembers/weaverB.jpg"
+import wilhelmK from "../pics/boardMembers/wilhelmK.jpg"
 //import exploreLCvid from "../videos/Explore Licking County.mp4"
+//import that one video for the louis sullivan page
 
 function About(props)
 {
@@ -198,7 +222,106 @@ function Leadership()
 {
     return(
         <div>
-
+            <div id="header">
+                The internal team
+                <img src={internalTeam}></img>
+                Image taken at Denison Art Space:
+                Garrett, Dan Moder, Carol Thress, Alex Trujillo
+            </div>
+            <div className="container">
+                <div id="boardOfDirectors">
+                    <div className="row">
+                        <div className="col-md-3">
+                            <img src={bressoudS}></img>
+                            Suzanne Bressoud - Board Chair 20/21
+                        </div>
+                        <div className="col-md-3">
+                            <img src={fornataroM}></img>
+                            Mike Fornataro - Immediate Past Chair
+                        </div>
+                        <div className="col-md-3">
+                            <img src={proudfitK}></img>
+                            Kendra Proudfit - Board Treasurer
+                        </div>
+                        <div className="col-md-3">
+                            <img src={misnerB}></img>
+                            Brittany Misner - Board Secretary
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3">
+                            <img src={birdB}></img>
+                            Bryn Bird
+                        </div>
+                        <div className="col-md-3">
+                            <img src={flowersD}></img>
+                            Duane Flowers
+                        </div>
+                        <div className="col-md-3">
+                            <img src={harrisM}></img>
+                            Michael Harris
+                        </div>
+                        <div className="col-md-3">
+                            <img src={hampshireJ}></img>
+                            Jude Hampshire
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3">
+                            <img src={petreyD}></img>
+                            Dee Dee Petrey
+                        </div>
+                        <div className="col-md-3">
+                            <img src={nelsonC}></img>
+                            Cherie Nelson
+                        </div>
+                        <div className="col-md-3">
+                            <img src={mcmanusS}></img>
+                            Stephanie McManus
+                        </div>
+                        <div className="col-md-3">
+                            <img src={treciakA}></img>
+                            Amy Treciak
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3">
+                            <img src={weaverB}></img>
+                            Bill Weaver
+                        </div>
+                        <div className="col-md-3">
+                            <img src={dutcherC}></img>
+                            Chip Dutcher
+                        </div>
+                        <div className="col-md-3">
+                            <img src={bairdC}></img>
+                            Catherine Baird
+                        </div>
+                        <div className="col-md-3">
+                            <img src={harknessC}></img>
+                            Christoper Harkness
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3">
+                            <img src={livingstonJ}></img>
+                            Jay Livingston
+                        </div>
+                        <div className="col-md-3">
+                            <img src={wilhelmK}></img>
+                            Kim Wilhelm
+                        </div>
+                        <div className="col-md-3">
+                            <img src={baloghA}></img>
+                            Anne Balogh
+                        </div>
+                        <div className="col-md-3">
+                            <img src={lorasoJ}></img>
+                            Janice LoRaso
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
