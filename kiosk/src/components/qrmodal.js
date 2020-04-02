@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { TranslatorProvider, useTranslate } from "react-translate";
+import { TranslatorProvider, useTranslate } from "react-translate"
 import QRCode from 'react-qr-code';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function Qrmodal(props) {
+
+
   const [show, setShow] = useState(false); //use React state for the open/close of the modal
 
   const handleClose = () => setShow(false);
@@ -14,12 +16,12 @@ function Qrmodal(props) {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Explore more on your device
+        {props.buttonText}
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Explore on your device</Modal.Title>
+          <Modal.Title>{props.modalText}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <QRCode value = {props.link}/>
@@ -34,4 +36,4 @@ function Qrmodal(props) {
   );
 }
 
-export {Qrmodal}
+export { Qrmodal };
