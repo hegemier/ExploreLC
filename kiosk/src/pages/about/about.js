@@ -1,32 +1,40 @@
 import React from "react";
 import { Qrmodal, NavBar } from "../../components/"
 
-//the following are all images used in the about pages
+//the following are all images used in the about pages//
+
+//Organization and Louis Sullivan
 import travelGuideImg from "../pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
 import impactAwardImg from "../pics/iw-impact-award.jpg"
 import louisSullivanImg from "../pics/history-04-louisSullivan.jpg"
 import floorPlanImg from "../pics/193101_007-web-louisSullivan.jpg"
-import bressoudS from "../pics/boardMembers/bressoudS.jpg"
-import bairdC from "../pics/boardMembers/bairdC.jpg"
-import baloghA from "../pics/boardMembers/baloghA.jpg"
-import birdB from "../pics/boardMembers/birdB.jpg"
-import dutcherC from "../pics/boardMembers/dutcherC.jpg"
-import flowersD from "../pics/boardMembers/flowersD.jpg"
-import fornataroM from "../pics/boardMembers/fornataroM.jpg"
-import hampshireJ from "../pics/boardMembers/hampshireJ.jpg"
-import harknessC from "../pics/boardMembers/harknessC.jpg"
-import harrisM from "../pics/boardMembers/HarrisM.jpg"
-import livingstonJ from "../pics/boardMembers/livingstonJ.jpg"
-import lorasoJ from "../pics/boardMembers/lorasoJ.jpg"
-import mcmanusS from "../pics/boardMembers/mcmanusS.jpg"
-import misnerB from "../pics/boardMembers/misnerB.jpg"
-import nelsonC from "../pics/boardMembers/nelsonC.jpg"
-import petreyD from "../pics/boardMembers/petreyD.jpg"
-import proudfitK from "../pics/boardMembers/proudfitK.jpg"
-import internalTeam from "../pics/boardMembers/theTeam.jpeg"
-import treciakA from "../pics/boardMembers/treciakA.jpg"
-import weaverB from "../pics/boardMembers/weaverB.jpg"
-import wilhelmK from "../pics/boardMembers/wilhelmK.jpg"
+
+//Leadership, ask about why this is an issue in the slack
+// import bressoudS from "../pics/boardMembers/bressoudS.jpg"
+// import bairdC from "../pics/boardMembers/catherineBaird.jpg"
+// import baloghA from "../pics/boardMembers/anneBalogh.jpg"
+// import birdB from "../pics/boardMembers/birdB.jpg"
+// import dutcherC from "../pics/boardMembers/dutcherC.jpg"
+// import flowersD from "../pics/boardMembers/flowersD.jpg"
+// import fornataroM from "../pics/boardMembers/fornataroM.jpg"
+// import hampshireJ from "../pics/boardMembers/hampshireJ.jpg"
+// import harknessC from "../pics/boardMembers/harknessC.jpg"
+// import harrisM from "../pics/boardMembers/harrisM.jpg"
+// import livingstonJ from "../pics/boardMembers/livingstonJ.jpg"
+// import lorasoJ from "../pics/boardMembers/lorasoJ.jpg"
+// import mcmanusS from "../pics/boardMembers/mcmanusS.jpg"
+// import misnerB from "../pics/boardMembers/misnerB.jpg"
+// import nelsonC from "../pics/boardMembers/nelsonC.jpg"
+// import petreyD from "../pics/boardMembers/petreyD.jpg"
+// import proudfitK from "../pics/boardMembers/proudfitK.jpg"
+// import internalTeam from "../pics/boardMembers/theTeam.jpeg"
+// import treciakA from "../pics/boardMembers/treciakA.jpg"
+// import weaverB from "../pics/boardMembers/weaverB.jpg"
+// import wilhelmK from "../pics/boardMembers/wilhelmK.jpg"
+
+//collaborators
+
+//videos
 //import exploreLCvid from "../videos/Explore Licking County.mp4"
 //import that one video for the louis sullivan page
 
@@ -57,12 +65,12 @@ function About(props)
                             ORGANIZATION
                         </li>
                         <li>
-                            <button>
+                            {/*<button>
                                 type="button"
                                 onClick={()=>onAbout_LouisSullivan()}
                                 class="btn btn-outline-light btn-lg">
                                 LOUIS SULLIVAN
-                            </button>
+                            </button>*/}
                         </li>
                         <li>
                             <a href="https://explorelc.org/leadership">LEADERSHIP</a>
@@ -95,7 +103,7 @@ function About(props)
                                 <br />
                                 Whether or not you stay on the beaten path or venture off is up to you... It's all worth the trip.
                                 Check out our latest travel magazine and explore.
-                                <Qrmodal link={"https://explorelc.org/guide/2020-travel-magazine"} buttonText={"GET THE TRAVEL MAGAZINE"} modalText={"Request a copy of the travel magazine using your device"}/>
+                                <Qrmodal link={"https://explorelc.org/guide/2020-travel-magazine"} buttonText={"GET THE TRAVEL MAGAZINE"} modalText={"Request a copy of the travel magazine using your mobile device"}/>
                                 {/*qr modal to push magazine to phone */}
                             </div>
                         </div>
@@ -132,7 +140,7 @@ function About(props)
         )
 };
 
-
+{/*
 function  LouisSullivan()
 {
     return(
@@ -144,12 +152,6 @@ function  LouisSullivan()
             <div id="body">
                 <ul className="float-left">
                     <li>
-                        <button>
-                        type="button"
-                        onClick={()=>onAbout()}
-                        class="btn btn-outline-light btn-lg">
-                        ORGANIZATION
-                        </button>
                     </li>
                     <li>
                         LOUIS SULLIVAN
@@ -168,6 +170,7 @@ function  LouisSullivan()
                     </li>
                 </ul>
                 PLACEHOLDER FOR VIDEO
+    */}
                 {/*
                 <div id="video">
                     <video src="kiosk/src/Sullivan Restoration Part One" align="center" controls>
@@ -175,6 +178,7 @@ function  LouisSullivan()
                     </video>
                 </div>
                 */}
+    {/*
                 <div id="about" className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -206,7 +210,7 @@ function  LouisSullivan()
                               Sullivan Building of Newark’s restoration and reuse.  The vision has always been to 
                               create a valuable space that is financially self-sustaining and open for the public to enjoy, 
                               celebrate and study.  Today, the team continues to work with that goal in mind by creating a new 
-                              home for Explore Licking County.   
+                              home for Explore Licking County.
                         </div>
                     </div>
                 </div>
@@ -331,13 +335,83 @@ function Collaborators()
 {
     return(
         <div>
-            
+            <div className="container">
+                <div id="state collaborators">
+                    <span>State collborators</span>
+                    We reach beyond our borders and forge the partnerships that spark our creativity and fuel the passion.
+                    <div className="row">
+                        <div>
+                            <div className="col-md-2">
+                                
+                            </div>
+                            <div className="col-md-2">
+                            
+                            </div>
+                            <div className="col-md-2">
+
+                            </div>
+                            <div className="col-md-2">
+                            
+                            </div>
+                            <div className="col-md-2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sales and marketing">
+                    <span>Sales and marketing</span>
+                    Some people call it sales, we call it storytelling.
+                    We make the story available to larger audiences through our friendships with the marketing community.
+                    <div className="row">
+                    <div>
+                        <div className="col-md-2">
+                            
+                        </div>
+                        <div className="col-md-2">
+                        
+                        </div>
+                        <div className="col-md-2">
+
+                        </div>
+                        <div className="col-md-2">
+                        
+                        </div>
+                        <div className="col-md-2">
+
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div>
+                        <div className="col-md-2">
+                            
+                        </div>
+                        <div className="col-md-2">
+                        
+                        </div>
+                        <div className="col-md-2">
+
+                        </div>
+                        <div className="col-md-2">
+                        
+                        </div>
+                        <div className="col-md-2">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="local collaborators">
+                    <span>Local collaborators</span>
+                    There is pride and enthusiasm in our communities, and we shake hands locally to keep the momentum.
+
+                </div>
+            </div>
         </div>
     )
 }
+*/}
 
-
-{{/* These pages might just want to straight-up push to phone or redirect. They require keyboard input and provide downloads.
+{/* These pages might just want to straight-up push to phone or redirect. They require keyboard input and provide downloads.
 function Contact()
 {
     return(
@@ -354,6 +428,6 @@ function Partners()
         </div>
     )
 }
-*/}}
+*/}
 
 export { About }
