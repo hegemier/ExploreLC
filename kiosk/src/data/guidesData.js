@@ -5,25 +5,45 @@ import {
 const GuidesData = [
     {
         id : 1,
-        title: "Enjoying What's Around you",
+        title: {
+            en: "Enjoying What's Around you",
+            kr: "",
+            jp: "",
+            gr: ""
+        },
         image: EnjoyingWhatsAroundYou,
         url: 'https://explorelc.org/guide/enjoying-whats-around-you'
     },
     {
         id : 2,
-        title: "Celebrating Life",
+        title: {
+            en: "Celebrating Life",
+            kr: "",
+            jp: "",
+            gr: ""
+        },
         image: CelebratingLife,
         url: 'https://explorelc.org/guide/celebrating-life'
     },
     {
         id : 3,
-        title: "Beverage Trail",
+        title: {
+            en: "Beverage Trail",
+            kr: "",
+            jp: "",
+            gr: ""
+        },
         image: BeverageTrail,
         url: 'https://explorelc.org/guide/beverage-trail'
     },
     {
         id : 4,
-        title: "Pathfinder Routes",
+        title: {
+            en: "Pathfinder Routes",
+            kr: "",
+            jp: "",
+            gr: ""
+        },
         image: EnjoyingWhatsAroundYou,
         url: 'https://explorelc.org/pathfinder'
     }
