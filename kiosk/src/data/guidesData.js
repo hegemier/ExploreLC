@@ -7,9 +7,9 @@ const GuidesData = [
         id : 1,
         title: {
             en: "Enjoying What's Around you",
-            kr: "",
-            jp: "",
-            gr: ""
+            gr: "Genießen, was um dich herum ist",
+            fr: "Profiter de ce qui vous entoure",
+            sp: "Disfrutando lo que te rodea"
         },
         image: EnjoyingWhatsAroundYou,
         url: 'https://explorelc.org/guide/enjoying-whats-around-you'
@@ -18,9 +18,9 @@ const GuidesData = [
         id : 2,
         title: {
             en: "Celebrating Life",
-            kr: "",
-            jp: "",
-            gr: ""
+            gr: "Das Leben feiern",
+            fr: "Célébrer la vie",
+            sp: "Celebrando la vida"
         },
         image: CelebratingLife,
         url: 'https://explorelc.org/guide/celebrating-life'
@@ -29,9 +29,9 @@ const GuidesData = [
         id : 3,
         title: {
             en: "Beverage Trail",
-            kr: "",
-            jp: "",
-            gr: ""
+            gr: "Getränkespur",
+            fr: "Sentier des boissons",
+            sp: "Camino de bebidas"
         },
         image: BeverageTrail,
         url: 'https://explorelc.org/guide/beverage-trail'
@@ -40,9 +40,9 @@ const GuidesData = [
         id : 4,
         title: {
             en: "Pathfinder Routes",
-            kr: "",
-            jp: "",
-            gr: ""
+            gr: "Pathfinder-Routen",
+            fr: "Itinéraires Pathfinder",
+            sp: "Rutas Pathfinder"
         },
         image: EnjoyingWhatsAroundYou,
         url: 'https://explorelc.org/pathfinder'

@@ -12,7 +12,7 @@ const Guides = (props)=>{
     const renderGuidesCards = ()=>{
         return GuidesData.map(each=>{
             const { id, title, image, url } = each;
-            const { en, kr, jp, gr } = title;
+            const { en, gr, fr,sp } = title;
 
             return (
                 <div key={id} className="card floatL">
@@ -24,18 +24,49 @@ const Guides = (props)=>{
                         <h5 className="card-title">
                             {
                                 (lang === 'en')?en:
-                                (lang === 'kr')?kr:
-                                (lang === 'jp')?jp:gr
+                                (lang === 'gr')?gr:
+                                (lang === 'fr')?fr:sp
                             }
                         </h5>
                         <p className="card-text">
-                            Enjoy
+                            
                         </p>
                         <Qrmodal link={url}/>
                     </div>
                 </div>
             );
         });
+    };
+
+    const toggleLang = ()=>{
+        return (
+            <div className="displayFlex LRPadding10">
+                <button
+                    type="button"
+                    onClick={()=>setLang('en')}
+                    className={(lang === 'en')?"btn btn-dark LRPadding10":"btn btn-light LRPadding10"}>
+                    {(lang === 'en')?'English':(lang === 'gr')?'Englisch':(lang === 'fr')?'Anglais':'Ingles'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('gr')}
+                    className={(lang === 'gr')?"btn btn-dark LRPadding10":"btn btn-light LRPadding10"}>
+                    {(lang === 'en')?'German':(lang === 'gr')?'Deutsch':(lang === 'fr')?'Allemande':'Alemán'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('fr')}
+                    className={(lang === 'fr')?"btn btn-dark LRPadding10":"btn btn-light LRPadding10"}>
+                    {(lang === 'en')?'French':(lang === 'gr')?'Französisch':(lang === 'fr')?'Français':'Francés'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('sp')}
+                    className={(lang === 'sp')?"btn btn-dark LRPadding10":"btn btn-light LRPadding10"}>
+                    {(lang === 'en')?'Spanish':(lang === 'gr')?'Spanisch':(lang === 'fr')?'Espagnol':'Español'}
+                </button>
+            </div>
+        );
     };
 
     return (
@@ -52,16 +83,7 @@ const Guides = (props)=>{
             </section>
 
             <section className="displayBlock">
-                <div className="displayFlex LRPadding10">
-                    <button type="button" class={
-                        (lang === 'en')?"btn btn-dark":"btn btn-light"}>En</button>
-                    <button type="button" class={
-                        (lang === 'kr')?"btn btn-dark":"btn btn-light"}>Kr</button>
-                    <button type="button" class={
-                        (lang === 'jp')?"btn btn-dark":"btn btn-light"}>Jp</button>
-                    <button type="button" class={
-                        (lang === 'gr')?"btn btn-dark":"btn btn-light"}>Gr</button>
-                </div>
+                {toggleLang()}
                 <div>
                     <div className="clearB"/>
                         {renderGuidesCards()}
