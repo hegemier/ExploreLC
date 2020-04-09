@@ -2,17 +2,27 @@ import React from 'react';
 import { NavBar, Qrmodal } from '../../components';
 import "./events.scss"
 import "../../sass/fonts.scss"
+import data from "./eventList.json"
 
-const eventCard = (
-  <div class="card">
-    <div className="card-img-top event-card-img"></div>
-    <div class="card-body">
-      <strong class="card-title">Speaker Series - Ticks: updates on diseases and prevention</strong>
-      <p class="card-text">Apr 02, 2020 @ 7:00 pm<br/>Burton Morgan Hall, Denison University<br/>Partner: Licking Park District</p>
-      <Qrmodal link="https://www.facebook.com/508276569892107" className="card-link">View Event</Qrmodal>
+const eventList = data.data;
+
+function EventCards(props) {
+  const eventsList = props.eventList;
+  const cardList = eventsList.map((event) =>
+    <div className="card text-center">
+      <img src={event.pic} className="card-img-top" alt="event img"/>
+      <div className="card-body">
+        <h5 className="card-title">{event.title}</h5>
+        <p>{event.date}</p>
+        <Qrmodal link={event.link} className="btn btn-primary btn-lg btn-block">Explore on Your Device</Qrmodal>
+      </div>
     </div>
-  </div>
-);
+  );
+
+  return (
+    <div className="card-columns">{cardList}</div>
+  );
+}
 
 const Events = (props)=>{
   const {onHome, onGuides, onTowns, onEvents, onDirectory, onAbout} = props;
@@ -22,14 +32,8 @@ const Events = (props)=>{
       <div className="event-bg">
         <div className="overlay-div"></div>
         <section id="eventNavBarImg">
-          <NavBar
-            onHome={onHome}
-            onGuides={onGuides}
-            onTowns={onTowns}
-            onEvents={onEvents}
-            onDirectory={onDirectory}
-            onAbout={onAbout}
-          />
+          <NavBar onHome={onHome} onGuides={onGuides} onTowns={onTowns} onEvents={onEvents}
+            onDirectory={onDirectory} onAbout={onAbout}/>
         </section>
         <div className="text-center">
           <strong className="imgHeader">See what's happening</strong>
@@ -37,12 +41,7 @@ const Events = (props)=>{
           <br/>
         </div>
       </div>
-      <div className="event-date-text">Events starting from March 03, 2020</div>
-      <div class="card-deck">
-        {eventCard}
-        {eventCard}
-        {eventCard}
-      </div>
+      <EventCards eventList={eventList} />
     </div>
   );
 }
