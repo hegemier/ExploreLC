@@ -27,7 +27,7 @@
 }
 
 .fixedheight{
-  height: 20%;
+  height: 22%;
 }
 //these values will be changed to reflect the Kiosk's specific resolution, but for now are adapted for the development amchine.
 .imgprops{
@@ -36,6 +36,20 @@
 }
 
 .card{
-  height: 800px;
+  height: 1000px;
   width: 520px;
+  padding-bottom: 20px;
+}
+
+p{
+  font-size: 15px;
+}
+
+.card-body{
+  height: 1000px;
+  padding-bottom: 20px;
+}
+
+.card-body{
+  padding-bottom: 30px;
 }
