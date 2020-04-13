@@ -4,39 +4,93 @@ import { Qrmodal, NavBar } from "../../components/"
 //the following are all images used in the about pages//
 
 //Organization and Louis Sullivan
-import travelGuideImg from "../pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
-import impactAwardImg from "../pics/iw-impact-award.jpg"
-import louisSullivanImg from "../pics/history-04-louisSullivan.jpg"
-import floorPlanImg from "../pics/193101_007-web-louisSullivan.jpg"
+import travelGuideImg from "./pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
+import impactAwardImg from "./pics/iw-impact-award.jpg"
+import louisSullivanImg from "./pics/history-04-louisSullivan.jpg"
+import floorPlanImg from "./pics/193101_007-web-louisSullivan.jpg"
 
 //Leadership, ask about why this is an issue in the slack
-// import bressoudS from "../pics/boardMembers/bressoudS.jpg"
-// import bairdC from "../pics/boardMembers/catherineBaird.jpg"
-// import baloghA from "../pics/boardMembers/anneBalogh.jpg"
-// import birdB from "../pics/boardMembers/birdB.jpg"
-// import dutcherC from "../pics/boardMembers/dutcherC.jpg"
-// import flowersD from "../pics/boardMembers/flowersD.jpg"
-// import fornataroM from "../pics/boardMembers/fornataroM.jpg"
-// import hampshireJ from "../pics/boardMembers/hampshireJ.jpg"
-// import harknessC from "../pics/boardMembers/harknessC.jpg"
-// import harrisM from "../pics/boardMembers/harrisM.jpg"
-// import livingstonJ from "../pics/boardMembers/livingstonJ.jpg"
-// import lorasoJ from "../pics/boardMembers/lorasoJ.jpg"
-// import mcmanusS from "../pics/boardMembers/mcmanusS.jpg"
-// import misnerB from "../pics/boardMembers/misnerB.jpg"
-// import nelsonC from "../pics/boardMembers/nelsonC.jpg"
-// import petreyD from "../pics/boardMembers/petreyD.jpg"
-// import proudfitK from "../pics/boardMembers/proudfitK.jpg"
-// import internalTeam from "../pics/boardMembers/theTeam.jpeg"
-// import treciakA from "../pics/boardMembers/treciakA.jpg"
-// import weaverB from "../pics/boardMembers/weaverB.jpg"
-// import wilhelmK from "../pics/boardMembers/wilhelmK.jpg"
+import bressoudS from "./pics/boardMembers/bressoudS.jpg"
+import bairdC from "./pics/boardMembers/catherineBaird.jpg"
+import baloghA from "./pics/boardMembers/anneBalogh.jpg"
+import birdB from "./pics/boardMembers/birdB.jpg"
+import dutcherC from "./pics/boardMembers/dutcherC.jpg"
+import flowersD from "./pics/boardMembers/flowersD.jpg"
+import fornataroM from "./pics/boardMembers/fornataroM.jpg"
+import hampshireJ from "./pics/boardMembers/hampshireJ.jpg"
+import harknessC from "./pics/boardMembers/harknessC.jpg"
+import harrisM from "./pics/boardMembers/HarrisM.jpg"
+import livingstonJ from "./pics/boardMembers/livingstonJ.jpg"
+import lorasoJ from "./pics/boardMembers/lorasoJ.jpg"
+import mcmanusS from "./pics/boardMembers/mcmanusS.jpg"
+import misnerB from "./pics/boardMembers/misnerB.jpg"
+import nelsonC from "./pics/boardMembers/nelsonC.jpg"
+import petreyD from "./pics/boardMembers/petreyD.jpg"
+import proudfitK from "./pics/boardMembers/proudfitK.jpg"
+import internalTeam from "./pics/boardMembers/theTeam.jpeg"
+import treciakA from "./pics/boardMembers/treciakA.jpg"
+import weaverB from "./pics/boardMembers/weaverB.jpg"
+import wilhelmK from "./pics/boardMembers/wilhelmK.jpg"
 
 //collaborators
+import ohioTourism from "./pics/collaboratorPics/ohio-tourism.png"
+import ohioHistoryConnection from "./pics/collaboratorPics/ohio-history-connection.png"
+import ohioHotelAndLodgingAssociation from "./pics/collaboratorPics/ohio-hotel-and-lodging-association.png"
+import ohioTravelAssociation from "./pics/collaboratorPics/ohio-travel-association.png"
+import worldHeritageOhio from "./pics/collaboratorPics/world-heritage-ohio.png"
 
 //videos
 //import exploreLCvid from "../videos/Explore Licking County.mp4"
 //import that one video for the louis sullivan page
+
+function About_sidebar(props)
+/* Contained here is the sidebar for the about pages. By clicking on the names of the pages,
+ * users can navigate between them.
+ */
+{
+    return(
+    <ul className="float-left">
+        <li>
+            <button
+                type = "button"
+                onClick={()=>props.onAbout()}
+                class="about-page">
+                ORGANIZATION
+            </button>           
+        </li>
+        <li>
+            <button
+                type = "button"
+                onClick={()=>props.onAbout_louisSullivan()}
+                class="about-page">
+                LOUIS SULLIVAN
+            </button>
+        </li>
+        <li>
+            <button
+                type = "button"
+                onClick={()=>props.onAbout_leadership()}
+                class="about-page">
+                LEADERSHIP
+            </button>
+        </li>
+        <li>
+            <button
+                type = "button"
+                onClick={()=>props.onAbout_collaborators()}
+                class="about-page">
+                COLLABORATORS
+            </button>
+        </li>
+        <li>
+            <Qrmodal link={"https://explorelc.org/contact"} buttonText={"CONTACT"} modalText={"Contact us using your mobile device"}/>
+        </li>
+        <li>
+            <Qrmodal link={"https://explorelc.org/partners"} buttonText={"PARTNERS"} modalText={"See how you can partner with us using your mobile device"}/>
+        </li>
+    </ul>
+    )
+};
 
 function About(props)
 {
@@ -60,31 +114,7 @@ function About(props)
                     <br />
                 </div>
                 <div id="body">
-                    <ul className="float-left">
-                        <li>
-                            ORGANIZATION
-                        </li>
-                        <li>
-                            {/*<button>
-                                type="button"
-                                onClick={()=>onAbout_LouisSullivan()}
-                                class="btn btn-outline-light btn-lg">
-                                LOUIS SULLIVAN
-                            </button>*/}
-                        </li>
-                        <li>
-                            <a href="https://explorelc.org/leadership">LEADERSHIP</a>
-                        </li>
-                        <li>
-                            <a href="https://explorelc.org/collaborators">COLLABORATORS</a>
-                        </li>
-                        <li>
-                            <Qrmodal link={"https://explorelc.org/contact"} buttonText={"CONTACT"} modalText={"Contact us using your mobile device"}/>
-                        </li>
-                        <li>
-                            <Qrmodal link={"https://explorelc.org/partners"} buttonText={"PARTNERS"} modalText={"See how you can partner with us using your mobile device"}/>
-                        </li>
-                    </ul>
+                    {About_sidebar(props)}
                     <div id="about" className="container">
                         <div>
                             <strong>Explore Licking County</strong> is here to help our community and visitors find their way to
@@ -140,37 +170,28 @@ function About(props)
         )
 };
 
-{/*
-function  LouisSullivan()
+
+function  LouisSullivan(props)
 {
     return(
         <div>
+        <section id="guideBanner">
+            <NavBar
+                onHome={props.onHome}
+                onGuides={props.onGuides}
+                onTowns={props.onTowns}
+                onEvents={props.onEvents}
+                onDirectory={props.onDirectory}
+                onAbout={props.onAbout}
+            />
+         </section>            
             <div id="header">
                 <p align = "center"><strong>The Louis Sullivan Building</strong></p>
                 <br />
             </div>
             <div id="body">
-                <ul className="float-left">
-                    <li>
-                    </li>
-                    <li>
-                        LOUIS SULLIVAN
-                    </li>
-                    <li>
-                        <a href="https://explorelc.org/leadership">LEADERSHIP</a>
-                    </li>
-                    <li>
-                        <a href="https://explorelc.org/collaborators">COLLABORATORS</a>
-                    </li>
-                    <li>
-                        <Qrmodal link={"https://explorelc.org/contact"} buttonText={"CONTACT"} modalText={"Contact us using your mobile device"}/>
-                    </li>
-                    <li>
-                        <Qrmodal link={"https://explorelc.org/partners"} buttonText={"PARTNERS"} modalText={"See how you can partner with us using your mobile device"}/>
-                    </li>
-                </ul>
+                {About_sidebar(props)}
                 PLACEHOLDER FOR VIDEO
-    */}
                 {/*
                 <div id="video">
                     <video src="kiosk/src/Sullivan Restoration Part One" align="center" controls>
@@ -178,7 +199,6 @@ function  LouisSullivan()
                     </video>
                 </div>
                 */}
-    {/*
                 <div id="about" className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -194,13 +214,13 @@ function  LouisSullivan()
                                significance never changed.  In 1973, it was added to the National Register of Historic Places.
                         </div>
                         <div id="imageOfLouisSullivanBuilding" className="col-md-6">
-                        <img src={louisSullivanImg}></img>
+                        <img src={louisSullivanImg} height="95%" width="95%"></img>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-md-6">
                             <div id="imageOfFloorPlan" className="col-md-6">
-                                <img src={floorPlanImg}></img>
+                                <img src={floorPlanImg} height="190%" width="220%"></img>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -222,105 +242,127 @@ function  LouisSullivan()
 }
 
 
-function Leadership()
+function Leadership(props)
 {
     return(
         <div>
+            <section id="guideBanner">
+                <NavBar
+                    onHome={props.onHome}
+                    onGuides={props.onGuides}
+                    onTowns={props.onTowns}
+                    onEvents={props.onEvents}
+                    onDirectory={props.onDirectory}
+                    onAbout={props.onAbout}
+                />
+            </section>
             <div id="header">
-                The internal team
-                <img src={internalTeam}></img>
-                Image taken at Denison Art Space:
-                Garrett, Dan Moder, Carol Thress, Alex Trujillo
+                <p align = "center"><strong>The one and only Explore Licking county team</strong></p>
+                <br />
             </div>
+            {About_sidebar(props)}
             <div className="container">
+                <div id="internal team">
+                    The internal team
+                    <br />
+                    <img src={internalTeam} height="100%" width="100%"></img>
+                    <br />
+                    Image taken at Denison Art Space:
+                    <br />
+                    Garrett, Dan Moder, Carol Thress, Alex Trujillo
+                </div>
                 <div id="boardOfDirectors">
                     <div className="row">
                         <div className="col-md-3">
-                            <img src={bressoudS}></img>
+                            <img src={bressoudS} height="100%" width="100%"></img>
                             Suzanne Bressoud - Board Chair 20/21
                         </div>
                         <div className="col-md-3">
-                            <img src={fornataroM}></img>
+                            <img src={fornataroM} height="100%" width="100%"></img>
                             Mike Fornataro - Immediate Past Chair
                         </div>
                         <div className="col-md-3">
-                            <img src={proudfitK}></img>
+                            <img src={proudfitK} height="100%" width="100%"></img>
                             Kendra Proudfit - Board Treasurer
                         </div>
                         <div className="col-md-3">
-                            <img src={misnerB}></img>
+                            <img src={misnerB} height="100%" width="100%"></img>
                             Brittany Misner - Board Secretary
                         </div>
                     </div>
+                    <br /><br />
                     <div className="row">
                         <div className="col-md-3">
-                            <img src={birdB}></img>
+                            <img src={birdB} height="100%" width="100%"></img>
                             Bryn Bird
                         </div>
                         <div className="col-md-3">
-                            <img src={flowersD}></img>
+                            <img src={flowersD} height="100%" width="100%"></img>
                             Duane Flowers
                         </div>
                         <div className="col-md-3">
-                            <img src={harrisM}></img>
+                            <img src={harrisM} height="100%" width="100%"></img>
                             Michael Harris
                         </div>
                         <div className="col-md-3">
-                            <img src={hampshireJ}></img>
+                            <img src={hampshireJ} height="100%" width="100%"></img>
                             Jude Hampshire
                         </div>
                     </div>
+                    <br /><br />
                     <div className="row">
                         <div className="col-md-3">
-                            <img src={petreyD}></img>
+                            <img src={petreyD} height="100%" width="100%"></img>
                             Dee Dee Petrey
                         </div>
                         <div className="col-md-3">
-                            <img src={nelsonC}></img>
+                            <img src={nelsonC} height="100%" width="100%"></img>
                             Cherie Nelson
                         </div>
                         <div className="col-md-3">
-                            <img src={mcmanusS}></img>
+                            <img src={mcmanusS} height="100%" width="100%"></img>
                             Stephanie McManus
                         </div>
                         <div className="col-md-3">
-                            <img src={treciakA}></img>
+                            <img src={treciakA} height="100%" width="100%"></img>
                             Amy Treciak
                         </div>
-                    </div>
+                    </div><br />
+                    <br /><br />
                     <div className="row">
                         <div className="col-md-3">
-                            <img src={weaverB}></img>
+                            <img src={weaverB} height="100%" width="100%"></img>
                             Bill Weaver
                         </div>
                         <div className="col-md-3">
-                            <img src={dutcherC}></img>
+                            <img src={dutcherC} height="100%" width="100%"></img>
                             Chip Dutcher
                         </div>
                         <div className="col-md-3">
-                            <img src={bairdC}></img>
+                            <img src={bairdC} height="100%" width="100%"></img>
                             Catherine Baird
                         </div>
                         <div className="col-md-3">
-                            <img src={harknessC}></img>
+                            <img src={harknessC} height="100%" width="100%"></img>
                             Christoper Harkness
                         </div>
                     </div>
+                    <br /><br />
                     <div className="row">
                         <div className="col-md-3">
-                            <img src={livingstonJ}></img>
+                            <img src={livingstonJ} height="100%" width="100%"></img>
                             Jay Livingston
                         </div>
                         <div className="col-md-3">
-                            <img src={wilhelmK}></img>
+                            <img src={wilhelmK} height="100%" width="100%"></img>
                             Kim Wilhelm
                         </div>
                         <div className="col-md-3">
-                            <img src={baloghA}></img>
+                            <img src={baloghA} height="100%" width="100%"></img>
                             Anne Balogh
                         </div>
                         <div className="col-md-3">
-                            <img src={lorasoJ}></img>
+                            <img src={lorasoJ} height="100%" width="100%"></img>
                             Janice LoRaso
                         </div>
                     </div>
@@ -331,14 +373,73 @@ function Leadership()
 }
 
 
-function Collaborators()
+function Collaborators(props)
 {
     return(
         <div>
+          <section id="guideBanner">
+                <NavBar
+                    onHome={props.onHome}
+                    onGuides={props.onGuides}
+                    onTowns={props.onTowns}
+                    onEvents={props.onEvents}
+                    onDirectory={props.onDirectory}
+                    onAbout={props.onAbout}
+                />
+            </section>
+            {About_sidebar(props)}
             <div className="container">
                 <div id="state collaborators">
                     <span>State collborators</span>
+                    <br />
                     We reach beyond our borders and forge the partnerships that spark our creativity and fuel the passion.
+                    <br />
+                    <div className="row">
+                        <div>
+                            <div className="col-md-2">
+                                <img src={ohioTourism}></img>
+                                Ohio Tourism 
+                            </div>
+                            <div className="col-md-2">
+                            
+                            </div>
+                            <div className="col-md-2">
+
+                            </div>
+                            <div className="col-md-2">
+                            
+                            </div>
+                            <div className="col-md-2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sales and marketing">
+                    <span>Sales and marketing</span>
+                    <br />
+                    Some people call it sales, we call it storytelling.
+                    We make the story available to larger audiences through our friendships with the marketing community.
+                    <br />
+                    <div className="row">
+                        <div>
+                                <div className="col-md-2">
+                                
+                                </div>
+                                <div className="col-md-2">
+                                
+                                </div>
+                                <div className="col-md-2">
+
+                                </div>
+                                <div className="col-md-2">
+                                
+                                </div>
+                                <div className="col-md-2">
+
+                                </div>
+                        </div>
+                    </div>
                     <div className="row">
                         <div>
                             <div className="col-md-2">
@@ -359,57 +460,17 @@ function Collaborators()
                         </div>
                     </div>
                 </div>
-                <div id="sales and marketing">
-                    <span>Sales and marketing</span>
-                    Some people call it sales, we call it storytelling.
-                    We make the story available to larger audiences through our friendships with the marketing community.
-                    <div className="row">
-                    <div>
-                        <div className="col-md-2">
-                            
-                        </div>
-                        <div className="col-md-2">
-                        
-                        </div>
-                        <div className="col-md-2">
-
-                        </div>
-                        <div className="col-md-2">
-                        
-                        </div>
-                        <div className="col-md-2">
-
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div>
-                        <div className="col-md-2">
-                            
-                        </div>
-                        <div className="col-md-2">
-                        
-                        </div>
-                        <div className="col-md-2">
-
-                        </div>
-                        <div className="col-md-2">
-                        
-                        </div>
-                        <div className="col-md-2">
-
-                        </div>
-                    </div>
-                </div>
                 <div id="local collaborators">
                     <span>Local collaborators</span>
+                    <br />
                     There is pride and enthusiasm in our communities, and we shake hands locally to keep the momentum.
-
+                    <br />
                 </div>
             </div>
         </div>
     )
 }
-*/}
+
 
 {/* These pages might just want to straight-up push to phone or redirect. They require keyboard input and provide downloads.
 function Contact()
@@ -430,4 +491,4 @@ function Partners()
 }
 */}
 
-export { About }
+export { About, LouisSullivan, Leadership, Collaborators,};

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Guides } from './pages/guides';
 import { Towns } from './pages/towns';
-import { About } from './pages/about';
-import { Events} from './pages/events';
+import { About, LouisSullivan, Leadership, Collaborators } from './pages/about';
+import { Events } from './pages/events';
 import { Directory } from './pages/directory'
 /*
   I have made this page for other pages to fill in
@@ -66,6 +66,45 @@ const App = ()=>{
                 onEvents={()=>updateState('events')}
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
+                onAbout_louisSullivan={()=>updateState('about_louisSullivan')}
+                onAbout_leadership={()=>updateState('about_leadership')}
+                onAbout_collaborators={()=>updateState('about_collaborators')}
+            />;
+          else if (value === 'about_louisSullivan')//navigate to the louis sullivan about page
+            return <LouisSullivan
+              onHome={()=>updateState('home')}
+              onGuides={()=>updateState('guides')}
+              onTowns={()=>updateState('towns')}
+              onEvents={()=>updateState('events')}
+              onDirectory={()=>updateState('directory')}
+              onAbout={()=>updateState('about')}
+              onAbout_louisSullivan={()=>updateState('about_louisSullivan')}
+              onAbout_leadership={()=>updateState('about_leadership')}
+              onAbout_collaborators={()=>updateState('about_collaborators')}
+            />;
+          else if (value === 'about_leadership')//navigate to the leadership about page
+            return <Leadership
+              onHome={()=>updateState('home')}
+              onGuides={()=>updateState('guides')}
+              onTowns={()=>updateState('towns')}
+              onEvents={()=>updateState('events')}
+              onDirectory={()=>updateState('directory')}
+              onAbout={()=>updateState('about')}
+              onAbout_louisSullivan={()=>updateState('about_louisSullivan')}
+              onAbout_leadership={()=>updateState('about_leadership')}
+              onAbout_collaborators={()=>updateState('about_collaborators')}
+            />;
+          else if (value === 'about_collaborators')//navigate to the collaborators about page
+            return <Collaborators
+              onHome={()=>updateState('home')}
+              onGuides={()=>updateState('guides')}
+              onTowns={()=>updateState('towns')}
+              onEvents={()=>updateState('events')}
+              onDirectory={()=>updateState('directory')}
+              onAbout={()=>updateState('about')}
+              onAbout_louisSullivan={()=>updateState('about_louisSullivan')}
+              onAbout_leadership={()=>updateState('about_leadership')}
+              onAbout_collaborators={()=>updateState('about_collaborators')}
             />;
           else if (value === 'events')//change the component name to use different page
             return <Events
