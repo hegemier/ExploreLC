@@ -27,15 +27,6 @@ const App = ()=>{
 
   return (
     <div>
-    <NavBar/>
-    <Towns/>
-import { Guides, Organization } from './pages';
-
-const App = ()=>{
-  return (
-    <div className="displayBlock">
-      <Guides/>
-      <Organization/>
     <Provider value={{value:state, updateState}}>
       <Consumer>
         {props=>{
