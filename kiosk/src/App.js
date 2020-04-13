@@ -3,6 +3,7 @@ import { Guides } from './pages/guides';
 import { Towns } from './pages/towns';
 import { About } from './pages/about';
 import { Events} from './pages/events';
+import { Directory } from './pages/directory'
 /*
   I have made this page for other pages to fill in
   to the corresponding context.
@@ -84,15 +85,15 @@ const App = ()=>{
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
             />;
-          /*else if (value === 'about')//change the component name to use different page
-            return <About
+          else if (value === 'directory')//change the component name to use different page
+            return <Directory
                 onHome={()=>updateState('home')}
                 onGuides={()=>updateState('guides')}
                 onTowns={()=>updateState('towns')}
                 onEvents={()=>updateState('events')}
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
-            />;*/
+            />;
         }}
       </Consumer>
     </Provider>
