@@ -33,11 +33,32 @@ import weaverB from "./pics/boardMembers/weaverB.jpg"
 import wilhelmK from "./pics/boardMembers/wilhelmK.jpg"
 
 //collaborators
+import placeHolderImage from "./pics/collaboratorPics/elc-directory-placeholder-01.jpg"
 import ohioTourism from "./pics/collaboratorPics/ohio-tourism.png"
 import ohioHistoryConnection from "./pics/collaboratorPics/ohio-history-connection.png"
 import ohioHotelAndLodgingAssociation from "./pics/collaboratorPics/ohio-hotel-and-lodging-association.png"
 import ohioTravelAssociation from "./pics/collaboratorPics/ohio-travel-association.png"
 import worldHeritageOhio from "./pics/collaboratorPics/world-heritage-ohio.png"
+import greatLakesPublishing from "./pics/collaboratorPics/greatlakespublishing.png"
+import citySceneMediaGroup from "./pics/collaboratorPics/City_scene_media_group.png"
+import martinDigital from "./pics/collaboratorPics/Martin_Digital_edited.png"
+import _614Magazine from "./pics/collaboratorPics/614_updated.png"
+import stockAndBarrel from "./pics/collaboratorPics/stock_and_barrel_edited.png"
+import _1870Magazine from "./pics/collaboratorPics/1870_edited.png"
+import inspirePRgroup from "./pics/collaboratorPics/inspire_pr_Edit.png"
+import ohioTravelPavillion from "./pics/collaboratorPics/Ohio_Travel_Pavillion.png"
+import adRack from "./pics/collaboratorPics/Ad-Rack.png"
+import newarkRotaryClub from "./pics/collaboratorPics/Newark_Rotory.png"
+import lickingCountyChamberOfCommerce from "./pics/collaboratorPics/LCCC.png"
+import lickingCountyHistoricalSociety from "./pics/collaboratorPics/LCHS.png"
+import lickingCountyFoundation from "./pics/collaboratorPics/LCF.png"
+import newAlbanyChamberOfCommerce from "./pics/collaboratorPics/New_Albany_Chamber.jpg"
+import cityOfHeath from "./pics/collaboratorPics/City_of_heath.png"
+import unitedWayOfLickingCounty from "./pics/collaboratorPics/United_way.jpg"
+import AmericanRedCross from "./pics/collaboratorPics/American_Red_Cross.png"
+import granvilleAreaChamberOfCommerce from "./pics/collaboratorPics/Granville_Chamber.png"
+import buckeyeLakeRegionChamberOfCommerce from "./pics/collaboratorPics/buckeyelake.png"
+import culturalAllianceOfLickingCounty from "./pics/collaboratorPics/collab-who.jpg"
 
 //videos
 //import exploreLCvid from "../videos/Explore Licking County.mp4"
@@ -50,6 +71,7 @@ function About_sidebar(props)
 {
     return(
     <ul className="float-left">
+        <span> ABOUT </span>
         <li>
             <button
                 type = "button"
@@ -269,7 +291,8 @@ function Leadership(props)
                     <br />
                     Image taken at Denison Art Space:
                     <br />
-                    Garrett, Dan Moder, Carol Thress, Alex Trujillo
+                    Garrett Martin, Dan Moder, Carol Thress, Alex Trujillo
+                    <br />
                 </div>
                 <div id="boardOfDirectors">
                     <div className="row">
@@ -387,85 +410,175 @@ function Collaborators(props)
                     onAbout={props.onAbout}
                 />
             </section>
+            <div id="header">
+                <p align = "center"><strong>We celebrate the collaborators that are part of our story</strong></p>
+                <br />
+            </div>
             {About_sidebar(props)}
             <div className="container">
                 <div id="state collaborators">
                     <span>State collborators</span>
                     <br />
                     We reach beyond our borders and forge the partnerships that spark our creativity and fuel the passion.
-                    <br />
+                    <br /><br />
                     <div className="row">
-                        <div>
-                            <div className="col-md-2">
-                                <img src={ohioTourism}></img>
-                                Ohio Tourism 
-                            </div>
-                            <div className="col-md-2">
-                            
-                            </div>
-                            <div className="col-md-2">
-
-                            </div>
-                            <div className="col-md-2">
-                            
-                            </div>
-                            <div className="col-md-2">
-
-                            </div>
+                        <div className="col-md-2">
+                            <img src={ohioTourism} height="200px" width="180px"></img>
+                            <Qrmodal link={"https://ohio.org/"} buttonText={"Ohio Tourism"} modalText={"Learn more about Ohio Tourism on your mobile device"}/>
+                        </div>
+                        <div className="col-md-2">
+                            <img src={ohioHistoryConnection} height="200px" width="180px"></img>
+                            <Qrmodal link={"https://www.ohiohistory.org/"} buttonText={"Ohio History Connection"} modalText={"Learn more about Ohio History Connection on your mobile device"}/>
+                        </div>
+                        <div className="col-md-2">
+                            <img src={ohioHotelAndLodgingAssociation} height="200px" width="180px"></img>
+                            <Qrmodal link={"https://www.ohiolodging.com/"} buttonText={"Ohio Hotel and Lodging Association"} modalText={"Learn more about the Ohio Hotel and Lodging Association on your mobile device"}/>
+                        </div>
+                        <div className="col-md-2">
+                            <img src={ohioTravelAssociation} height="200px" width="180px"></img>
+                            <Qrmodal link={"https://www.ohiotravel.org/aws/OHTRV/pt/sp/home_page"} buttonText={"Ohio Travel Association"} modalText={"Learn more about the Ohio Travel Association on your mobile device"}/>
+                        </div>
+                        <div className="col-md-2">
+                            <img src={worldHeritageOhio} height="200px" width="180px"></img>
+                            <Qrmodal link={"http://worldheritageohio.org/"} buttonText={"World Heritage Ohio"} modalText={"Learn more about World Heritage Ohio on your mobile device"}/>
                         </div>
                     </div>
                 </div>
+                <hr></hr>
+                <br /><br /><br />
                 <div id="sales and marketing">
                     <span>Sales and marketing</span>
                     <br />
                     Some people call it sales, we call it storytelling.
                     We make the story available to larger audiences through our friendships with the marketing community.
-                    <br />
+                    <br /><br />
                     <div className="row">
-                        <div>
-                                <div className="col-md-2">
-                                
-                                </div>
-                                <div className="col-md-2">
-                                
-                                </div>
-                                <div className="col-md-2">
-
-                                </div>
-                                <div className="col-md-2">
-                                
-                                </div>
-                                <div className="col-md-2">
-
-                                </div>
+                        <div className="col-md-2">
+                            <img src={greatLakesPublishing} height="200px" width="180px"></img>
+                            Great Lakes Publishing
+                        </div>
+                        <div className="col-md-2">
+                            <img src={citySceneMediaGroup} heigh="200px" width="180px"></img>
+                            Cityscene Media Group
+                        </div>
+                        <div className="col-md-2">
+                            <img src={martinDigital} heigh="200px" width="180px"></img>
+                            Martin Digital
+                        </div>
+                        <div className="col-md-2">
+                            <img src={_614Magazine} heigh="200px" width="180px"></img>
+                            614 Magazine
+                        </div>
+                        <div className="col-md-2">
+                            <img src={stockAndBarrel} heigh="200px" width="180px"></img>
+                            Stock & Barrel
                         </div>
                     </div>
                     <div className="row">
-                        <div>
-                            <div className="col-md-2">
-                                
-                            </div>
-                            <div className="col-md-2">
-                            
-                            </div>
-                            <div className="col-md-2">
-
-                            </div>
-                            <div className="col-md-2">
-                            
-                            </div>
-                            <div className="col-md-2">
-
-                            </div>
+                        <div className="col-md-2">
+                            <img src={_1870Magazine} heigh="200px" width="180px"></img>
+                            1870 Magazine
+                        </div>
+                        <div className="col-md-2">
+                            <img src={inspirePRgroup} heigh="200px" width="180px"></img>
+                            Inspire PR Group
+                        </div>
+                        <div className="col-md-2">
+                            <img src={ohioTravelPavillion} heigh="200px" width="180px"></img>
+                            Ohio Travel Pavillion
+                        </div>
+                        <div className="col-md-2">
+                            <img src={adRack} heigh="200px" width="180px"></img>
+                            Ad-Rack
+                        </div>
+                        <div className="col-md-2">
+                            {/**Empty column*/}
                         </div>
                     </div>
                 </div>
+                <hr></hr>
+                <br /><br /><br />
                 <div id="local collaborators">
                     <span>Local collaborators</span>
                     <br />
                     There is pride and enthusiasm in our communities, and we shake hands locally to keep the momentum.
-                    <br />
+                    <br /><br />
+                    <div className="row">
+                        <div className="col-md-2">
+                            <img src={placeHolderImage} height="200px" width="180px"></img>
+                            Licking County Historical Alliance
+                        </div>
+                        <div className="col-md-2">
+                            <img src={newarkRotaryClub} height="200px" width="180px"></img>
+                            Newark Rotary Club
+                        </div>
+                        <div className="col-md-2">
+                            <img src={lickingCountyChamberOfCommerce} height="200px" width="180px"></img>
+                            Licking County Chamber of Commerce
+                        </div>
+                        <div className="col-md-2">
+                            <img src={lickingCountyHistoricalSociety} height="200px" width="180px"></img>
+                            Licking County Historical Society
+                        </div>
+                        <div className="col-md-2">
+                            <img src={lickingCountyFoundation} height="200px" width="180px"></img>
+                            Licking County Foundation
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-2">
+                            <img src={newAlbanyChamberOfCommerce} height="200px" width="180px"></img>
+                            New Albany Chamber of Commerce
+                        </div>
+                        <div className="col-md-2">
+                            <img src={placeHolderImage} height="200px" width="180px"></img>
+                            Pataskala Chamber of Commerce
+                        </div>
+                        <div className="col-md-2">
+                            <img src={placeHolderImage} height="200px" width="180px"></img>
+                            City of Newark
+                        </div>
+                        <div className="col-md-2">
+                            <img src={cityOfHeath} height="200px" width="180px"></img>
+                            City of Heath
+                        </div>
+                        <div className="col-md-2">
+                            <img src={unitedWayOfLickingCounty} height="200px" width="180px"></img>
+                            United Way of Licking County
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-2">
+                            <img src={AmericanRedCross} height="200px" width="180px"></img>
+                            American Red Cross East and South Central Ohio
+                        </div>
+                        <div className="col-md-2">
+                            <img src={granvilleAreaChamberOfCommerce} height="200px" width="180px"></img>
+                            Granville Area Chamber of Commerce
+                        </div>
+                        <div className="col-md-2">
+                            <img src={buckeyeLakeRegionChamberOfCommerce} height="200px" width="180px"></img>
+                            Buckeye Lake Region Chamber of Commerce
+                        </div>
+                        <div className="col-md-2">
+                            <img src={culturalAllianceOfLickingCounty} height="200px" width="180px"></img>
+                            Cultural Alliance of Licking County
+                        </div>
+                        <div className="col-md-2">
+                            {/*Empty Column*/}
+                        </div>
+                    </div>
+                    {/*If adding more rows is desired, use the following template:
+                    <div className="row"
+                        <div className="col-md-2">
+                            <img src={imageName} height="200px" width="180px"></img>
+                            name of organization here
+                        </div>
+                        ^^^ this is a column, there can be up to 5 of these divs in one row div
+                    */}
                 </div>
+                <hr></hr>
+                <br /><br /><br />
             </div>
         </div>
     )
