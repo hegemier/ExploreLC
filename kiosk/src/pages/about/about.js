@@ -1,6 +1,10 @@
 import React from "react";
 import { Qrmodal, NavBar } from "../../components/"
 
+//style
+import "../../sass/about.scss"
+import "../../sass/fonts.scss"
+
 //the following are all images used in the about pages//
 
 //Organization and Louis Sullivan
@@ -9,7 +13,7 @@ import impactAwardImg from "./pics/iw-impact-award.jpg"
 import louisSullivanImg from "./pics/history-04-louisSullivan.jpg"
 import floorPlanImg from "./pics/193101_007-web-louisSullivan.jpg"
 
-//Leadership, ask about why this is an issue in the slack
+//Leadership
 import bressoudS from "./pics/boardMembers/bressoudS.jpg"
 import bairdC from "./pics/boardMembers/catherineBaird.jpg"
 import baloghA from "./pics/boardMembers/anneBalogh.jpg"
@@ -59,6 +63,7 @@ import AmericanRedCross from "./pics/collaboratorPics/American_Red_Cross.png"
 import granvilleAreaChamberOfCommerce from "./pics/collaboratorPics/Granville_Chamber.png"
 import buckeyeLakeRegionChamberOfCommerce from "./pics/collaboratorPics/buckeyelake.png"
 import culturalAllianceOfLickingCounty from "./pics/collaboratorPics/collab-who.jpg"
+
 
 //videos
 //import exploreLCvid from "../videos/Explore Licking County.mp4"
@@ -131,7 +136,7 @@ function About(props)
 
             <div>
                 <div id="header">
-                    <p align = "center"><strong>About our organization</strong></p>
+                    <p align = "center" className="imgHeader"><strong>About our organization</strong></p>
                     <p align = "center">It's our mission to help you Explore Licking County</p>
                     <br />
                 </div>
