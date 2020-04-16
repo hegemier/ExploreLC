@@ -1,1 +1,1 @@
-export { About } from './about';
+export { About, LouisSullivan, Leadership, Collaborators, } from './about';
