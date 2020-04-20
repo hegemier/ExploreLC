@@ -53,7 +53,7 @@ const NavBar = (props)=>{
                         <li className="nav-item">
                             <button
                                 type="button"
-                                onClick={()=>onGuides()}
+                                onClick={()=>{alert("clicked!")}}
                                 class="btn btn-outline-light btn-lg">
                                 Guides
                             </button>

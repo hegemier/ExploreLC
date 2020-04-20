@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Guides } from './pages/guides';
 import { Towns } from './pages/towns';
-import { About, LouisSullivan, Leadership, Collaborators} from './pages/about/about.js';
-import { Events} from './pages/events';
+import { About, LouisSullivan, Leadership, Collaborators } from './pages/about/about.js';
+import { Events } from './pages/events';
 import { Directory } from './pages/directory'
-//import { NavBar } from './components'
 /*
   I have made this page for other pages to fill in
   to the corresponding context.
@@ -24,7 +23,7 @@ import { Directory } from './pages/directory'
 
 const App = ()=>{
   const { Provider, Consumer } = React.createContext();
-  const [state, updateState] = useState('guides');//you can change part
+  const [state, updateState] = useState('homr');//you can change part
 
   return (
     <div>
@@ -67,16 +66,46 @@ const App = ()=>{
                 onEvents={()=>updateState('events')}
                 onDirectory={()=>updateState('directory')}
                 onAbout={()=>updateState('about')}
+                onAbout_LouisSullivan={()=>updateState('louisSullivan')}
+                onAbout_Leadership={()=>updateState('leadership')}
+                onAbout_Collaborators={()=>updateState('collaborators')}
             />;
-          else if (value === 'about_LouisSullivan')
-            return <LouisSullivan
+          else if (value === 'LouisSullivan')
+            return<LouisSullivan
               onHome={()=>updateState('home')}
               onGuides={()=>updateState('guides')}
               onTowns={()=>updateState('towns')}
               onEvents={()=>updateState('events')}
               onDirectory={()=>updateState('directory')}
               onAbout={()=>updateState('about')}
-            />;
+              onAbout_LouisSullivan={()=>updateState('louisSullivan')}
+              onAbout_Leadership={()=>updateState('leadership')}
+              onAbout_Collaborators={()=>updateState('collaborators')}
+            />
+          else if (value === 'leadership')
+            return<Leadership
+              onHome={()=>updateState('home')}
+              onGuides={()=>updateState('guides')}
+              onTowns={()=>updateState('towns')}
+              onEvents={()=>updateState('events')}
+              onDirectory={()=>updateState('directory')}
+              onAbout={()=>updateState('about')}
+              onAbout_LouisSullivan={()=>updateState('louisSullivan')}
+              onAbout_Leadership={()=>updateState('leadership')}
+              onAbout_Collaborators={()=>updateState('collaborators')}
+            />
+          else if (value === 'collaborators')
+          return<Leadership
+            onHome={()=>updateState('home')}
+            onGuides={()=>updateState('guides')}
+            onTowns={()=>updateState('towns')}
+            onEvents={()=>updateState('events')}
+            onDirectory={()=>updateState('directory')}
+            onAbout={()=>updateState('about')}
+            onAbout_LouisSullivan={()=>updateState('louisSullivan')}
+            onAbout_Leadership={()=>updateState('leadership')}
+            onAbout_Collaborators={()=>updateState('collaborators')}
+          />
           else if (value === 'events')//change the component name to use different page
             return <Events
                 onHome={()=>updateState('home')}
