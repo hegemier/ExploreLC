@@ -117,7 +117,7 @@ function About_sidebar(props)
         </li>
     </ul>
     )
-};
+}
 
 function About(props)
 {
@@ -195,7 +195,7 @@ function About(props)
             </div>
           </div>
         )
-};
+}
 
 
 function  LouisSullivan(props)
@@ -609,4 +609,4 @@ function Partners()
 }
 */}
 
-export { About, LouisSullivan, Leadership, Collaborators,};
+export { About, LouisSullivan, Leadership, Collaborators };
