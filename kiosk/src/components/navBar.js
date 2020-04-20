@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { NAVLOGO } from '../assets';
 // import { Events } from '../pages/events'
 
@@ -26,7 +26,7 @@ import { NAVLOGO } from '../assets';
 
     font is not downloaded yet.
     Will be updated when getting info from Garret and Alex
-*/
+
 
 const NavBar = (props)=>{
     const {
@@ -99,7 +99,9 @@ const NavBar = (props)=>{
     );
 };
 
-export { NavBar };
+export { NavBar };*/
+
+
 import React from 'react';
 import { NAVLOGO } from '../assets';
 

@@ -589,8 +589,8 @@ function Collaborators(props)
     )
 }
 
-
-{/* These pages might just want to straight-up push to phone or redirect. They require keyboard input and provide downloads.
+/*
+{ These pages might just want to straight-up push to phone or redirect. They require keyboard input and provide downloads.
 function Contact()
 {
     return(
@@ -607,6 +607,6 @@ function Partners()
         </div>
     )
 }
-*/}
+}*/
 
-export { About, LouisSullivan, Leadership, Collaborators,};
+export { About, LouisSullivan, Leadership, Collaborators };

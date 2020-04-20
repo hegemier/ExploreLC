@@ -14,7 +14,7 @@ function EventCards(props) {
       <div className="card-body">
         <h5 className="card-title">{event.title}</h5>
         <p>{event.date}</p>
-        <Qrmodal link={event.link} className="btn btn-primary btn-lg btn-block">Explore on Your Device</Qrmodal>
+        <Qrmodal link={event.link} className="btn btn-primary btn-lg btn-block" buttonText="Explore on Your Device" modalText="Explore on Your Device"></Qrmodal>
       </div>
     </div>
   );

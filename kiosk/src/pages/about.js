@@ -2,7 +2,9 @@ import React from "react";
 import Qrmodal from "../qrmodal"
 import travelGuideImg from "../pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
 import impactAwardImg from "../pics/iw-impact-award.jpg"
-import exploreLCvid from "../videos/Explore Licking County.mp4"
+// import exploreLCvid from "../videos/Explore Licking County.mp4"
+
+let exploreLCvid = "blob:https://player.vimeo.com/033c910f-291c-d645-8afe-0bee9eb3619e";
 
 function Organization()
 {

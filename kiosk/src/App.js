@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Guides } from './pages/guides';
+import { Guides, Organization } from './pages/guides';
 import { Towns } from './pages/towns';
-import { About, LouisSullivan, Leadership, Collaborators } from './pages/about';
-import { Events } from './pages/events';
+import { About, LouisSullivan, Leadership, Collaborators } from './pages/about/about.js';
+import { Events } from './pages/events/';
 import { Directory } from './pages/directory'
+
 /*
   I have made this page for other pages to fill in
   to the corresponding context.
@@ -21,21 +22,13 @@ import { Directory } from './pages/directory'
     />;
 */
 
+
 const App = ()=>{
   const { Provider, Consumer } = React.createContext();
   const [state, updateState] = useState('guides');//you can change part
 
   return (
     <div>
-    <NavBar/>
-    <Towns/>
-import { Guides, Organization } from './pages';
-
-const App = ()=>{
-  return (
-    <div className="displayBlock">
-      <Guides/>
-      <Organization/>
     <Provider value={{value:state, updateState}}>
       <Consumer>
         {props=>{

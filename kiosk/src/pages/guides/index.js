@@ -1,2 +1,2 @@
 export { Guides } from './guides';
-export { Organization } from './about';
+export { Organization } from '../about';
