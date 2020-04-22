@@ -1,5 +1,6 @@
 import React from "react";
 import { Qrmodal, NavBar } from "../../components/"
+//import { aboutData } from "../../data"
 
 //style
 import "../../sass/about.scss"
@@ -8,61 +9,61 @@ import "../../sass/fonts.scss"
 //the following are all images used in the about pages//
 
 //Organization and Louis Sullivan
-import travelGuideImg from "./pics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
-import impactAwardImg from "./pics/iw-impact-award.jpg"
-import louisSullivanImg from "./pics/history-04-louisSullivan.jpg"
-import floorPlanImg from "./pics/193101_007-web-louisSullivan.jpg"
+import travelGuideImg from "../../assets/image/aboutpics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
+import impactAwardImg from "../../assets/image/aboutpics/iw-impact-award.jpg"
+import louisSullivanImg from "../../assets/image/aboutpics/history-04-louisSullivan.jpg"
+import floorPlanImg from "../../assets/image/aboutpics/193101_007-web-louisSullivan.jpg"
 
 //Leadership
-import bressoudS from "./pics/boardMembers/bressoudS.jpg"
-import bairdC from "./pics/boardMembers/catherineBaird.jpg"
-import baloghA from "./pics/boardMembers/anneBalogh.jpg"
-import birdB from "./pics/boardMembers/birdB.jpg"
-import dutcherC from "./pics/boardMembers/dutcherC.jpg"
-import flowersD from "./pics/boardMembers/flowersD.jpg"
-import fornataroM from "./pics/boardMembers/fornataroM.jpg"
-import hampshireJ from "./pics/boardMembers/hampshireJ.jpg"
-import harknessC from "./pics/boardMembers/harknessC.jpg"
-import harrisM from "./pics/boardMembers/HarrisM.jpg"
-import livingstonJ from "./pics/boardMembers/livingstonJ.jpg"
-import lorasoJ from "./pics/boardMembers/lorasoJ.jpg"
-import mcmanusS from "./pics/boardMembers/mcmanusS.jpg"
-import misnerB from "./pics/boardMembers/misnerB.jpg"
-import nelsonC from "./pics/boardMembers/nelsonC.jpg"
-import petreyD from "./pics/boardMembers/petreyD.jpg"
-import proudfitK from "./pics/boardMembers/proudfitK.jpg"
-import internalTeam from "./pics/boardMembers/theTeam.jpeg"
-import treciakA from "./pics/boardMembers/treciakA.jpg"
-import weaverB from "./pics/boardMembers/weaverB.jpg"
-import wilhelmK from "./pics/boardMembers/wilhelmK.jpg"
+import bressoudS from "../../assets/image/aboutpics/boardMembers/bressoudS.jpg"
+import bairdC from "../../assets/image/aboutpics/boardMembers/catherineBaird.jpg"
+import baloghA from "../../assets/image/aboutpics/boardMembers/anneBalogh.jpg"
+import birdB from "../../assets/image/aboutpics/boardMembers/birdB.jpg"
+import dutcherC from "../../assets/image/aboutpics/boardMembers/dutcherC.jpg"
+import flowersD from "../../assets/image/aboutpics/boardMembers/flowersD.jpg"
+import fornataroM from "../../assets/image/aboutpics/boardMembers/fornataroM.jpg"
+import hampshireJ from "../../assets/image/aboutpics/boardMembers/hampshireJ.jpg"
+import harknessC from "../../assets/image/aboutpics/boardMembers/harknessC.jpg"
+import harrisM from "../../assets/image/aboutpics/boardMembers/HarrisM.jpg"
+import livingstonJ from "../../assets/image/aboutpics/boardMembers/livingstonJ.jpg"
+import lorasoJ from "../../assets/image/aboutpics/boardMembers/lorasoJ.jpg"
+import mcmanusS from "../../assets/image/aboutpics/boardMembers/mcmanusS.jpg"
+import misnerB from "../../assets/image/aboutpics/boardMembers/misnerB.jpg"
+import nelsonC from "../../assets/image/aboutpics/boardMembers/nelsonC.jpg"
+import petreyD from "../../assets/image/aboutpics/boardMembers/petreyD.jpg"
+import proudfitK from "../../assets/image/aboutpics/boardMembers/proudfitK.jpg"
+import internalTeam from "../../assets/image/aboutpics/boardMembers/theTeam.jpeg"
+import treciakA from "../../assets/image/aboutpics/boardMembers/treciakA.jpg"
+import weaverB from "../../assets/image/aboutpics/boardMembers/weaverB.jpg"
+import wilhelmK from "../../assets/image/aboutpics/boardMembers/wilhelmK.jpg"
 
 //collaborators
-import placeHolderImage from "./pics/collaboratorPics/elc-directory-placeholder-01.jpg"
-import ohioTourism from "./pics/collaboratorPics/ohio-tourism.png"
-import ohioHistoryConnection from "./pics/collaboratorPics/ohio-history-connection.png"
-import ohioHotelAndLodgingAssociation from "./pics/collaboratorPics/ohio-hotel-and-lodging-association.png"
-import ohioTravelAssociation from "./pics/collaboratorPics/ohio-travel-association.png"
-import worldHeritageOhio from "./pics/collaboratorPics/world-heritage-ohio.png"
-import greatLakesPublishing from "./pics/collaboratorPics/greatlakespublishing.png"
-import citySceneMediaGroup from "./pics/collaboratorPics/City_scene_media_group.png"
-import martinDigital from "./pics/collaboratorPics/Martin_Digital_edited.png"
-import _614Magazine from "./pics/collaboratorPics/614_updated.png"
-import stockAndBarrel from "./pics/collaboratorPics/stock_and_barrel_edited.png"
-import _1870Magazine from "./pics/collaboratorPics/1870_edited.png"
-import inspirePRgroup from "./pics/collaboratorPics/inspire_pr_Edit.png"
-import ohioTravelPavillion from "./pics/collaboratorPics/Ohio_Travel_Pavillion.png"
-import adRack from "./pics/collaboratorPics/Ad-Rack.png"
-import newarkRotaryClub from "./pics/collaboratorPics/Newark_Rotory.png"
-import lickingCountyChamberOfCommerce from "./pics/collaboratorPics/LCCC.png"
-import lickingCountyHistoricalSociety from "./pics/collaboratorPics/LCHS.png"
-import lickingCountyFoundation from "./pics/collaboratorPics/LCF.png"
-import newAlbanyChamberOfCommerce from "./pics/collaboratorPics/New_Albany_Chamber.jpg"
-import cityOfHeath from "./pics/collaboratorPics/City_of_heath.png"
-import unitedWayOfLickingCounty from "./pics/collaboratorPics/United_way.jpg"
-import AmericanRedCross from "./pics/collaboratorPics/American_Red_Cross.png"
-import granvilleAreaChamberOfCommerce from "./pics/collaboratorPics/Granville_Chamber.png"
-import buckeyeLakeRegionChamberOfCommerce from "./pics/collaboratorPics/buckeyelake.png"
-import culturalAllianceOfLickingCounty from "./pics/collaboratorPics/collab-who.jpg"
+import placeHolderImage from "../../assets/image/aboutpics/collaboratorPics/elc-directory-placeholder-01.jpg"
+import ohioTourism from "../../assets/image/aboutpics/collaboratorPics/ohio-tourism.png"
+import ohioHistoryConnection from "../../assets/image/aboutpics/collaboratorPics/ohio-history-connection.png"
+import ohioHotelAndLodgingAssociation from "../../assets/image/aboutpics/collaboratorPics/ohio-hotel-and-lodging-association.png"
+import ohioTravelAssociation from "../../assets/image/aboutpics/collaboratorPics/ohio-travel-association.png"
+import worldHeritageOhio from "../../assets/image/aboutpics/collaboratorPics/world-heritage-ohio.png"
+import greatLakesPublishing from "../../assets/image/aboutpics/collaboratorPics/greatlakespublishing.png"
+import citySceneMediaGroup from "../../assets/image/aboutpics/collaboratorPics/City_scene_media_group.png"
+import martinDigital from "../../assets/image/aboutpics/collaboratorPics/Martin_Digital_edited.png"
+import _614Magazine from "../../assets/image/aboutpics/collaboratorPics/614_updated.png"
+import stockAndBarrel from "../../assets/image/aboutpics/collaboratorPics/stock_and_barrel_edited.png"
+import _1870Magazine from "../../assets/image/aboutpics/collaboratorPics/1870_edited.png"
+import inspirePRgroup from "../../assets/image/aboutpics/collaboratorPics/inspire_pr_Edit.png"
+import ohioTravelPavillion from "../../assets/image/aboutpics/collaboratorPics/Ohio_Travel_Pavillion.png"
+import adRack from "../../assets/image/aboutpics/collaboratorPics/Ad-Rack.png"
+import newarkRotaryClub from "../../assets/image/aboutpics/collaboratorPics/Newark_Rotory.png"
+import lickingCountyChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/LCCC.png"
+import lickingCountyHistoricalSociety from "../../assets/image/aboutpics/collaboratorPics/LCHS.png"
+import lickingCountyFoundation from "../../assets/image/aboutpics/collaboratorPics/LCF.png"
+import newAlbanyChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/New_Albany_Chamber.jpg"
+import cityOfHeath from "../../assets/image/aboutpics/collaboratorPics/City_of_heath.png"
+import unitedWayOfLickingCounty from "../../assets/image/aboutpics/collaboratorPics/United_way.jpg"
+import AmericanRedCross from "../../assets/image/aboutpics/collaboratorPics/American_Red_Cross.png"
+import granvilleAreaChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/Granville_Chamber.png"
+import buckeyeLakeRegionChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/buckeyelake.png"
+import culturalAllianceOfLickingCounty from "../../assets/image/aboutpics/collaboratorPics/collab-who.jpg"
 
 
 //videos
@@ -117,7 +118,7 @@ function About_sidebar(props)
         </li>
     </ul>
     )
-};
+}
 
 function About(props)
 {
@@ -156,11 +157,10 @@ function About(props)
                                 <img src={travelGuideImg} height="600px" width="600px"></img>
                             </div>
                             <div className="col-md-4">
-                                <span> 2020 TRAVEL MAGAZINE </span>
+                                <span>  </span>
                                 <br />
-                                Whether or not you stay on the beaten path or venture off is up to you... It's all worth the trip.
-                                Check out our latest travel magazine and explore.
-                                <Qrmodal link={"https://explorelc.org/guide/2020-travel-magazine"} buttonText={"GET THE TRAVEL MAGAZINE"} modalText={"Request a copy of the travel magazine using your mobile device"}/>
+                                
+                                <Qrmodal link={""} buttonText={""} modalText={""}/>
                                 {/*qr modal to push magazine to phone */}
                             </div>
                         </div>
@@ -195,7 +195,7 @@ function About(props)
             </div>
           </div>
         )
-};
+}
 
 
 function  LouisSullivan(props)

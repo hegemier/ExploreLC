@@ -135,7 +135,10 @@ const NavBar = (props)=>{
         onTowns,
         onEvents,
         onDirectory,
-        onAbout
+        onAbout,
+        onAbout_LouisSullivan,
+        onAbout_Leadership,
+        onAbout_Collaborators
     } = props;
 
     return (
@@ -154,7 +157,7 @@ const NavBar = (props)=>{
                         <li className="nav-item">
                             <button
                                 type="button"
-                                onClick={()=>onGuides()}
+                                onClick={()=>{alert("clicked!")}}
                                 class="btn btn-outline-light btn-lg">
                                 Guides
                             </button>
