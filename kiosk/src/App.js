@@ -25,7 +25,7 @@ import { Directory } from './pages/directory'
 
 const App = ()=>{
   const { Provider, Consumer } = React.createContext();
-  const [state, updateState] = useState('homr');//you can change part
+  const [state, updateState] = useState('home');//you can change part
 
   return (
     <div>
