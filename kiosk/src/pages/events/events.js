@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavBar, Qrmodal } from '../../components';
 import "./events.scss"
+import "./events.css"
 import "../../sass/fonts.scss"
 import data from "./eventList.json"
 
@@ -9,7 +10,7 @@ const eventList = data.data;
 function EventCards(props) {
   const eventsList = props.eventList;
   const cardList = eventsList.map((event) =>
-    <div className="card text-center">
+    <div className="card text-center" id="event-card">
       <img src={event.pic} className="card-img-top" alt="event img"/>
       <div className="card-body">
         <h5 className="card-title">{event.title}</h5>

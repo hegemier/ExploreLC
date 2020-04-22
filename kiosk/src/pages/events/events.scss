@@ -52,29 +52,15 @@
     text-align: center;
     font-weight: 700;
   }
-  
-  .event-card-img {
-    background-image: url("https://scontent.fmnl4-3.fna.fbcdn.net/v/t1.0-0/p403x403/86177130_10158073318008686_1738766266530791424_n.jpg?_nc_cat=109&_nc_sid=b386c4&_nc_eui2=AeEmLAg5P64_pc6iyhJlq8IJEFAxT2fksXoYYc4pQB0kZpE2wzp0G3Dw-sO-01pUKK0zhRex0hD_HvWbnkGmR-zsbeBCqdvP2ZigIeYzWob3-Q&_nc_ohc=HHZea1gS-W0AX-j5Rsx&_nc_ht=scontent.fmnl4-3.fna&_nc_tp=6&oh=240b07a980b310e51d52264abafdcfbf&oe=5E8071CD");
-    height: 200px;
-    background-size: cover;
-  }
-
-  .card {
-    height: auto;
-  }
-
-  .card-deck {
-    margin-left: 20px;
-    margin-right: 20px;
-
-    .card {
-        margin-right: 5px;
-        margin-left: 5px;
-    }
-  }
 
 #eventNavBarImg {
     background-image: url("https://static1.squarespace.com/static/ta/5bc6137be6666940992e5e76/230/assets/elc-topo-top-01.png");
     background-size: cover;
     width: 100%;
+}
+
+.card-columns {
+  column-gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
