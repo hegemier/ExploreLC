@@ -1,74 +1,12 @@
 import React from "react";
 import { Qrmodal, NavBar } from "../../components/"
-//import { aboutData } from "../../data"
+//All media and exact text displayed is controlled within these data files
+import { aboutData, louisSullivanData, leadershipData, collaboratorsData } from "../../data/aboutData.js"
 
 //style
 import "../../sass/about.scss"
 import "../../sass/fonts.scss"
 
-//the following are all images used in the about pages//
-
-//Organization and Louis Sullivan
-import travelGuideImg from "../../assets/image/aboutpics/2020_Travel_Guide_Ecomm_Web_Ready.jpg"
-import impactAwardImg from "../../assets/image/aboutpics/iw-impact-award.jpg"
-import louisSullivanImg from "../../assets/image/aboutpics/history-04-louisSullivan.jpg"
-import floorPlanImg from "../../assets/image/aboutpics/193101_007-web-louisSullivan.jpg"
-
-//Leadership
-import bressoudS from "../../assets/image/aboutpics/boardMembers/bressoudS.jpg"
-import bairdC from "../../assets/image/aboutpics/boardMembers/catherineBaird.jpg"
-import baloghA from "../../assets/image/aboutpics/boardMembers/anneBalogh.jpg"
-import birdB from "../../assets/image/aboutpics/boardMembers/birdB.jpg"
-import dutcherC from "../../assets/image/aboutpics/boardMembers/dutcherC.jpg"
-import flowersD from "../../assets/image/aboutpics/boardMembers/flowersD.jpg"
-import fornataroM from "../../assets/image/aboutpics/boardMembers/fornataroM.jpg"
-import hampshireJ from "../../assets/image/aboutpics/boardMembers/hampshireJ.jpg"
-import harknessC from "../../assets/image/aboutpics/boardMembers/harknessC.jpg"
-import harrisM from "../../assets/image/aboutpics/boardMembers/HarrisM.jpg"
-import livingstonJ from "../../assets/image/aboutpics/boardMembers/livingstonJ.jpg"
-import lorasoJ from "../../assets/image/aboutpics/boardMembers/lorasoJ.jpg"
-import mcmanusS from "../../assets/image/aboutpics/boardMembers/mcmanusS.jpg"
-import misnerB from "../../assets/image/aboutpics/boardMembers/misnerB.jpg"
-import nelsonC from "../../assets/image/aboutpics/boardMembers/nelsonC.jpg"
-import petreyD from "../../assets/image/aboutpics/boardMembers/petreyD.jpg"
-import proudfitK from "../../assets/image/aboutpics/boardMembers/proudfitK.jpg"
-import internalTeam from "../../assets/image/aboutpics/boardMembers/theTeam.jpeg"
-import treciakA from "../../assets/image/aboutpics/boardMembers/treciakA.jpg"
-import weaverB from "../../assets/image/aboutpics/boardMembers/weaverB.jpg"
-import wilhelmK from "../../assets/image/aboutpics/boardMembers/wilhelmK.jpg"
-
-//collaborators
-import placeHolderImage from "../../assets/image/aboutpics/collaboratorPics/elc-directory-placeholder-01.jpg"
-import ohioTourism from "../../assets/image/aboutpics/collaboratorPics/ohio-tourism.png"
-import ohioHistoryConnection from "../../assets/image/aboutpics/collaboratorPics/ohio-history-connection.png"
-import ohioHotelAndLodgingAssociation from "../../assets/image/aboutpics/collaboratorPics/ohio-hotel-and-lodging-association.png"
-import ohioTravelAssociation from "../../assets/image/aboutpics/collaboratorPics/ohio-travel-association.png"
-import worldHeritageOhio from "../../assets/image/aboutpics/collaboratorPics/world-heritage-ohio.png"
-import greatLakesPublishing from "../../assets/image/aboutpics/collaboratorPics/greatlakespublishing.png"
-import citySceneMediaGroup from "../../assets/image/aboutpics/collaboratorPics/City_scene_media_group.png"
-import martinDigital from "../../assets/image/aboutpics/collaboratorPics/Martin_Digital_edited.png"
-import _614Magazine from "../../assets/image/aboutpics/collaboratorPics/614_updated.png"
-import stockAndBarrel from "../../assets/image/aboutpics/collaboratorPics/stock_and_barrel_edited.png"
-import _1870Magazine from "../../assets/image/aboutpics/collaboratorPics/1870_edited.png"
-import inspirePRgroup from "../../assets/image/aboutpics/collaboratorPics/inspire_pr_Edit.png"
-import ohioTravelPavillion from "../../assets/image/aboutpics/collaboratorPics/Ohio_Travel_Pavillion.png"
-import adRack from "../../assets/image/aboutpics/collaboratorPics/Ad-Rack.png"
-import newarkRotaryClub from "../../assets/image/aboutpics/collaboratorPics/Newark_Rotory.png"
-import lickingCountyChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/LCCC.png"
-import lickingCountyHistoricalSociety from "../../assets/image/aboutpics/collaboratorPics/LCHS.png"
-import lickingCountyFoundation from "../../assets/image/aboutpics/collaboratorPics/LCF.png"
-import newAlbanyChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/New_Albany_Chamber.jpg"
-import cityOfHeath from "../../assets/image/aboutpics/collaboratorPics/City_of_heath.png"
-import unitedWayOfLickingCounty from "../../assets/image/aboutpics/collaboratorPics/United_way.jpg"
-import AmericanRedCross from "../../assets/image/aboutpics/collaboratorPics/American_Red_Cross.png"
-import granvilleAreaChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/Granville_Chamber.png"
-import buckeyeLakeRegionChamberOfCommerce from "../../assets/image/aboutpics/collaboratorPics/buckeyelake.png"
-import culturalAllianceOfLickingCounty from "../../assets/image/aboutpics/collaboratorPics/collab-who.jpg"
-
-
-//videos
-//import exploreLCvid from "../videos/Explore Licking County.mp4"
-//import that one video for the louis sullivan page
 
 function About_sidebar(props)
 /* Contained here is the sidebar for the about pages. By clicking on the names of the pages,
@@ -89,7 +27,7 @@ function About_sidebar(props)
         <li>
             <button
                 type = "button"
-                onClick={()=>props.onAbout_louisSullivan()}
+                onClick={()=>props.onAbout_LouisSullivan()}
                 class="about-page">
                 LOUIS SULLIVAN
             </button>
@@ -97,7 +35,7 @@ function About_sidebar(props)
         <li>
             <button
                 type = "button"
-                onClick={()=>props.onAbout_leadership()}
+                onClick={()=>props.onAbout_Leadership()}
                 class="about-page">
                 LEADERSHIP
             </button>
@@ -105,7 +43,7 @@ function About_sidebar(props)
         <li>
             <button
                 type = "button"
-                onClick={()=>props.onAbout_collaborators()}
+                onClick={()=>props.onAbout_Collaborators()}
                 class="about-page">
                 COLLABORATORS
             </button>
@@ -122,6 +60,13 @@ function About_sidebar(props)
 
 function About(props)
 {
+    var lang = "en";
+    return aboutData.map(item=>{
+        const {overlayImage, header, subHeaderText, section0_text, section1_title, section1_text, section1_media, section1_url, 
+            section1_QRbuttonText, section1_QRmodalText, section2_title, section2_text, section2_url, section2_media,
+            section2_QRbuttonText, section2_QRmodalText, videoMedia} = item;
+        if (lang = "en")
+        {
         return(
           <div>
           <section id="guideBanner">
@@ -137,30 +82,29 @@ function About(props)
 
             <div>
                 <div id="header">
-                    <p align = "center" className="imgHeader"><strong>About our organization</strong></p>
-                    <p align = "center">It's our mission to help you Explore Licking County</p>
+                    <p align = "center" className="imgHeader"><strong>{header}</strong></p>
+                    <p align = "center">{subHeaderText}</p>
                     <br />
                 </div>
                 <div id="body">
                     {About_sidebar(props)}
                     <div id="about" className="container">
                         <div>
-                            <strong>Explore Licking County</strong> is here to help our community and visitors find their way to
-                            a one of a kind Licking County experience. We tell the story of people and their experiences and let those
-                            stories advocate our love for our county.
+                            {section0_text}
                         </div>
                     </div>
                     <br />
                     <div id="travelMagazine" className="container">
                         <div className="row">
                             <div id="travelMagImage" className="col-md-8">
-                                <img src={travelGuideImg} height="600px" width="600px"></img>
+                                <img src={section1_media} height="600px" width="600px"></img>
                             </div>
                             <div className="col-md-4">
-                                <span>  </span>
+                                <span>{section1_title}</span>
                                 <br />
-                                
-                                <Qrmodal link={""} buttonText={""} modalText={""}/>
+                                {section1_text}
+                                <br />
+                                <Qrmodal link={section1_url} buttonText={section1_QRbuttonText} modalText={section1_QRmodalText}/>
                                 {/*qr modal to push magazine to phone */}
                             </div>
                         </div>
@@ -169,14 +113,13 @@ function About(props)
                     <div id="impactAwards" className="container">
                         <div className="row">
                             <div className="col-md-4">  
-                                <span> IMPACT AWARDS </span>
+                                <span> {section2_title} </span>
                                 <br />
-                                Every year the Impact Awards are presented by Explore Licking County to outstanding tourism partners.
-                                While we value all partners in our network, we wish to acknowledge those who go above and beyond.
-                            </div>              
+                                {section2_text}
+                                </div>              
                             <div className="col-md-8">
-                                <img src={impactAwardImg}></img>
-                                {/*modal link to redirect to impact award page*/}
+                                <img src={section2_media}></img>
+                                {/*modal link to redirect to impact award page? maybe?*/}
                             </div>
                         </div>
                     </div>
@@ -194,85 +137,21 @@ function About(props)
                 </div>
             </div>
           </div>
-        )
+            )
+        }
+    })
 }
 
 
-function  LouisSullivan(props)
+function LouisSullivan(props)
 {
-    return(
-        <div>
-        <section id="guideBanner">
-            <NavBar
-                onHome={props.onHome}
-                onGuides={props.onGuides}
-                onTowns={props.onTowns}
-                onEvents={props.onEvents}
-                onDirectory={props.onDirectory}
-                onAbout={props.onAbout}
-            />
-         </section>            
-            <div id="header">
-                <p align = "center"><strong>The Louis Sullivan Building</strong></p>
-                <br />
-            </div>
-            <div id="body">
-                {About_sidebar(props)}
-                PLACEHOLDER FOR VIDEO
-                {/*
-                <div id="video">
-                    <video src="kiosk/src/Sullivan Restoration Part One" align="center" controls>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                */}
-                <div id="about" className="container">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <span>ABOUT</span>
-                            <br />
-                            The Louis Sullivan Building of Newark has graced the Courthouse Square for over a century
-                            at One North Third Street.  It was built in 1914 and opened its doors on August 25, 1915 
-                            as The Home Building Association Company, commonly known as “The Old Home”.  One of only eight 
-                            banks designed by noted American architect Louis Sullivan, it is both a national treasure and
-                             a treasured piece of Central Ohio’s heritage.  Through the years, the Sullivan Building was 
-                             also home to a butcher shop, a jewelry store and eventually an ice cream parlor. 
-                              With each new tenant the interior was altered, but the building’s historic and architectural
-                               significance never changed.  In 1973, it was added to the National Register of Historic Places.
-                        </div>
-                        <div id="imageOfLouisSullivanBuilding" className="col-md-6">
-                        <img src={louisSullivanImg} height="95%" width="95%"></img>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div id="imageOfFloorPlan" className="col-md-6">
-                                <img src={floorPlanImg} height="190%" width="220%"></img>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            In 2013, the building was generously gifted to the Licking County Foundation by Newark native,
-                             Stephen Jones.  Since early 2014, the Licking County Foundation and a team of community
-                              volunteers known as Team Sullivan have been working to develop a plan for the Louis 
-                              Sullivan Building of Newark’s restoration and reuse.  The vision has always been to 
-                              create a valuable space that is financially self-sustaining and open for the public to enjoy, 
-                              celebrate and study.  Today, the team continues to work with that goal in mind by creating a new 
-                              home for Explore Licking County.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="footer">
-            </div>
-        </div>
-    )
-}
-
-
-function Leadership(props)
-{
-    return(
-        <div>
+    var lang = "en";
+    return louisSullivanData.map(item=>{
+        const {overlayImage, header, videoMedia, section1_header, section1_text, section1_media, section2_text, section2_media} = item;
+        if (lang = "en")
+        {
+        return(
+            <div>
             <section id="guideBanner">
                 <NavBar
                     onHome={props.onHome}
@@ -282,311 +161,388 @@ function Leadership(props)
                     onDirectory={props.onDirectory}
                     onAbout={props.onAbout}
                 />
-            </section>
-            <div id="header">
-                <p align = "center"><strong>The one and only Explore Licking county team</strong></p>
-                <br />
-            </div>
-            {About_sidebar(props)}
-            <div className="container">
-                <div id="internal team">
-                    The internal team
-                    <br />
-                    <img src={internalTeam} height="100%" width="100%"></img>
-                    <br />
-                    Image taken at Denison Art Space:
-                    <br />
-                    Garrett Martin, Dan Moder, Carol Thress, Alex Trujillo
+            </section>            
+                <div id="header">
+                    <p align = "center"><strong> {header} </strong></p>
                     <br />
                 </div>
-                <div id="boardOfDirectors">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <img src={bressoudS} height="100%" width="100%"></img>
-                            Suzanne Bressoud - Board Chair 20/21
+                <div id="body">
+                    {About_sidebar(props)}
+                    PLACEHOLDER FOR VIDEO {videoMedia}
+                    <div id="about" className="container">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <span>{section1_header}</span>
+                                <br />
+                                {section1_text}
+                            </div>
+                            <div id="imageOfLouisSullivanBuilding" className="col-md-6">
+                            <img src={section1_media} height="95%" width="95%"></img>
+                            </div>
                         </div>
-                        <div className="col-md-3">
-                            <img src={fornataroM} height="100%" width="100%"></img>
-                            Mike Fornataro - Immediate Past Chair
-                        </div>
-                        <div className="col-md-3">
-                            <img src={proudfitK} height="100%" width="100%"></img>
-                            Kendra Proudfit - Board Treasurer
-                        </div>
-                        <div className="col-md-3">
-                            <img src={misnerB} height="100%" width="100%"></img>
-                            Brittany Misner - Board Secretary
-                        </div>
-                    </div>
-                    <br /><br />
-                    <div className="row">
-                        <div className="col-md-3">
-                            <img src={birdB} height="100%" width="100%"></img>
-                            Bryn Bird
-                        </div>
-                        <div className="col-md-3">
-                            <img src={flowersD} height="100%" width="100%"></img>
-                            Duane Flowers
-                        </div>
-                        <div className="col-md-3">
-                            <img src={harrisM} height="100%" width="100%"></img>
-                            Michael Harris
-                        </div>
-                        <div className="col-md-3">
-                            <img src={hampshireJ} height="100%" width="100%"></img>
-                            Jude Hampshire
-                        </div>
-                    </div>
-                    <br /><br />
-                    <div className="row">
-                        <div className="col-md-3">
-                            <img src={petreyD} height="100%" width="100%"></img>
-                            Dee Dee Petrey
-                        </div>
-                        <div className="col-md-3">
-                            <img src={nelsonC} height="100%" width="100%"></img>
-                            Cherie Nelson
-                        </div>
-                        <div className="col-md-3">
-                            <img src={mcmanusS} height="100%" width="100%"></img>
-                            Stephanie McManus
-                        </div>
-                        <div className="col-md-3">
-                            <img src={treciakA} height="100%" width="100%"></img>
-                            Amy Treciak
-                        </div>
-                    </div><br />
-                    <br /><br />
-                    <div className="row">
-                        <div className="col-md-3">
-                            <img src={weaverB} height="100%" width="100%"></img>
-                            Bill Weaver
-                        </div>
-                        <div className="col-md-3">
-                            <img src={dutcherC} height="100%" width="100%"></img>
-                            Chip Dutcher
-                        </div>
-                        <div className="col-md-3">
-                            <img src={bairdC} height="100%" width="100%"></img>
-                            Catherine Baird
-                        </div>
-                        <div className="col-md-3">
-                            <img src={harknessC} height="100%" width="100%"></img>
-                            Christoper Harkness
-                        </div>
-                    </div>
-                    <br /><br />
-                    <div className="row">
-                        <div className="col-md-3">
-                            <img src={livingstonJ} height="100%" width="100%"></img>
-                            Jay Livingston
-                        </div>
-                        <div className="col-md-3">
-                            <img src={wilhelmK} height="100%" width="100%"></img>
-                            Kim Wilhelm
-                        </div>
-                        <div className="col-md-3">
-                            <img src={baloghA} height="100%" width="100%"></img>
-                            Anne Balogh
-                        </div>
-                        <div className="col-md-3">
-                            <img src={lorasoJ} height="100%" width="100%"></img>
-                            Janice LoRaso
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div id="imageOfFloorPlan" className="col-md-6">
+                                    <img src={section2_media} height="190%" width="220%"></img>
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                {section2_text}
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div id="footer">
+                </div>
             </div>
-        </div>
-    )
+            )
+        }
+    })
+}
+
+
+function Leadership(props)
+{
+    var lang = "en";
+    return leadershipData.map(item=>{
+        const {overlayImage, header, subHeaderText, image1, image1_desc, section1_header, person1_pic, person1_name, person2_pic,
+            person2_name, person3_pic, person3_name, person4_pic, person4_name, person5_pic, person5_name, person6_pic, 
+            person6_name, person7_pic, person7_name, person8_pic, person8_name, person9_pic, person9_name, person10_pic, 
+            person10_name, person11_pic, person11_name, person12_pic, person12_name, person13_pic, person13_name, person14_pic, 
+            person14_name, person15_pic, person15_name, person16_pic, person16_name, person17_pic, person17_name, person18_pic, 
+            person18_name, person19_pic, person19_name, person20_pic, person20_name} = item;
+        if (lang = "en")
+        {
+        return(
+            <div>
+                <section id="guideBanner">
+                    <NavBar
+                        onHome={props.onHome}
+                        onGuides={props.onGuides}
+                        onTowns={props.onTowns}
+                        onEvents={props.onEvents}
+                        onDirectory={props.onDirectory}
+                        onAbout={props.onAbout}
+                    />
+                </section>
+                <div id="header">
+                    <p align = "center"><strong>{header}</strong></p>
+                    <br />
+                </div>
+                {About_sidebar(props)}
+                <div className="container">
+                    <div id="internal team">
+                        {subHeaderText}
+                        <br />
+                        <img src={image1} height="100%" width="100%"></img>
+                        <br />
+                        {image1_desc}
+                        <br />
+                    </div>
+                    <br />
+                    {section1_header}
+                    <div id="boardOfDirectors">
+                        <div className="row">
+                            <div className="col-md-3">
+                                <img src={person1_pic} height="100%" width="100%"></img>
+                                {person1_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person2_pic} height="100%" width="100%"></img>
+                                {person2_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person3_pic} height="100%" width="100%"></img>
+                                {person3_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person4_pic} height="100%" width="100%"></img>
+                                {person4_name}
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div className="row">
+                            <div className="col-md-3">
+                                <img src={person5_pic} height="100%" width="100%"></img>
+                                {person5_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person6_pic} height="100%" width="100%"></img>
+                                {person6_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person7_pic} height="100%" width="100%"></img>
+                                {person7_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person8_pic} height="100%" width="100%"></img>
+                                {person8_name}
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div className="row">
+                            <div className="col-md-3">
+                                <img src={person9_pic} height="100%" width="100%"></img>
+                                {person9_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person10_pic} height="100%" width="100%"></img>
+                                {person10_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person11_pic} height="100%" width="100%"></img>
+                                {person11_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person12_pic} height="100%" width="100%"></img>
+                                {person12_name}
+                            </div>
+                        </div><br />
+                        <br /><br />
+                        <div className="row">
+                            <div className="col-md-3">
+                                <img src={person13_pic} height="100%" width="100%"></img>
+                                {person13_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person14_pic} height="100%" width="100%"></img>
+                                {person14_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person15_pic} height="100%" width="100%"></img>
+                                {person15_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person16_pic} height="100%" width="100%"></img>
+                                {person16_name}
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div className="row">
+                            <div className="col-md-3">
+                                <img src={person17_pic} height="100%" width="100%"></img>
+                                {person17_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person18_pic} height="100%" width="100%"></img>
+                                {person18_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person19_pic} height="100%" width="100%"></img>
+                                {person19_name}
+                            </div>
+                            <div className="col-md-3">
+                                <img src={person20_pic} height="100%" width="100%"></img>
+                                {person20_name}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            )
+        }
+    })
 }
 
 
 function Collaborators(props)
 {
-    return(
-        <div>
-          <section id="guideBanner">
-                <NavBar
-                    onHome={props.onHome}
-                    onGuides={props.onGuides}
-                    onTowns={props.onTowns}
-                    onEvents={props.onEvents}
-                    onDirectory={props.onDirectory}
-                    onAbout={props.onAbout}
-                />
-            </section>
-            <div id="header">
-                <p align = "center"><strong>We celebrate the collaborators that are part of our story</strong></p>
-                <br />
+    var lang = "en";
+    return collaboratorsData.map(item=>{
+        const {overlayImage, header, collabHeader1, collabSubHeader1, h1_collab1, h1_collab2, h1_collab3, h1_collab4, h1_collab5,
+            h1_pic1, h1_pic2, h1_pic3, h1_pic4, h1_pic5, collabHeader2, collabSubHeader2, h2_collab1, h2_collab2,
+            h2_collab3_, h2_collab4, h2_collab5, h2_collab6, h2_collab7, h2_collab8, h2_collab9, h2_collab10, h2_pic1,
+            h2_pic2, h2_pic3, h2_pic4, h2_pic5, h2_pic6, h2_pic7, h2_pic8, h2_pic9, h2_pic10, collabHeader3, collabSubHeader3,
+            h3_collab1, h3_collab2, h3_collab3, h3_collab4, h3_collab5, h3_collab6, h3_collab7, h3_collab8, h3_collab9, h3_collab10,
+            h3_collab11, h3_collab12, h3_collab13, h3_collab14, h3_collab15, h3_pic1, h3_pic2, h3_pic3, h3_pic4, h3_pic5, h3_pic6,
+            h3_pic7, h3_pic8, h3_pic9, h3_pic10, h3_pic11, h3_pic12, h3_pic13, h3_pic14, h3_pic15} = item;
+        if (lang = "en")
+        {
+        return(
+            <div>
+            <section id="guideBanner">
+                    <NavBar
+                        onHome={props.onHome}
+                        onGuides={props.onGuides}
+                        onTowns={props.onTowns}
+                        onEvents={props.onEvents}
+                        onDirectory={props.onDirectory}
+                        onAbout={props.onAbout}
+                    />
+                </section>
+                <div id="header">
+                    <p align = "center"><strong>{header}</strong></p>
+                    <br />
+                </div>
+                {About_sidebar(props)}
+                <div className="container">
+                    <div id="state collaborators">
+                        <span>{collabHeader1}</span>
+                        <br />
+                        {collabSubHeader1}
+                        <br /><br />
+                        <div className="row">
+                            <div className="col-md-2">
+                                <img src={h1_pic1} height="200px" width="180px"></img>
+                                <Qrmodal link={"https://ohio.org/"} buttonText={"Ohio Tourism"} modalText={"Learn more about Ohio Tourism on your mobile device"}/>
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h1_pic2} height="200px" width="180px"></img>
+                                <Qrmodal link={"https://www.ohiohistory.org/"} buttonText={"Ohio History Connection"} modalText={"Learn more about Ohio History Connection on your mobile device"}/>
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h1_pic3} height="200px" width="180px"></img>
+                                <Qrmodal link={"https://www.ohiolodging.com/"} buttonText={"Ohio Hotel and Lodging Association"} modalText={"Learn more about the Ohio Hotel and Lodging Association on your mobile device"}/>
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h1_pic4} height="200px" width="180px"></img>
+                                <Qrmodal link={"https://www.ohiotravel.org/aws/OHTRV/pt/sp/home_page"} buttonText={"Ohio Travel Association"} modalText={"Learn more about the Ohio Travel Association on your mobile device"}/>
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h1_pic5} height="200px" width="180px"></img>
+                                <Qrmodal link={"http://worldheritageohio.org/"} buttonText={"World Heritage Ohio"} modalText={"Learn more about World Heritage Ohio on your mobile device"}/>
+                            </div>
+                        </div>
+                    </div>
+                    <hr></hr>
+                    <br /><br /><br />
+                    <div id="sales and marketing">
+                        <span>{collabHeader2}</span>
+                        <br />
+                        {collabSubHeader2}
+                        <br /><br />
+                        <div className="row">
+                            <div className="col-md-2">
+                                <img src={h2_pic1} height="200px" width="180px"></img>
+                                Great Lakes Publishing
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h2_pic2} heigh="200px" width="180px"></img>
+                                Cityscene Media Group
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h2_pic3} heigh="200px" width="180px"></img>
+                                Martin Digital
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h2_pic4} heigh="200px" width="180px"></img>
+                                614 Magazine
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h2_pic5} heigh="200px" width="180px"></img>
+                                Stock & Barrel
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-2">
+                                <img src={h2_pic6} heigh="200px" width="180px"></img>
+                                1870 Magazine
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h2_pic7} heigh="200px" width="180px"></img>
+                                Inspire PR Group
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h2_pic8} heigh="200px" width="180px"></img>
+                                Ohio Travel Pavillion
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h2_pic9} heigh="200px" width="180px"></img>
+                                Ad-Rack
+                            </div>
+                            <div className="col-md-2">
+                                {/**Empty column*/}
+                            </div>
+                        </div>
+                    </div>
+                    <hr></hr>
+                    <br /><br /><br />
+                    <div id="local collaborators">
+                        <span>{collabHeader3}</span>
+                        <br />
+                        {collabSubHeader3}
+                        <br /><br />
+                        <div className="row">
+                            <div className="col-md-2">
+                                <img src={h3_pic1} height="200px" width="180px"></img>
+                                Licking County Historical Alliance
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic2} height="200px" width="180px"></img>
+                                Newark Rotary Club
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic3} height="200px" width="180px"></img>
+                                Licking County Chamber of Commerce
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic4} height="200px" width="180px"></img>
+                                Licking County Historical Society
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic5} height="200px" width="180px"></img>
+                                Licking County Foundation
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-2">
+                                <img src={h3_pic6} height="200px" width="180px"></img>
+                                New Albany Chamber of Commerce
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic7} height="200px" width="180px"></img>
+                                Pataskala Chamber of Commerce
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic8} height="200px" width="180px"></img>
+                                City of Newark
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic9} height="200px" width="180px"></img>
+                                City of Heath
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic10} height="200px" width="180px"></img>
+                                United Way of Licking County
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-2">
+                                <img src={h3_pic11} height="200px" width="180px"></img>
+                                American Red Cross East and South Central Ohio
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic12} height="200px" width="180px"></img>
+                                Granville Area Chamber of Commerce
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic13} height="200px" width="180px"></img>
+                                Buckeye Lake Region Chamber of Commerce
+                            </div>
+                            <div className="col-md-2">
+                                <img src={h3_pic14} height="200px" width="180px"></img>
+                                Cultural Alliance of Licking County
+                            </div>
+                            <div className="col-md-2">
+                                {/*Empty Column*/}
+                            </div>
+                        </div>
+                        {/*If adding more rows is desired, use the following template:
+                        <div className="row"
+                            <div className="col-md-2">
+                                <img src={imageName} height="200px" width="180px"></img>
+                                name of organization here
+                            </div>
+                            ^^^ this is a column, there can be up to 5 of these divs in one row div
+                        */}
+                    </div>
+                    <hr></hr>
+                    <br /><br /><br />
+                </div>
             </div>
-            {About_sidebar(props)}
-            <div className="container">
-                <div id="state collaborators">
-                    <span>State collborators</span>
-                    <br />
-                    We reach beyond our borders and forge the partnerships that spark our creativity and fuel the passion.
-                    <br /><br />
-                    <div className="row">
-                        <div className="col-md-2">
-                            <img src={ohioTourism} height="200px" width="180px"></img>
-                            <Qrmodal link={"https://ohio.org/"} buttonText={"Ohio Tourism"} modalText={"Learn more about Ohio Tourism on your mobile device"}/>
-                        </div>
-                        <div className="col-md-2">
-                            <img src={ohioHistoryConnection} height="200px" width="180px"></img>
-                            <Qrmodal link={"https://www.ohiohistory.org/"} buttonText={"Ohio History Connection"} modalText={"Learn more about Ohio History Connection on your mobile device"}/>
-                        </div>
-                        <div className="col-md-2">
-                            <img src={ohioHotelAndLodgingAssociation} height="200px" width="180px"></img>
-                            <Qrmodal link={"https://www.ohiolodging.com/"} buttonText={"Ohio Hotel and Lodging Association"} modalText={"Learn more about the Ohio Hotel and Lodging Association on your mobile device"}/>
-                        </div>
-                        <div className="col-md-2">
-                            <img src={ohioTravelAssociation} height="200px" width="180px"></img>
-                            <Qrmodal link={"https://www.ohiotravel.org/aws/OHTRV/pt/sp/home_page"} buttonText={"Ohio Travel Association"} modalText={"Learn more about the Ohio Travel Association on your mobile device"}/>
-                        </div>
-                        <div className="col-md-2">
-                            <img src={worldHeritageOhio} height="200px" width="180px"></img>
-                            <Qrmodal link={"http://worldheritageohio.org/"} buttonText={"World Heritage Ohio"} modalText={"Learn more about World Heritage Ohio on your mobile device"}/>
-                        </div>
-                    </div>
-                </div>
-                <hr></hr>
-                <br /><br /><br />
-                <div id="sales and marketing">
-                    <span>Sales and marketing</span>
-                    <br />
-                    Some people call it sales, we call it storytelling.
-                    We make the story available to larger audiences through our friendships with the marketing community.
-                    <br /><br />
-                    <div className="row">
-                        <div className="col-md-2">
-                            <img src={greatLakesPublishing} height="200px" width="180px"></img>
-                            Great Lakes Publishing
-                        </div>
-                        <div className="col-md-2">
-                            <img src={citySceneMediaGroup} heigh="200px" width="180px"></img>
-                            Cityscene Media Group
-                        </div>
-                        <div className="col-md-2">
-                            <img src={martinDigital} heigh="200px" width="180px"></img>
-                            Martin Digital
-                        </div>
-                        <div className="col-md-2">
-                            <img src={_614Magazine} heigh="200px" width="180px"></img>
-                            614 Magazine
-                        </div>
-                        <div className="col-md-2">
-                            <img src={stockAndBarrel} heigh="200px" width="180px"></img>
-                            Stock & Barrel
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-2">
-                            <img src={_1870Magazine} heigh="200px" width="180px"></img>
-                            1870 Magazine
-                        </div>
-                        <div className="col-md-2">
-                            <img src={inspirePRgroup} heigh="200px" width="180px"></img>
-                            Inspire PR Group
-                        </div>
-                        <div className="col-md-2">
-                            <img src={ohioTravelPavillion} heigh="200px" width="180px"></img>
-                            Ohio Travel Pavillion
-                        </div>
-                        <div className="col-md-2">
-                            <img src={adRack} heigh="200px" width="180px"></img>
-                            Ad-Rack
-                        </div>
-                        <div className="col-md-2">
-                            {/**Empty column*/}
-                        </div>
-                    </div>
-                </div>
-                <hr></hr>
-                <br /><br /><br />
-                <div id="local collaborators">
-                    <span>Local collaborators</span>
-                    <br />
-                    There is pride and enthusiasm in our communities, and we shake hands locally to keep the momentum.
-                    <br /><br />
-                    <div className="row">
-                        <div className="col-md-2">
-                            <img src={placeHolderImage} height="200px" width="180px"></img>
-                            Licking County Historical Alliance
-                        </div>
-                        <div className="col-md-2">
-                            <img src={newarkRotaryClub} height="200px" width="180px"></img>
-                            Newark Rotary Club
-                        </div>
-                        <div className="col-md-2">
-                            <img src={lickingCountyChamberOfCommerce} height="200px" width="180px"></img>
-                            Licking County Chamber of Commerce
-                        </div>
-                        <div className="col-md-2">
-                            <img src={lickingCountyHistoricalSociety} height="200px" width="180px"></img>
-                            Licking County Historical Society
-                        </div>
-                        <div className="col-md-2">
-                            <img src={lickingCountyFoundation} height="200px" width="180px"></img>
-                            Licking County Foundation
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-2">
-                            <img src={newAlbanyChamberOfCommerce} height="200px" width="180px"></img>
-                            New Albany Chamber of Commerce
-                        </div>
-                        <div className="col-md-2">
-                            <img src={placeHolderImage} height="200px" width="180px"></img>
-                            Pataskala Chamber of Commerce
-                        </div>
-                        <div className="col-md-2">
-                            <img src={placeHolderImage} height="200px" width="180px"></img>
-                            City of Newark
-                        </div>
-                        <div className="col-md-2">
-                            <img src={cityOfHeath} height="200px" width="180px"></img>
-                            City of Heath
-                        </div>
-                        <div className="col-md-2">
-                            <img src={unitedWayOfLickingCounty} height="200px" width="180px"></img>
-                            United Way of Licking County
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-2">
-                            <img src={AmericanRedCross} height="200px" width="180px"></img>
-                            American Red Cross East and South Central Ohio
-                        </div>
-                        <div className="col-md-2">
-                            <img src={granvilleAreaChamberOfCommerce} height="200px" width="180px"></img>
-                            Granville Area Chamber of Commerce
-                        </div>
-                        <div className="col-md-2">
-                            <img src={buckeyeLakeRegionChamberOfCommerce} height="200px" width="180px"></img>
-                            Buckeye Lake Region Chamber of Commerce
-                        </div>
-                        <div className="col-md-2">
-                            <img src={culturalAllianceOfLickingCounty} height="200px" width="180px"></img>
-                            Cultural Alliance of Licking County
-                        </div>
-                        <div className="col-md-2">
-                            {/*Empty Column*/}
-                        </div>
-                    </div>
-                    {/*If adding more rows is desired, use the following template:
-                    <div className="row"
-                        <div className="col-md-2">
-                            <img src={imageName} height="200px" width="180px"></img>
-                            name of organization here
-                        </div>
-                        ^^^ this is a column, there can be up to 5 of these divs in one row div
-                    */}
-                </div>
-                <hr></hr>
-                <br /><br /><br />
-            </div>
-        </div>
-    )
+            )
+        }
+    })
 }
 
 /*
