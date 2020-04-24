@@ -108,7 +108,7 @@ const leadershipData = [
         image1_desc : "Image taken at Denison Art Space: Garrett Martin, Dan Moder, Carol Thress, Alex Trujillo",
         section1_header: "Board of directors",
         person1_pic : bressoudS,
-        person1_name : "Suzzanne Bressoud - Board Chair 20/21",
+        person1_name : "Suzanne Bressoud - Board Chair 20/21",
         person2_pic : fornataroM,
         person2_name : "Mike Fornataro - Immediate Past Chair",
         person3_pic : proudfitK,

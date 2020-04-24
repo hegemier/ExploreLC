@@ -22,39 +22,44 @@ function About_sidebar(props)
                 <button
                     type = "button"
                     onClick={()=>props.onAbout()}
-                    class="about-page">
-                    ORGANIZATION
+                    class="btn btn-outline-dark btn-black">
+                    Organization
                 </button>           
             </li>
+            <br />
             <li>
                 <button
                     type = "button"
                     onClick={()=>props.onAbout_LouisSullivan()}
-                    class="about-page">
-                    LOUIS SULLIVAN
+                    class="btn btn-outline-dark btn-black">
+                    Louis Sullivan
                 </button>
             </li>
+            <br />
             <li>
                 <button
                     type = "button"
                     onClick={()=>props.onAbout_Leadership()}
-                    class="about-page">
-                    LEADERSHIP
+                    class="btn btn-outline-dark btn-black">
+                    Leadership
                 </button>
             </li>
+            <br />
             <li>
                 <button
                     type = "button"
                     onClick={()=>props.onAbout_Collaborators()}
-                    class="about-page">
-                    COLLABORATORS
+                    class="btn btn-outline-dark btn-black">
+                    Collaborators
                 </button>
             </li>
+            <br />
             <li>
-                <Qrmodal link={"https://explorelc.org/contact"} buttonText={"CONTACT"} modalText={"Contact us using your mobile device"}/>
+                <Qrmodal link={"https://explorelc.org/contact"} buttonText={"Contact"} modalText={"Contact us using your mobile device"}/>
             </li>
+            <br />
             <li>
-                <Qrmodal link={"https://explorelc.org/partners"} buttonText={"PARTNERS"} modalText={"See how you can partner with us using your mobile device"}/>
+                <Qrmodal link={"https://explorelc.org/partners"} buttonText={"Partners"} modalText={"See how you can partner with us using your mobile device"}/>
             </li>
         </ul>
     </div>
@@ -74,19 +79,19 @@ function About(props)
             <div>
             <div className = "organization-bg">
                 <div className= "overlay-div"></div>
-                    <NavBar
-                        onHome={props.onHome}
-                        onGuides={props.onGuides}
-                        onTowns={props.onTowns}
-                        onEvents={props.onEvents}
-                        onDirectory={props.onDirectory}
-                        onAbout={props.onAbout}
-                    />
-                    <div id="header">
-                        <p align = "center" className="imgHeader">{header}</p>
-                        <p align = "center" className="imgHeader-2">{subHeaderText}</p>
-                        <br />
-                    </div>
+                <NavBar
+                    onHome={props.onHome}
+                    onGuides={props.onGuides}
+                    onTowns={props.onTowns}
+                    onEvents={props.onEvents}
+                    onDirectory={props.onDirectory}
+                    onAbout={props.onAbout}
+                />
+                <div id="header">
+                    <p align = "center" className="imgHeader">{header}</p>
+                    <p align = "center" className="imgHeader-2">{subHeaderText}</p>
+                    <br />
+                </div>
             </div>
             <br /><br />
             <div>
@@ -160,42 +165,52 @@ function LouisSullivan(props)
         {
         return(
             <div>
-            <section id="guideBanner">
-                <NavBar
-                    onHome={props.onHome}
-                    onGuides={props.onGuides}
-                    onTowns={props.onTowns}
-                    onEvents={props.onEvents}
-                    onDirectory={props.onDirectory}
-                    onAbout={props.onAbout}
-                />
-            </section>            
-                <div id="header">
-                    <p align = "center"><strong> {header} </strong></p>
-                    <br />
+                <div className="louisSullivan-bg">
+                    <div className="overlay-div"></div>
+                    <NavBar
+                        onHome={props.onHome}
+                        onGuides={props.onGuides}
+                        onTowns={props.onTowns}
+                        onEvents={props.onEvents}
+                        onDirectory={props.onDirectory}
+                        onAbout={props.onAbout}
+                    />           
+                    <div id="header">
+                        <p align = "center" className="imgHeader"> {header} </p>
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    </div>
                 </div>
+                <br /><br />
                 <div id="body">
                     {About_sidebar(props)}
-                    PLACEHOLDER FOR VIDEO {videoMedia}
+                    <br /><br />
+                    PLACEHOLDER FOR VIDEO
+                    {/*
+                    <video src={videoMedia} align="center" controls>
+                    Error loading video
+                    </video>  
+                    */}
                     <div id="about" className="container">
                         <div className="row">
                             <div className="col-md-6">
-                                <span>{section1_header}</span>
+                                <span className="louisSullivan-section-header">{section1_header}</span>
                                 <br />
-                                {section1_text}
+                                <p className="section-text">{section1_text}</p>
                             </div>
                             <div id="imageOfLouisSullivanBuilding" className="col-md-6">
-                            <img src={section1_media} height="95%" width="95%"></img>
+                            <img align="center" margin-left="25px" src={section1_media} height="400px" width="450px"></img>
                             </div>
                         </div>
+                        <br /><br />
                         <div className="row">
                             <div className="col-md-6">
                                 <div id="imageOfFloorPlan" className="col-md-6">
-                                    <img src={section2_media} height="190%" width="220%"></img>
+                                    <img src={section2_media} height="400px" width="450px"></img>
                                 </div>
                             </div>
+
                             <div className="col-md-6">
-                                {section2_text}
+                                <p className="section-text">{section2_text}</p>
                             </div>
                         </div>
                     </div>
@@ -223,7 +238,8 @@ function Leadership(props)
         {
         return(
             <div>
-                <section id="guideBanner">
+                <div className="default-bg">
+                    <div className= "overlay-div"></div>
                     <NavBar
                         onHome={props.onHome}
                         onGuides={props.onGuides}
@@ -232,11 +248,12 @@ function Leadership(props)
                         onDirectory={props.onDirectory}
                         onAbout={props.onAbout}
                     />
-                </section>
-                <div id="header">
-                    <p align = "center"><strong>{header}</strong></p>
-                    <br />
+                    <div id="header">
+                        <p align = "center" className="imgHeader">{header}</p>
+                        <br /><br /><br /><br /><br />
+                    </div>
                 </div>
+                <br /><br />
                 {About_sidebar(props)}
                 <div className="container">
                     <div id="internal team">

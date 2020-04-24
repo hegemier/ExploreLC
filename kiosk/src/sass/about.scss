@@ -1,5 +1,6 @@
 .imgHeader 
 {
+  filter: brightness(100%);
   display: block;
   font-family: Libre Baskerville;
   font-weight: 400;
@@ -40,7 +41,17 @@
 
 .louisSullivan-bg
 {
-  background-image: url("../assets/image/aboutpics/louisSullivanOverlay.jpg")
+  //filter: brightness(85%);
+  background-image: url("../assets/image/aboutpics/louisSullivanOverlay.jpg");
+  background-position: 0% 30%;
+  background-size: cover;
+}
+
+.default-bg
+{
+  background-image: url("../assets/image/aboutpics/defaultOverlay.jpg");
+  background-position: 0% 30%;
+  background-size: cover;
 }
 
 .sidebarItems
@@ -62,12 +73,23 @@
   /*font-family : proxima-nova;*/
   font-weight : bold;
   font-style : normal;
-  font-size : 14px;
+  font-size : 19px;
   letter-spacing : 1px;
   text-transform : uppercase;
   text-decoration : none;
   color : #d53030;
   display : block;
+}
+
+.about-sidebar
+{
+  background-color : cyan;
+  border :black;
+  color : black;
+  text-align : center;
+  text-decoration : none;
+  display : inline-block;
+  /*margin:0px 10px 0px 10px;*/
 }
 
 .introText
@@ -94,6 +116,7 @@
   vertical-align: -200px;
   font-weight: bold;
   font-style: normal;
+  font-size: 19px;
   letter-spacing: .15em;
   text-transform: uppercase;
   line-height: 1.1em;
@@ -102,6 +125,24 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: #a3a3a3;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.louisSullivan-section-header
+{
+  margin-top: 0;
+  margin: 1em 0 .5em;
+  color: rgba(26,26,26,.9);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  text-rendering: optimizeLegibility;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -121,10 +162,19 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgba(0,0,0,.68);
-  font-size: 13px !important;
+  font-size: 14px !important;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+
+ul 
+{
+  list-style-type: none;
+}
+/*
+.container darken-img {
+  filter: brightness(90%);
+}*/
