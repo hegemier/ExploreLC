@@ -1,5 +1,6 @@
 import React from 'react';
 import { NAVLOGO } from '../assets';
+import "./navBar.scss";
 
 /*
     This is navigation bar component to be included
@@ -54,7 +55,7 @@ const NavBar = (props)=>{
                             <button
                                 type="button"
                                 onClick={()=>onGuides()}
-                                class="btn btn-outline-light btn-lg">
+                                className="btn btn-outline-light btn-lg">
                                 Guides
                             </button>
                         </li>
@@ -62,7 +63,7 @@ const NavBar = (props)=>{
                             <button
                                 type="button"
                                 onClick={()=>onTowns()}
-                                class="btn btn-outline-light btn-lg">
+                                className="btn btn-outline-light btn-lg">
                                 Towns
                             </button>
                         </li>
@@ -70,7 +71,7 @@ const NavBar = (props)=>{
                             <button
                                 type="button"
                                 onClick={()=>onEvents()}
-                                class="btn btn-outline-light btn-lg">
+                                className="btn btn-outline-light btn-lg">
                                 Events
                             </button>
                         </li>
@@ -78,7 +79,7 @@ const NavBar = (props)=>{
                             <button
                                 type="button"
                                 onClick={()=>onDirectory()}
-                                class="btn btn-outline-light btn-lg">
+                                className="btn btn-outline-light btn-lg">
                                 Directory
                             </button>
                         </li>
@@ -86,7 +87,7 @@ const NavBar = (props)=>{
                             <button
                                 type="button"
                                 onClick={()=>onAbout()}
-                                class="btn btn-outline-light btn-lg">
+                                className="btn btn-outline-light btn-lg">
                                  About
                             </button>
                         </li>

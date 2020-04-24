@@ -101,3 +101,29 @@
 #event-card > .card-body {
   height: auto;
 }
+
+#gotoelc {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  padding-bottom: 0px;
+  height: 30vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.squarespace-cdn.com/content/v1/5bc6137be6666940992e5e76/1586807226923-WHBE9NWDOJEAL7IGCWON/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/mag_on_table_web.jpg");
+  background-size: 160% 100%;
+  background-position: 10%;
+}
+
+#gotoelc-overlay {
+  height: auto;
+}
+
+.card-img-overlay > .btn-primary {
+  position: relative;
+  transform: translate(0%, 230%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgba($color: #000000, $alpha: 0.0);
+  border-color: rgba($color: #ffffff, $alpha: 1);
+}

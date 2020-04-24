@@ -8,10 +8,6 @@ const eventList = data.data;
 const today = new Date();
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-const buttonEvents = {
-  'padding-left': '45%'
-}
-
 const displayDate = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear();
 
 function EventDate(props) {
@@ -19,7 +15,11 @@ function EventDate(props) {
     <p style={{marginBottom: 0}}>{date}</p>
   );
 
-  return <div className="date-block">{dateList}</div>;
+  return (
+    <div className="date-block">
+      {dateList}
+    </div>
+  );
 }
 
 function EventCards(props) {
@@ -30,13 +30,20 @@ function EventCards(props) {
       <div className="card-body">
         <h5 className="card-title">{event.title}</h5>
         <EventDate dates={event.date}></EventDate>
-        <Qrmodal link={event.link} className="btn-primary" buttonText="View Event" modalText="Explore on Your Device"></Qrmodal>
+        <Qrmodal link={event.link} className="btn-primary" buttonText="View Event" modalText="View Event on Facebook"></Qrmodal>
       </div>
     </div>
   );
 
   return (
-    <div className="card-columns">{cardList}</div>
+    <div className="card-columns">
+      {cardList}
+      <div className="card bg-dark text-white text-center" id="gotoelc">
+        <div className="card-img-overlay" width="100%" id="gotoelc-overlay">
+          <Qrmodal link={"https://explorelc.org/"} className='btn-primary' buttonText="View More" modalText="Go To Explorelc.org"/>
+        </div>
+      </div>
+    </div>
   );
 }
 
