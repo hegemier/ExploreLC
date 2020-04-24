@@ -79,10 +79,10 @@ const aboutData = [
         section2_title : "IMPACT AWARDS",
         section2_text : "Every year the Impact Awards are presented by Explore Licking County to outstanding tourism partners. While we value all partners in our network, we wish to acknowledge those who go above and beyond.",
         section2_media : impactAwardImg,
-        section2_url : "",
-        section2_QRbuttonText : "",
-        section2_QRmodalText : "",
-        videoMedia : ""
+        section2_url : "https://explorelc.org/impact-awards",
+        section2_QRbuttonText : "IMPACT AWARDS",
+        section2_QRmodalText : "Use your mobile device to learn about the Impact Awards Ceremony",
+        videoMedia : null
     }
 ];
 

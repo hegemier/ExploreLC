@@ -14,47 +14,50 @@ function About_sidebar(props)
  */
 {
     return(
-    <ul className="float-left">
-        <span> ABOUT </span>
-        <li>
-            <button
-                type = "button"
-                onClick={()=>props.onAbout()}
-                class="about-page">
-                ORGANIZATION
-            </button>           
-        </li>
-        <li>
-            <button
-                type = "button"
-                onClick={()=>props.onAbout_LouisSullivan()}
-                class="about-page">
-                LOUIS SULLIVAN
-            </button>
-        </li>
-        <li>
-            <button
-                type = "button"
-                onClick={()=>props.onAbout_Leadership()}
-                class="about-page">
-                LEADERSHIP
-            </button>
-        </li>
-        <li>
-            <button
-                type = "button"
-                onClick={()=>props.onAbout_Collaborators()}
-                class="about-page">
-                COLLABORATORS
-            </button>
-        </li>
-        <li>
-            <Qrmodal link={"https://explorelc.org/contact"} buttonText={"CONTACT"} modalText={"Contact us using your mobile device"}/>
-        </li>
-        <li>
-            <Qrmodal link={"https://explorelc.org/partners"} buttonText={"PARTNERS"} modalText={"See how you can partner with us using your mobile device"}/>
-        </li>
-    </ul>
+    <div>
+        <ul className="float-left">
+            <span className="sidebarHeader"> ABOUT </span>
+            <br />
+            <li>
+                <button
+                    type = "button"
+                    onClick={()=>props.onAbout()}
+                    class="about-page">
+                    ORGANIZATION
+                </button>           
+            </li>
+            <li>
+                <button
+                    type = "button"
+                    onClick={()=>props.onAbout_LouisSullivan()}
+                    class="about-page">
+                    LOUIS SULLIVAN
+                </button>
+            </li>
+            <li>
+                <button
+                    type = "button"
+                    onClick={()=>props.onAbout_Leadership()}
+                    class="about-page">
+                    LEADERSHIP
+                </button>
+            </li>
+            <li>
+                <button
+                    type = "button"
+                    onClick={()=>props.onAbout_Collaborators()}
+                    class="about-page">
+                    COLLABORATORS
+                </button>
+            </li>
+            <li>
+                <Qrmodal link={"https://explorelc.org/contact"} buttonText={"CONTACT"} modalText={"Contact us using your mobile device"}/>
+            </li>
+            <li>
+                <Qrmodal link={"https://explorelc.org/partners"} buttonText={"PARTNERS"} modalText={"See how you can partner with us using your mobile device"}/>
+            </li>
+        </ul>
+    </div>
     )
 }
 
@@ -68,69 +71,74 @@ function About(props)
         if (lang = "en")
         {
         return(
-          <div>
-          <section id="guideBanner">
-                <NavBar
-                    onHome={props.onHome}
-                    onGuides={props.onGuides}
-                    onTowns={props.onTowns}
-                    onEvents={props.onEvents}
-                    onDirectory={props.onDirectory}
-                    onAbout={props.onAbout}
-                />
-            </section>
-
             <div>
-                <div id="header">
-                    <p align = "center" className="imgHeader"><strong>{header}</strong></p>
-                    <p align = "center">{subHeaderText}</p>
-                    <br />
-                </div>
+            <div className = "organization-bg">
+                <div className= "overlay-div"></div>
+                    <NavBar
+                        onHome={props.onHome}
+                        onGuides={props.onGuides}
+                        onTowns={props.onTowns}
+                        onEvents={props.onEvents}
+                        onDirectory={props.onDirectory}
+                        onAbout={props.onAbout}
+                    />
+                    <div id="header">
+                        <p align = "center" className="imgHeader">{header}</p>
+                        <p align = "center" className="imgHeader-2">{subHeaderText}</p>
+                        <br />
+                    </div>
+            </div>
+            <br /><br />
+            <div>
                 <div id="body">
                     {About_sidebar(props)}
+                    <br /><br />
                     <div id="about" className="container">
-                        <div>
+                        <div className="introText">
                             {section0_text}
                         </div>
                     </div>
                     <br />
-                    <div id="travelMagazine" className="container">
-                        <div className="row">
-                            <div id="travelMagImage" className="col-md-8">
-                                <img src={section1_media} height="600px" width="600px"></img>
-                            </div>
-                            <div className="col-md-4">
-                                <span>{section1_title}</span>
-                                <br />
-                                {section1_text}
-                                <br />
-                                <Qrmodal link={section1_url} buttonText={section1_QRbuttonText} modalText={section1_QRmodalText}/>
-                                {/*qr modal to push magazine to phone */}
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    <div id="impactAwards" className="container">
-                        <div className="row">
-                            <div className="col-md-4">  
-                                <span> {section2_title} </span>
-                                <br />
-                                {section2_text}
-                                </div>              
-                            <div className="col-md-8">
-                                <img src={section2_media}></img>
-                                {/*modal link to redirect to impact award page? maybe?*/}
+                    <div margin-top="50px">
+                        <br /><br /><br /><br /><br />
+                        <div id="travelMagazine" className="container">
+                            <div className="row">
+                                <div id="travelMagImage" className="col-md-8">
+                                    <img src={section1_media} height="600px" width="600px"></img>
+                                </div>
+                                <div className="col-md-4">
+                                    <p className="organization-section-header">{section1_title}</p>
+                                    <br />
+                                    <p className="section-text">{section1_text}</p>
+                                    <br />
+                                    <Qrmodal link={section1_url} buttonText={section1_QRbuttonText} modalText={section1_QRmodalText}/>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <br />
-                    <div id="video" className="container">
-                    PLACEHOLDER FOR VIDEO
-                    {/*
-                        <video src="exploreLCvid" align="center" controls>
-                         Your browser does not support the video tag.
-                        </video>  
-                    */}
+                        <br /><br /><br />
+                        <div id="impactAwards" className="container">
+                            <div className="row">
+                                <div className="col-md-4">  
+                                    <p className="organization-section-header"> {section2_title} </p>
+                                    <br />
+                                    <p className="section-text">{section2_text}</p>
+                                    <br />
+                                    <Qrmodal link={section2_url} buttonText={section2_QRbuttonText} modalText={section2_QRmodalText}/>
+                                </div>
+                                <div className="col-md-8">
+                                    <img src={section2_media}></img>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="video" className="container">
+                        PLACEHOLDER FOR VIDEO
+                        {/*
+                            <video src={videoMedia} align="center" controls>
+                            Error loading video
+                            </video>  
+                        */}
+                        </div>
                     </div>
                 </div>
                 <div id="footer">

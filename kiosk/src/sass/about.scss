@@ -1,16 +1,130 @@
-/*.imgHeader {
-    display: block;
-    font-family: Libre Baskerville;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 60px;
-    letter-spacing: 0px;
-    text-transform: none;
-    line-height: 1em;
-    color:#000000;
-    margin: 20px;
-    margin-top: 2em;
-    margin-bottom: -5px;
-    -webkit-font-smoothing: antialiased;
-    z-index: 100;
-  }*/
+.imgHeader 
+{
+  display: block;
+  font-family: Libre Baskerville;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  letter-spacing: 0px;
+  text-transform: none;
+  line-height: 1em;
+  color:#000000;
+  margin: 20px;
+  margin-top: 2em;
+  margin-bottom: -5px;
+  -webkit-font-smoothing: antialiased;
+  z-index: 100;
+}
+
+.imgHeader-2 
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-transform: none;
+  color: #fff;
+  margin: 20px;
+  margin-bottom: 8em;
+  -webkit-font-smoothing: antialiased;
+  z-index: 100;
+}
+
+.organization-bg
+{
+  background-image: url("../assets/image/aboutpics/organizationOverlay.png");
+  background-position: 0% 38%;
+  background-size: cover;
+}
+
+.louisSullivan-bg
+{
+  background-image: url("../assets/image/aboutpics/louisSullivanOverlay.jpg")
+}
+
+.sidebarItems
+{
+  /*font-family : proxima-nova;*/
+  font-weight : 600;
+  font-style : normal;
+  font-size : 14px;
+  letter-spacing : 2px;
+  text-transform : uppercase;
+  text-decoration : none;
+  color : rgba(26, 26, 26, 0.4);
+  display : block;
+  padding : 0 0 .75em;
+}
+
+.sidebarHeader
+{
+  /*font-family : proxima-nova;*/
+  font-weight : bold;
+  font-style : normal;
+  font-size : 14px;
+  letter-spacing : 1px;
+  text-transform : uppercase;
+  text-decoration : none;
+  color : #d53030;
+  display : block;
+}
+
+.introText
+{
+  font-family: adobe-garamond-pro;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  line-height: 1.4;
+  display: block;
+  margin-right: 140px;
+  margin-left: 140px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  letter-spacing: 0px;
+  color: rgba(26,26,26,.7)
+}
+
+.organization-section-header
+{
+  /*font-family: proxima-nova;*/
+  vertical-align: -200px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  display: inline;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #a3a3a3;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.section-text
+{
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: Libre Baskerville;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .01em;
+  text-transform: none;
+  line-height: 1.8em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: rgba(0,0,0,.68);
+  font-size: 13px !important;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
