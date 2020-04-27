@@ -1,6 +1,7 @@
 import {
     EnjoyingWhatsAroundYou, CelebratingLife, BeverageTrail
 } from '../assets/image';
+import { GuidesReader } from '../assets/audio';
 
 const GuidesData = [
     {
@@ -49,4 +50,4 @@ const GuidesData = [
     }
 ];
 
-export { GuidesData };
+export { GuidesData, GuidesReader };
