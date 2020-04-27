@@ -35,7 +35,7 @@
 .organization-bg
 {
   background-image: url("../assets/image/aboutpics/organizationOverlay.png");
-  background-position: 0% 38%;
+  background-position: 0% 14%;
   background-size: cover;
 }
 
@@ -170,10 +170,58 @@
   margin-inline-end: 0px;
 }
 
+.narrower-header
+{
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.team-header
+{
+  white-space: pre-wrap;
+  color: #4f4f4f;
+  font-family: Libre Baskerville;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.4em;
+  text-rendering: optimizeLegibility;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.board-of-directors
+{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 1.8em;
+  color: rgba(26,26,26,.7);
+  font-weight: 400;
+}
+
+.nudge-right
+{
+  margin-left: 100px;
+}
+
 ul 
 {
   list-style-type: none;
 }
+
+.language-select
+{
+  vertical-align: 0px;
+}
+
+
 /*
 .container darken-img {
   filter: brightness(90%);
