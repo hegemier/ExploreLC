@@ -3,6 +3,27 @@ import { Qrmodal, NavBar } from "../../components/"
 //All media and exact text displayed is controlled within these data files
 import { aboutData, louisSullivanData, leadershipData, collaboratorsData } from "../../data/aboutData.js"
 
+//audio for screenreader
+import about_en from "../../assets/aboutAudio/about_en.mp3"
+import about_es from "../../assets/aboutAudio/about_es.mp3"
+import about_de from "../../assets/aboutAudio/about_de.mp3"
+import about_fr from "../../assets/aboutAudio/about_fr.mp3"
+///////////////////////////////////////////////////////////
+import louisSullivan_en from "../../assets/aboutAudio/louisSullivan_en.mp3"
+import louisSullivan_es from "../../assets/aboutAudio/louisSullivan_es.mp3"
+import louisSullivan_de from "../../assets/aboutAudio/louisSullivan_de.mp3"
+import louisSullivan_fr from "../../assets/aboutAudio/louisSullivan_fr.mp3"
+///////////////////////////////////////////////////////////
+import leadership_en from "../../assets/aboutAudio/leadership_en.mp3"
+import leadership_es from "../../assets/aboutAudio/leadership_es.mp3"
+import leadership_de from "../../assets/aboutAudio/leadership_de.mp3"
+import leadership_fr from "../../assets/aboutAudio/leadership_fr.mp3"
+///////////////////////////////////////////////////////////
+import collaborators_en from "../../assets/aboutAudio/collaborators_en.mp3"
+import collaborators_es from "../../assets/aboutAudio/collaborators_es.mp3"
+import collaborators_de from "../../assets/aboutAudio/collaborators_de.mp3"
+import collaborators_fr from "../../assets/aboutAudio/collaborators_fr.mp3"
+
 //style
 import "../../sass/about.scss"
 import "../../sass/fonts.scss"
@@ -68,6 +89,41 @@ function About_sidebar(props)
 
 function About(props)
 {
+    let enAudio = new Audio(about_en)
+    let esAudio = new Audio(about_es) //load audio
+    let frAudio = new Audio(about_fr)
+    let deAudio = new Audio(about_de)
+  
+    const startEnglish = () => {
+      enAudio.play()
+    }
+    const startDeutsch = () => { //play audio
+      deAudio.play()
+    }
+    const startFrancoise = () => {
+      frAudio.play()
+    }
+    const startEspanol = () => {
+      esAudio.play()
+    }
+  
+    const pauseAll = () => { //pause audio
+      enAudio.pause()
+      deAudio.pause()
+      frAudio.pause()
+      esAudio.pause()
+    }
+  
+    const stopAll = () => {
+      enAudio.pause()
+      enAudio.src = enAudio.src
+      deAudio.pause()
+      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
+      frAudio.pause()
+      frAudio.src = frAudio.src
+      esAudio.pause()
+      esAudio.src = esAudio.src
+    }
 
     const [lang, setLang] = useState("en") //by default, start the page on english
 
@@ -413,7 +469,14 @@ function About(props)
                 <button onClick ={() => setLang("de")}>Deutsch</button>
                 <button onClick ={() => setLang("fr")}>Francais</button>
                 <button onClick ={() => setLang("en")}>English</button>
-        
+
+                <button onClick={startEspanol}>Lector de pantalla español</button>
+                <button onClick={startDeutsch}>Deutscher Screenreader</button>
+                <button onClick={startFrancoise}>Lecteur d'écran français</button>
+                <button onClick={startEnglish}>English Screenreader</button>
+                <button onClick={pauseAll}>Pause / Pausa</button>
+                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>        
+
                 <div className = "clearB"/>
                 {
                     renderPage()
@@ -427,6 +490,42 @@ function About(props)
 
 function LouisSullivan(props)
 {
+    let enAudio = new Audio(louisSullivan_en)
+    let esAudio = new Audio(louisSullivan_es) //load audio
+    let frAudio = new Audio(louisSullivan_fr)
+    let deAudio = new Audio(louisSullivan_de)
+  
+    const startEnglish = () => {
+      enAudio.play()
+    }
+    const startDeutsch = () => { //play audio
+      deAudio.play()
+    }
+    const startFrancoise = () => {
+      frAudio.play()
+    }
+    const startEspanol = () => {
+      esAudio.play()
+    }
+  
+    const pauseAll = () => { //pause audio
+      enAudio.pause()
+      deAudio.pause()
+      frAudio.pause()
+      esAudio.pause()
+    }
+  
+    const stopAll = () => {
+      enAudio.pause()
+      enAudio.src = enAudio.src
+      deAudio.pause()
+      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
+      frAudio.pause()
+      frAudio.src = frAudio.src
+      esAudio.pause()
+      esAudio.src = esAudio.src
+    }
+
     const [lang, setLang] = useState("en") //by default, start the page on english
 
     const renderPage = () => {
@@ -685,7 +784,14 @@ function LouisSullivan(props)
                 <button onClick ={() => setLang("de")}>Deutsch</button>
                 <button onClick ={() => setLang("fr")}>Francais</button>
                 <button onClick ={() => setLang("en")}>English</button>
-        
+
+                <button onClick={startEspanol}>Lector de pantalla español</button>
+                <button onClick={startDeutsch}>Deutscher Screenreader</button>
+                <button onClick={startFrancoise}>Lecteur d'écran français</button>
+                <button onClick={startEnglish}>English Screenreader</button>
+                <button onClick={pauseAll}>Pause / Pausa</button>
+                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>   
+
                 <div className = "clearB"/>
                 {
                     renderPage()
@@ -699,6 +805,43 @@ function LouisSullivan(props)
 
 function Leadership(props)
 {
+
+    let enAudio = new Audio(leadership_en)
+    let esAudio = new Audio(leadership_es) //load audio
+    let frAudio = new Audio(leadership_fr)
+    let deAudio = new Audio(leadership_de)
+  
+    const startEnglish = () => {
+      enAudio.play()
+    }
+    const startDeutsch = () => { //play audio
+      deAudio.play()
+    }
+    const startFrancoise = () => {
+      frAudio.play()
+    }
+    const startEspanol = () => {
+      esAudio.play()
+    }
+  
+    const pauseAll = () => { //pause audio
+      enAudio.pause()
+      deAudio.pause()
+      frAudio.pause()
+      esAudio.pause()
+    }
+  
+    const stopAll = () => {
+      enAudio.pause()
+      enAudio.src = enAudio.src
+      deAudio.pause()
+      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
+      frAudio.pause()
+      frAudio.src = frAudio.src
+      esAudio.pause()
+      esAudio.src = esAudio.src
+    }
+
     const [lang, setLang] = useState("en") //by default, start the page on english
 
     const renderPage = () => {
@@ -1274,7 +1417,14 @@ function Leadership(props)
                 <button onClick ={() => setLang("de")}>Deutsch</button>
                 <button onClick ={() => setLang("fr")}>Francais</button>
                 <button onClick ={() => setLang("en")}>English</button>
-        
+
+                <button onClick={startEspanol}>Lector de pantalla español</button>
+                <button onClick={startDeutsch}>Deutscher Screenreader</button>
+                <button onClick={startFrancoise}>Lecteur d'écran français</button>
+                <button onClick={startEnglish}>English Screenreader</button>
+                <button onClick={pauseAll}>Pause / Pausa</button>
+                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>   
+
                 <div className = "clearB"/>
                 {
                     renderPage()
@@ -1288,6 +1438,42 @@ function Leadership(props)
 
 function Collaborators(props)
 {
+    let enAudio = new Audio(collaborators_en)
+    let esAudio = new Audio(collaborators_es) //load audio
+    let frAudio = new Audio(collaborators_fr)
+    let deAudio = new Audio(collaborators_de)
+  
+    const startEnglish = () => {
+      enAudio.play()
+    }
+    const startDeutsch = () => { //play audio
+      deAudio.play()
+    }
+    const startFrancoise = () => {
+      frAudio.play()
+    }
+    const startEspanol = () => {
+      esAudio.play()
+    }
+  
+    const pauseAll = () => { //pause audio
+      enAudio.pause()
+      deAudio.pause()
+      frAudio.pause()
+      esAudio.pause()
+    }
+  
+    const stopAll = () => {
+      enAudio.pause()
+      enAudio.src = enAudio.src
+      deAudio.pause()
+      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
+      frAudio.pause()
+      frAudio.src = frAudio.src
+      esAudio.pause()
+      esAudio.src = esAudio.src
+    }
+
     const [lang, setLang] = useState("en") //by default, start the page on english
 
     const renderPage = () => {
@@ -2219,7 +2405,14 @@ function Collaborators(props)
                 <button onClick ={() => setLang("de")}>Deutsch</button>
                 <button onClick ={() => setLang("fr")}>Francais</button>
                 <button onClick ={() => setLang("en")}>English</button>
-        
+
+                <button onClick={startEspanol}>Lector de pantalla español</button>
+                <button onClick={startDeutsch}>Deutscher Screenreader</button>
+                <button onClick={startFrancoise}>Lecteur d'écran français</button>
+                <button onClick={startEnglish}>English Screenreader</button>
+                <button onClick={pauseAll}>Pause / Pausa</button>
+                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>
+
                 <div className = "clearB"/>
                 {
                     renderPage()
