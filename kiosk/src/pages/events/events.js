@@ -40,7 +40,7 @@ function EventCards(props) {
       {cardList}
       <div className="card bg-dark text-white text-center" id="gotoelc">
         <div className="card-img-overlay" width="100%" id="gotoelc-overlay">
-          <Qrmodal link={"https://explorelc.org/"} className='btn-primary' buttonText="View More" modalText="Go To Explorelc.org"/>
+          <Qrmodal link={"https://explorelc.org/events"} className='btn-primary' buttonText="View More" modalText="Go To Explorelc.org"/>
         </div>
       </div>
     </div>

@@ -1,10 +1,14 @@
+// Library Imports ==============================
 const NIGHTMARE = require('nightmare');
 const CHEERIO = require('cheerio');
 const fs = require('fs');
 
+// Declaration ==================================
 var nightmare = NIGHTMARE({show: true});
-var url = "https://explorelc.org/events";
+var URL = "https://explorelc.org/events";
+var dl;
 
+// Scraping function ============================
 var getData = html => {
   var eventList = [];
 
@@ -50,12 +54,14 @@ var getData = html => {
   return json;
 }
 
-nightmare.goto(url)
+// nightmare Scraping ===========================
+function main() {
+  nightmare.goto(URL)
   .wait('div.sk-events')
   .evaluate(() => document.querySelector('body').innerHTML)
   .end()
   .then(response => {
-    let dl = getData(response);
+    dl = getData(response);
 
     json_dl = JSON.stringify(dl);
 
@@ -63,3 +69,8 @@ nightmare.goto(url)
   }).catch(err => {
     console.log(err);
   });
+}
+
+main();
+// exports for tests ============================
+module.exports = { URL, dl, getData };
