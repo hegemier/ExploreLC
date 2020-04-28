@@ -19,7 +19,7 @@
 }
 
 .width33{
-  width:33%;
+  width: 33%;
 }
 
 .overflow{
@@ -36,8 +36,18 @@
 }
 
 .card{
-  height: 630px;
+  height: 630px;;
   width: 553px;
   margin-right: 20px;
   margin-top: 20px;
+}
+
+.directory-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 60px;
+  .card{
+    margin: 20px 10px;
+  }
 }
