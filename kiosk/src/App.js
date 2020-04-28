@@ -34,7 +34,7 @@ const App = ()=>{
         {props=>{
           const { value, updateState } = props;
           if (value === 'home')//change the component name to use different page
-            return <Guides
+            return <Events
                   onHome={()=>updateState('home')}
                   onGuides={()=>updateState('guides')}
                   onTowns={()=>updateState('towns')}
