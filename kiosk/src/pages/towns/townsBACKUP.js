@@ -1,29 +1,48 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Qrmodal, NavBar } from "../../components/"
 import { TownsData } from '../../data'
 import "./towns.scss"
-import { TownsReader} from "../../assets/townsaudio"
+import { english, french, spanish, german } from "../../assets/townsaudio"
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faVolumeUp, faPause } from '@fortawesome/free-solid-svg-icons';
 
 function Towns(props) { //provide for translation to different languages
 
-  const [lang, setLang] = useState('en');
-  const [screenReader, setScreenReader] = useState(new Audio());
+  let enAudio = new Audio(english)
+  let esAudio = new Audio(spanish) //load audio
+  let frAudio = new Audio(french)
+  let deAudio = new Audio(german)
 
-  useEffect(()=>{
-      if (lang !== ''){
-          screenReader.pause();
-          const { en, fr, de, es } = TownsReader;
-          setScreenReader(
-              (lang === 'en')?en:
-              (lang === 'de')?de:
-              (lang === 'fr')?fr:es
-          );
-      }
-  },[lang]);
+  const startEnglish = () => {
+    enAudio.play()
+  }
+  const startDeutsch = () => { //play audio
+    deAudio.play()
+  }
+  const startFrancoise = () => {
+    frAudio.play()
+  }
+  const startEspanol = () => {
+    esAudio.play()
+  }
 
+  const pauseAll = () => { //pause audio
+    enAudio.pause()
+    deAudio.pause()
+    frAudio.pause()
+    esAudio.pause()
+  }
 
+  const stopAll = () => {
+    enAudio.pause()
+    enAudio.src = enAudio.src
+    deAudio.pause()
+    deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
+    frAudio.pause()
+    frAudio.src = frAudio.src
+    esAudio.pause()
+    esAudio.src = esAudio.src
+  }
 
   /*
   const stopAllAudio = () => {
@@ -35,10 +54,7 @@ function Towns(props) { //provide for translation to different languages
 
   */
 
-  const reset = () => {
-    screenReader.pause()
-    screenReader.src = screenReader.src
-  }
+  const [lang, setLang] = useState("en")
 
   const renderCardsWithTranslation = () => {
     return TownsData.map(item=>{
@@ -102,65 +118,11 @@ function Towns(props) { //provide for translation to different languages
   }
 
 
-  //this list from TownsData will be converted into a deid of cards where you can click on a card and view information
-
-  const toggleLang = ()=>{
-      return (
-        <div>
-          <div className="dieslayFlex LRPadding10">
-              <button
-                  type="button"
-                  onClick={()=>setLang('en')}
-                  className={(lang === 'en')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
-                  {(lang === 'en')?'English':(lang === 'de')?'Englisch':(lang === 'fr')?'Anglais':'Ingles'}
-              </button>
-              <button
-                  type="button"
-                  onClick={()=>setLang('de')}
-                  className={(lang === 'de')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
-                  {(lang === 'en')?'German':(lang === 'de')?'Deutsch':(lang === 'fr')?'Allemand':'Alemán'}
-              </button>
-              <button
-                  type="button"
-                  onClick={()=>setLang('fr')}
-                  className={(lang === 'fr')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
-                  {(lang === 'en')?'French':(lang === 'de')?'Französisch':(lang === 'fr')?'Français':'Francés'}
-              </button>
-              <button
-                  type="button"
-                  onClick={()=>setLang('es')}
-                  className={(lang === 'es')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
-                  {(lang === 'en')?'Spanish':(lang === 'de')?'Spanisch':(lang === 'fr')?'Espagnol':'Español'}
-              </button>
-              <button
-                  type="button"
-                  onClick={()=>screenReader.play()}
-                  className="btn btn-dark LRPadding10 margin10">
-                  <Icon icon={faVolumeUp} size="1x"/>
-              </button>
-              <button
-                  type="button"
-                  onClick={()=>screenReader.pause()}
-                  className="btn btn-dark LRPadding10 margin10">
-                  <Icon icon={faPause} size="1x"/>
-              </button>
-
-              <button
-                type="button"
-                onClick={()=>reset()}
-                className="btn btn-dark LRPadding10 margin10">
-                Stop
-                </button>
-          </div>
-        </div>
-      );
-  };
-
-
+  //this list from TownsData will be converted into a grid of cards where you can click on a card and view information
 
 
   return (
-    <div className="towns-bg">
+    <div>
     <section id="guideBanner">
           <NavBar
               onHome={props.onHome}
@@ -171,11 +133,20 @@ function Towns(props) { //provide for translation to different languages
               onAbout={props.onAbout}
           />
       </section>
-      <section className="dieslayBlock">
-          {toggleLang()}
-        </section>
-
         <section className = "LRPadding10">
+        <button onClick ={() => setLang("es")}>Espanol</button>
+        <button onClick ={() => setLang("de")}>Deutsch</button>
+        <button onClick ={() => setLang("fr")}>Francais</button>
+        <button onClick ={() => setLang("en")}>English</button>
+
+        <button onClick={startEspanol}>Lector de pantalla español
+        className={(lang === 'en')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+        </button>
+        <button onClick={startDeutsch}>Deutscher Screenreader</button>
+        <button onClick={startFrancoise}>Lecteur d'écran français</button>
+        <button onClick={startEnglish}>English Screenreader</button>
+        <button onClick={pauseAll}>Pause / Pausa</button>
+        <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>
 
           <div className = "clearB"/>
             {

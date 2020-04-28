@@ -1,6 +1,7 @@
 import {
-    EnjoyingWhatsAroundYou, CelebratingLife, BeverageTrail
+    EnjoyingWhatsAroundYou, CelebratingLife, BeverageTrail, PathFinderRoutes, GoodTimesRolling, SeeingThroughLens, HistoricSites, VenuesLickingCounty
 } from '../assets/image';
+
 import { GuidesReader } from '../assets/audio';
 
 const GuidesData = [
@@ -47,7 +48,54 @@ const GuidesData = [
         },
         image: EnjoyingWhatsAroundYou,
         url: 'https://explorelc.org/pathfinder'
+    },
+
+    {
+        id : 5,
+        title: {
+          en: "The Good Times Keep Rolling",
+          fr: "Les bons moments continuent de rouler",
+          gr: "Die guten Zeiten rollen weiter",
+          sp: "Los buenos tiempos siguen rodando"
+
+        },
+        image: GoodTimesRolling,
+        url: 'https://explorelc.org/guide/the-good-times-keep-rolling'
+    },
+    {
+        id : 6,
+        title: {
+          en: "Seeing Through a New Lens",
+          sp: "Ver a través de una nueva lente",
+          fr: "Voir à travers une nouvelle lentille",
+          gr: "Durch eine neue Linse sehen"
+        },
+        image: SeeingThroughLens,
+        url: 'https://explorelc.org/guide/seeing-through-a-new-lens'
+    },
+    {
+        id : 7,
+        title: {
+          en: "Historic Sites",
+          gr: "Historische Stätten",
+          fr: "Sites historiques",
+          sp: "Sitios históricos"
+        },
+        image: HistoricSites,
+        url: 'https://explorelc.org/guide/historic-sites'
+    },
+    {
+        id : 8,
+        title: {
+          en: "Venues in Licking County",
+          sp: "Lugares en el condado de Licking",
+          gr: "Veranstaltungsorte in Licking County",
+          fr: "Lieux à Licking County"
+        },
+        image: VenuesLickingCounty,
+        url: 'https://explorelc.org/guide/venues'
     }
+
 ];
 
 export { GuidesData, GuidesReader };

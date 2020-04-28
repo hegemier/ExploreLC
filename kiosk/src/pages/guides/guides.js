@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavBar, Qrmodal } from '../../components/';
 import { GuidesData, GuidesReader } from '../../data';
+import "./guides.scss"
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faVolumeUp, faPause } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,11 +25,17 @@ const Guides = (props)=>{
         }
     },[lang]);
 
+    const reset = () => {
+      screenReader.pause()
+      screenReader.src = screenReader.src
+    }
+
+
     const renderGuidesCards = ()=>{
         return GuidesData.map(each=>{
             const { id, title, image, url } = each;
             const { en, gr, fr,sp } = title;
-        
+
             return (
                 <div key={id} className="card floatL">
                     <img
@@ -44,7 +51,8 @@ const Guides = (props)=>{
                             }
                         </h5>
                         <p className="card-text">
-                            <Qrmodal link={url}/>
+                            <Qrmodal link={url} buttonText={(lang === 'en')?'More Information':(lang === 'gr')?'Mehr Informationen':(lang === 'fr')?"Plus d'information":'Más información'}
+                            modalText={(lang === 'en')?'Explore on your device':(lang === 'gr')?'Entdecken Sie auf Ihrem Gerät':(lang === 'fr')?'Explorez sur votre appareil':'Explore en su dispositivo'}/>
                         </p>
                     </div>
                 </div>
@@ -91,6 +99,14 @@ const Guides = (props)=>{
                     className="btn btn-dark LRPadding10 margin10">
                     <Icon icon={faPause} size="1x"/>
                 </button>
+
+                <button
+                  type="button"
+                  onClick={()=>reset()}
+                  className="btn btn-dark LRPadding10 margin10">
+                  Stop
+                  </button>
+
             </div>
         );
     };
@@ -108,6 +124,7 @@ const Guides = (props)=>{
                 />
             </section>
 
+          <div className="guides-bg">
             <section className="displayBlock">
                 {toggleLang()}
                 <div>
@@ -116,13 +133,13 @@ const Guides = (props)=>{
                     <div className="clearB"/>
                 </div>
                 {/* <div className="width60perc">
-                    
+
                 </div>
                 <div className="width40perc">
                     Ads to be here
                 </div> */}
             </section>
-
+            </div>
 
         </div>
     );

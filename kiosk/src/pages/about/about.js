@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Qrmodal, NavBar } from "../../components/"
 //All media and exact text displayed is controlled within these data files
 import { aboutData, louisSullivanData, leadershipData, collaboratorsData } from "../../data/aboutData.js"
-
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faVolumeUp, faPause } from '@fortawesome/free-solid-svg-icons';
 //audio for screenreader
 import about_en from "../../assets/aboutAudio/about_en.mp3"
 import about_es from "../../assets/aboutAudio/about_es.mp3"
