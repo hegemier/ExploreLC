@@ -1,33 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Qrmodal, NavBar } from "../../components/"
 //All media and exact text displayed is controlled within these data files
 import { aboutData, louisSullivanData, leadershipData, collaboratorsData } from "../../data/aboutData.js"
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faVolumeUp, faPause } from '@fortawesome/free-solid-svg-icons';
 //audio for screenreader
-import about_en from "../../assets/aboutAudio/about_en.mp3"
-import about_es from "../../assets/aboutAudio/about_es.mp3"
-import about_de from "../../assets/aboutAudio/about_de.mp3"
-import about_fr from "../../assets/aboutAudio/about_fr.mp3"
-///////////////////////////////////////////////////////////
-import louisSullivan_en from "../../assets/aboutAudio/louisSullivan_en.mp3"
-import louisSullivan_es from "../../assets/aboutAudio/louisSullivan_es.mp3"
-import louisSullivan_de from "../../assets/aboutAudio/louisSullivan_de.mp3"
-import louisSullivan_fr from "../../assets/aboutAudio/louisSullivan_fr.mp3"
-///////////////////////////////////////////////////////////
-import leadership_en from "../../assets/aboutAudio/leadership_en.mp3"
-import leadership_es from "../../assets/aboutAudio/leadership_es.mp3"
-import leadership_de from "../../assets/aboutAudio/leadership_de.mp3"
-import leadership_fr from "../../assets/aboutAudio/leadership_fr.mp3"
-///////////////////////////////////////////////////////////
-import collaborators_en from "../../assets/aboutAudio/collaborators_en.mp3"
-import collaborators_es from "../../assets/aboutAudio/collaborators_es.mp3"
-import collaborators_de from "../../assets/aboutAudio/collaborators_de.mp3"
-import collaborators_fr from "../../assets/aboutAudio/collaborators_fr.mp3"
+import { AboutReader } from "../../assets/aboutAudio"
 
 //style
 import "../../sass/about.scss"
 import "../../sass/fonts.scss"
+
+
+
 
 
 function About_sidebar(props)
@@ -35,6 +20,8 @@ function About_sidebar(props)
  * users can navigate between them.
  */
 {
+
+
     return(
     <div>
         <ul className="float-left">
@@ -90,43 +77,80 @@ function About_sidebar(props)
 
 function About(props)
 {
-    let enAudio = new Audio(about_en)
-    let esAudio = new Audio(about_es) //load audio
-    let frAudio = new Audio(about_fr)
-    let deAudio = new Audio(about_de)
 
-    const startEnglish = () => {
-      enAudio.play()
-    }
-    const startDeutsch = () => { //play audio
-      deAudio.play()
-    }
-    const startFrancoise = () => {
-      frAudio.play()
-    }
-    const startEspanol = () => {
-      esAudio.play()
-    }
+  const [lang, setLang] = useState('en');
+  const [screenReader, setScreenReader] = useState(new Audio());
 
-    const pauseAll = () => { //pause audio
-      enAudio.pause()
-      deAudio.pause()
-      frAudio.pause()
-      esAudio.pause()
-    }
+  useEffect(()=>{
+      if (lang !== ''){
+          screenReader.pause();
+          const { en, fr, de, es } = AboutReader;
+          setScreenReader(
+              (lang === 'en')?en:
+              (lang === 'de')?de:
+              (lang === 'fr')?fr:es
+          );
+      }
+  },[lang]);
 
-    const stopAll = () => {
-      enAudio.pause()
-      enAudio.src = enAudio.src
-      deAudio.pause()
-      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
-      frAudio.pause()
-      frAudio.src = frAudio.src
-      esAudio.pause()
-      esAudio.src = esAudio.src
-    }
 
-    const [lang, setLang] = useState("en") //by default, start the page on english
+
+  const reset = () => {
+    screenReader.pause()
+    screenReader.src = screenReader.src
+  }
+
+  const toggleLang = ()=>{
+      return (
+        <div>
+          <div className="dieslayFlex LRPadding10">
+              <button
+                  type="button"
+                  onClick={()=>setLang('en')}
+                  className={(lang === 'en')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                  {(lang === 'en')?'English':(lang === 'de')?'Englisch':(lang === 'fr')?'Anglais':'Ingles'}
+              </button>
+              <button
+                  type="button"
+                  onClick={()=>setLang('de')}
+                  className={(lang === 'de')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                  {(lang === 'en')?'German':(lang === 'de')?'Deutsch':(lang === 'fr')?'Allemand':'Alemán'}
+              </button>
+              <button
+                  type="button"
+                  onClick={()=>setLang('fr')}
+                  className={(lang === 'fr')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                  {(lang === 'en')?'French':(lang === 'de')?'Französisch':(lang === 'fr')?'Français':'Francés'}
+              </button>
+              <button
+                  type="button"
+                  onClick={()=>setLang('es')}
+                  className={(lang === 'es')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                  {(lang === 'en')?'Spanish':(lang === 'de')?'Spanisch':(lang === 'fr')?'Espagnol':'Español'}
+              </button>
+              <button
+                  type="button"
+                  onClick={()=>screenReader.play()}
+                  className="btn btn-dark LRPadding10 margin10">
+                  <Icon icon={faVolumeUp} size="1x"/>
+              </button>
+              <button
+                  type="button"
+                  onClick={()=>screenReader.pause()}
+                  className="btn btn-dark LRPadding10 margin10">
+                  <Icon icon={faPause} size="1x"/>
+              </button>
+
+              <button
+                type="button"
+                onClick={()=>reset()}
+                className="btn btn-dark LRPadding10 margin10">
+                Stop
+                </button>
+          </div>
+        </div>
+      );
+  };
 
     const renderPage = () => {
         return aboutData.map(item=>{
@@ -154,6 +178,9 @@ function About(props)
                         onDirectory={props.onDirectory}
                         onAbout={props.onAbout}
                     />
+                    <section className="dieslayBlock">
+                        {toggleLang()}
+                      </section>
                     <div id="header">
                         <p align = "center" className="imgHeader">{header}</p>
                         <p align = "center" className="imgHeader-2">{subHeaderText}</p>
@@ -233,6 +260,9 @@ function About(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div id="header">
                             <p align = "center" className="imgHeader">{es_header}</p>
                             <p align = "center" className="imgHeader-2">{es_subHeaderText}</p>
@@ -312,6 +342,9 @@ function About(props)
                         onDirectory={props.onDirectory}
                         onAbout={props.onAbout}
                     />
+                    <section className="dieslayBlock">
+                        {toggleLang()}
+                      </section>
                     <div id="header">
                         <p align = "center" className="imgHeader">{de_header}</p>
                         <p align = "center" className="imgHeader-2">{de_subHeaderText}</p>
@@ -391,6 +424,9 @@ function About(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div id="header">
                             <p align = "center" className="imgHeader">{fr_header}</p>
                             <p align = "center" className="imgHeader-2">{fr_subHeaderText}</p>
@@ -466,17 +502,6 @@ function About(props)
     return(
         <div>
             <section className = "language-select">
-                <button onClick ={() => setLang("es")}>Espanol</button>
-                <button onClick ={() => setLang("de")}>Deutsch</button>
-                <button onClick ={() => setLang("fr")}>Francais</button>
-                <button onClick ={() => setLang("en")}>English</button>
-
-                <button onClick={startEspanol}>Lector de pantalla español</button>
-                <button onClick={startDeutsch}>Deutscher Screenreader</button>
-                <button onClick={startFrancoise}>Lecteur d'écran français</button>
-                <button onClick={startEnglish}>English Screenreader</button>
-                <button onClick={pauseAll}>Pause / Pausa</button>
-                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>
 
                 <div className = "clearB"/>
                 {
@@ -491,44 +516,81 @@ function About(props)
 
 function LouisSullivan(props)
 {
-    let enAudio = new Audio(louisSullivan_en)
-    let esAudio = new Audio(louisSullivan_es) //load audio
-    let frAudio = new Audio(louisSullivan_fr)
-    let deAudio = new Audio(louisSullivan_de)
 
-    const startEnglish = () => {
-      enAudio.play()
-    }
-    const startDeutsch = () => { //play audio
-      deAudio.play()
-    }
-    const startFrancoise = () => {
-      frAudio.play()
-    }
-    const startEspanol = () => {
-      esAudio.play()
-    }
 
-    const pauseAll = () => { //pause audio
-      enAudio.pause()
-      deAudio.pause()
-      frAudio.pause()
-      esAudio.pause()
-    }
+    const [lang, setLang] = useState('en');
+    const [screenReader, setScreenReader] = useState(new Audio());
 
-    const stopAll = () => {
-      enAudio.pause()
-      enAudio.src = enAudio.src
-      deAudio.pause()
-      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
-      frAudio.pause()
-      frAudio.src = frAudio.src
-      esAudio.pause()
-      esAudio.src = esAudio.src
+    useEffect(()=>{
+        if (lang !== ''){
+            screenReader.pause();
+            const { en, fr, de, es } = AboutReader;
+            setScreenReader(
+                (lang === 'en')?en:
+                (lang === 'de')?de:
+                (lang === 'fr')?fr:es
+            );
+        }
+    },[lang]);
+
+
+
+    const reset = () => {
+      screenReader.pause()
+      screenReader.src = screenReader.src
     }
 
-    const [lang, setLang] = useState("en") //by default, start the page on english
+    const toggleLang = ()=>{
+        return (
+          <div>
+            <div className="dieslayFlex LRPadding10">
+                <button
+                    type="button"
+                    onClick={()=>setLang('en')}
+                    className={(lang === 'en')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'English':(lang === 'de')?'Englisch':(lang === 'fr')?'Anglais':'Ingles'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('de')}
+                    className={(lang === 'de')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'German':(lang === 'de')?'Deutsch':(lang === 'fr')?'Allemand':'Alemán'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('fr')}
+                    className={(lang === 'fr')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'French':(lang === 'de')?'Französisch':(lang === 'fr')?'Français':'Francés'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('es')}
+                    className={(lang === 'es')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'Spanish':(lang === 'de')?'Spanisch':(lang === 'fr')?'Espagnol':'Español'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>screenReader.play()}
+                    className="btn btn-dark LRPadding10 margin10">
+                    <Icon icon={faVolumeUp} size="1x"/>
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>screenReader.pause()}
+                    className="btn btn-dark LRPadding10 margin10">
+                    <Icon icon={faPause} size="1x"/>
+                </button>
 
+                <button
+                  type="button"
+                  onClick={()=>reset()}
+                  className="btn btn-dark LRPadding10 margin10">
+                  Stop
+                  </button>
+            </div>
+          </div>
+        );
+    };
     const renderPage = () => {
         return louisSullivanData.map(item=>{
             const {overlayImage, header, videoMedia, section1_header, section1_text, section1_media, section2_text, section2_media,
@@ -549,6 +611,9 @@ function LouisSullivan(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader"> {header} </p>
                             <br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -608,6 +673,9 @@ function LouisSullivan(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader"> {es_header} </p>
                             <br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -667,6 +735,9 @@ function LouisSullivan(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader"> {de_header} </p>
                             <br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -726,6 +797,9 @@ function LouisSullivan(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader"> {fr_header} </p>
                             <br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -781,17 +855,6 @@ function LouisSullivan(props)
     return(
         <div>
             <section className = "language-select">
-                <button onClick ={() => setLang("es")}>Espanol</button>
-                <button onClick ={() => setLang("de")}>Deutsch</button>
-                <button onClick ={() => setLang("fr")}>Francais</button>
-                <button onClick ={() => setLang("en")}>English</button>
-
-                <button onClick={startEspanol}>Lector de pantalla español</button>
-                <button onClick={startDeutsch}>Deutscher Screenreader</button>
-                <button onClick={startFrancoise}>Lecteur d'écran français</button>
-                <button onClick={startEnglish}>English Screenreader</button>
-                <button onClick={pauseAll}>Pause / Pausa</button>
-                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>
 
                 <div className = "clearB"/>
                 {
@@ -807,43 +870,82 @@ function LouisSullivan(props)
 function Leadership(props)
 {
 
-    let enAudio = new Audio(leadership_en)
-    let esAudio = new Audio(leadership_es) //load audio
-    let frAudio = new Audio(leadership_fr)
-    let deAudio = new Audio(leadership_de)
 
-    const startEnglish = () => {
-      enAudio.play()
-    }
-    const startDeutsch = () => { //play audio
-      deAudio.play()
-    }
-    const startFrancoise = () => {
-      frAudio.play()
-    }
-    const startEspanol = () => {
-      esAudio.play()
-    }
 
-    const pauseAll = () => { //pause audio
-      enAudio.pause()
-      deAudio.pause()
-      frAudio.pause()
-      esAudio.pause()
-    }
 
-    const stopAll = () => {
-      enAudio.pause()
-      enAudio.src = enAudio.src
-      deAudio.pause()
-      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
-      frAudio.pause()
-      frAudio.src = frAudio.src
-      esAudio.pause()
-      esAudio.src = esAudio.src
+    const [lang, setLang] = useState('en');
+    const [screenReader, setScreenReader] = useState(new Audio());
+
+    useEffect(()=>{
+        if (lang !== ''){
+            screenReader.pause();
+            const { en, fr, de, es } = AboutReader;
+            setScreenReader(
+                (lang === 'en')?en:
+                (lang === 'de')?de:
+                (lang === 'fr')?fr:es
+            );
+        }
+    },[lang]);
+
+
+
+    const reset = () => {
+      screenReader.pause()
+      screenReader.src = screenReader.src
     }
 
-    const [lang, setLang] = useState("en") //by default, start the page on english
+    const toggleLang = ()=>{
+        return (
+          <div>
+            <div className="dieslayFlex LRPadding10">
+                <button
+                    type="button"
+                    onClick={()=>setLang('en')}
+                    className={(lang === 'en')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'English':(lang === 'de')?'Englisch':(lang === 'fr')?'Anglais':'Ingles'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('de')}
+                    className={(lang === 'de')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'German':(lang === 'de')?'Deutsch':(lang === 'fr')?'Allemand':'Alemán'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('fr')}
+                    className={(lang === 'fr')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'French':(lang === 'de')?'Französisch':(lang === 'fr')?'Français':'Francés'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('es')}
+                    className={(lang === 'es')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'Spanish':(lang === 'de')?'Spanisch':(lang === 'fr')?'Espagnol':'Español'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>screenReader.play()}
+                    className="btn btn-dark LRPadding10 margin10">
+                    <Icon icon={faVolumeUp} size="1x"/>
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>screenReader.pause()}
+                    className="btn btn-dark LRPadding10 margin10">
+                    <Icon icon={faPause} size="1x"/>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={()=>reset()}
+                  className="btn btn-dark LRPadding10 margin10">
+                  Stop
+                  </button>
+            </div>
+          </div>
+        );
+    };
 
     const renderPage = () => {
     return leadershipData.map(item=>{
@@ -870,6 +972,9 @@ function Leadership(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -1007,6 +1112,9 @@ function Leadership(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{es_header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -1144,6 +1252,9 @@ function Leadership(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{de_header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -1281,6 +1392,9 @@ function Leadership(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{fr_header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -1414,17 +1528,7 @@ function Leadership(props)
     return(
         <div>
             <section className = "language-select">
-                <button onClick ={() => setLang("es")}>Espanol</button>
-                <button onClick ={() => setLang("de")}>Deutsch</button>
-                <button onClick ={() => setLang("fr")}>Francais</button>
-                <button onClick ={() => setLang("en")}>English</button>
 
-                <button onClick={startEspanol}>Lector de pantalla español</button>
-                <button onClick={startDeutsch}>Deutscher Screenreader</button>
-                <button onClick={startFrancoise}>Lecteur d'écran français</button>
-                <button onClick={startEnglish}>English Screenreader</button>
-                <button onClick={pauseAll}>Pause / Pausa</button>
-                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>
 
                 <div className = "clearB"/>
                 {
@@ -1439,44 +1543,82 @@ function Leadership(props)
 
 function Collaborators(props)
 {
-    let enAudio = new Audio(collaborators_en)
-    let esAudio = new Audio(collaborators_es) //load audio
-    let frAudio = new Audio(collaborators_fr)
-    let deAudio = new Audio(collaborators_de)
 
-    const startEnglish = () => {
-      enAudio.play()
-    }
-    const startDeutsch = () => { //play audio
-      deAudio.play()
-    }
-    const startFrancoise = () => {
-      frAudio.play()
-    }
-    const startEspanol = () => {
-      esAudio.play()
-    }
 
-    const pauseAll = () => { //pause audio
-      enAudio.pause()
-      deAudio.pause()
-      frAudio.pause()
-      esAudio.pause()
-    }
 
-    const stopAll = () => {
-      enAudio.pause()
-      enAudio.src = enAudio.src
-      deAudio.pause()
-      deAudio.src = deAudio.src //reset source of the audio so it will play from the beginning
-      frAudio.pause()
-      frAudio.src = frAudio.src
-      esAudio.pause()
-      esAudio.src = esAudio.src
+    const [lang, setLang] = useState('en');
+    const [screenReader, setScreenReader] = useState(new Audio());
+
+    useEffect(()=>{
+        if (lang !== ''){
+            screenReader.pause();
+            const { en, fr, de, es } = AboutReader;
+            setScreenReader(
+                (lang === 'en')?en:
+                (lang === 'de')?de:
+                (lang === 'fr')?fr:es
+            );
+        }
+    },[lang]);
+
+
+
+    const reset = () => {
+      screenReader.pause()
+      screenReader.src = screenReader.src
     }
 
-    const [lang, setLang] = useState("en") //by default, start the page on english
+    const toggleLang = ()=>{
+        return (
+          <div>
+            <div className="dieslayFlex LRPadding10">
+                <button
+                    type="button"
+                    onClick={()=>setLang('en')}
+                    className={(lang === 'en')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'English':(lang === 'de')?'Englisch':(lang === 'fr')?'Anglais':'Ingles'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('de')}
+                    className={(lang === 'de')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'German':(lang === 'de')?'Deutsch':(lang === 'fr')?'Allemand':'Alemán'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('fr')}
+                    className={(lang === 'fr')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'French':(lang === 'de')?'Französisch':(lang === 'fr')?'Français':'Francés'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>setLang('es')}
+                    className={(lang === 'es')?"btn btn-dark LRPadding10 margin10":"btn btn-light LRPadding10 margin10"}>
+                    {(lang === 'en')?'Spanish':(lang === 'de')?'Spanisch':(lang === 'fr')?'Espagnol':'Español'}
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>screenReader.play()}
+                    className="btn btn-dark LRPadding10 margin10">
+                    <Icon icon={faVolumeUp} size="1x"/>
+                </button>
+                <button
+                    type="button"
+                    onClick={()=>screenReader.pause()}
+                    className="btn btn-dark LRPadding10 margin10">
+                    <Icon icon={faPause} size="1x"/>
+                </button>
 
+                <button
+                  type="button"
+                  onClick={()=>reset()}
+                  className="btn btn-dark LRPadding10 margin10">
+                  Stop
+                  </button>
+            </div>
+          </div>
+        );
+    };
     const renderPage = () => {
         return collaboratorsData.map(item=>{
             const {overlayImage, header, collabHeader1, collabSubHeader1, h1_collab1, h1_collab2, h1_collab3, h1_collab4, h1_collab5,
@@ -1522,6 +1664,9 @@ function Collaborators(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -1743,6 +1888,9 @@ function Collaborators(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{es_header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -1964,6 +2112,9 @@ function Collaborators(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{de_header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -2185,6 +2336,9 @@ function Collaborators(props)
                             onDirectory={props.onDirectory}
                             onAbout={props.onAbout}
                         />
+                        <section className="dieslayBlock">
+                            {toggleLang()}
+                          </section>
                         <div className="narrower-header">
                             <p align = "center" className="imgHeader">{fr_header}</p>
                             <br /><br /><br /><br /><br /><br /><br /><br />
@@ -2402,17 +2556,6 @@ function Collaborators(props)
     return(
         <div>
             <section className = "language-select">
-                <button onClick ={() => setLang("es")}>Espanol</button>
-                <button onClick ={() => setLang("de")}>Deutsch</button>
-                <button onClick ={() => setLang("fr")}>Francais</button>
-                <button onClick ={() => setLang("en")}>English</button>
-
-                <button onClick={startEspanol}>Lector de pantalla español</button>
-                <button onClick={startDeutsch}>Deutscher Screenreader</button>
-                <button onClick={startFrancoise}>Lecteur d'écran français</button>
-                <button onClick={startEnglish}>English Screenreader</button>
-                <button onClick={pauseAll}>Pause / Pausa</button>
-                <button onClick={stopAll}>Stop Audio / Detener audio / Arrêter l'audio / Audio stoppen</button>
 
                 <div className = "clearB"/>
                 {

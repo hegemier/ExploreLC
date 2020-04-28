@@ -72,7 +72,7 @@ const App = ()=>{
                 onAbout_Leadership={()=>updateState('leadership')}
                 onAbout_Collaborators={()=>updateState('collaborators')}
             />;
-          else if (value === 'LouisSullivan')
+          else if (value === 'louisSullivan')
             return<LouisSullivan
               onHome={()=>updateState('home')}
               onGuides={()=>updateState('guides')}
@@ -97,7 +97,7 @@ const App = ()=>{
               onAbout_Collaborators={()=>updateState('collaborators')}
             />
           else if (value === 'collaborators')
-          return<Leadership
+          return<Collaborators
             onHome={()=>updateState('home')}
             onGuides={()=>updateState('guides')}
             onTowns={()=>updateState('towns')}

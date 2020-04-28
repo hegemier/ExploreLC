@@ -25,16 +25,6 @@ function Towns(props) { //provide for translation to different languages
 
 
 
-  /*
-  const stopAllAudio = () => {
-    var sounds = document.getElementsByTagName('audio')
-    for(int i = 0; i < sounds.length; i++) {
-      sounds[i].pause()
-    }
-  }
-
-  */
-
   const reset = () => {
     screenReader.pause()
     screenReader.src = screenReader.src
