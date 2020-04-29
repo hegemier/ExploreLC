@@ -75,6 +75,24 @@ const list = {
     14: "Die Ohio State University in Newark bietet Zugang zur Universität, indem sie die Ohio State Kurse, Programme, Recherchen und Dienstleistungen für viele Ohio Communities erweitert.",
     15: "Das Midland Theatre ist ein 1,200-Sitztheater, das in den 1920er Jahren gebaut wurde.Nach umfangreichen Renovierungsarbeiten ist das Theater heute ein hochmoderner Veranstaltungsort und Konzertsaal.Die Midland kann auch der Host für Ihre nächste Funktion sein.Mit privaten Buchungen kann das Theater ein alltägliches Treffen abhalten und es in eine einzigartige Veranstaltung verwandeln.",
     16: "Seit 1970.000.000.Jh Olde Mill ist ein Ziel, das leckere Eis, Essen und Erinnerungen serviert.Begleiten Sie sie in Utica, um einen Tag mit Eiscreme zu verbringen!Jedes Jahr kommen mehr als 1500000 in das Licking County Ohio, um sich mit der Natur zu vereinen und sich das frischeste Eis zu gönnen, das sie je in Ye Olde Mill probiert haben.Die Ye Olde Mill bietet mit 20 malerischen Hektar sanfter Hügel und dichten Wäldern die perfekte Kulisse für Familienspaß, Versammlungen, Hochzeiten und vieles mehr.",
+  },
+  es: {
+    1: "La canasta rural es una boutique en Granville, Ohio, conocida por su diseño único, que le ofrece una experiencia de flores personalizada y atenta.",
+    2: "Bouncin Bean Coffee es una cafetería local en el Centro de Croton, Ohio, que proporciona café, té y comida a clientes importantes, y para preparar los menús de bebidas más geniales y visibles, por favor encuentre aquí sus bebidas favoritas, incluidos el café condensado, el latte y el hielo.Y té, helado de terciopelo, etc. podríamos encontrar el mercado más grande del mundo en Hartford.",
+    3: "Los cafés de panaderías antiguas, que abrieron sus cafés tradicionales en septiembre de 2019, sabían desde el principio que el apoyo de otras empresas locales era una prioridad, y compraron los mejores frijoles locales, y los clientes estuvieron de acuerdo.Se enorgullecen de formar parte de la comunidad de Johnston, que vende productos locales y organiza clubes de artesanía y lectura para tratar con la comunidad.",
+    4: "¡North Shore Coffee es una cafetería local que se enorgullece de ofrecer café orgánico, café de primera línea hecho localmente, cada grano de café certificado de comercio justo, directamente de la granja, la panadería y su taza!Como comunidad costera, hemos creado un entorno interesante y singular para promover la limpieza de los lagos de las siete hojas y también hemos utilizado productos biodegradables, orgánicos y ambientalmente inocuos.",
+    5: "Si tienes un deseo insaciable de la mejor y más deliciosa pizza, hoy planeas ir a nuestra casa en Newark a dirigir un restaurante de pizza, oh.",
+    6: "La granja de carreras negras, con una superficie de más de 280 hectáreas, tiene tres rituales y un salón de recepción, además de la histórica cabaña de hesi, construida en 1880, y el encanto rural de los bosques y las granjas que la rodean ofrece un contexto hermoso y único para sus días especiales.",
+    7: "La escuela Cornell, un ejemplo clásico del funcionamiento de la educación pública rural en los Estados Unidos a finales del siglo XX, fue fundada en 1886 para prestar servicios a los estudiantes hasta 1923 y está estructurada por los Amigos de la escuela Cornell de Tom y gloria Miller, de Alejandría.En mayo de 1991 se trasladó de su propiedad a su ubicación actual, y la escuela Cornell ha sido un proyecto histórico vivo para las escuelas de la región desde 1996.",
+    8: "La Reserva biológica de la Universidad de Denison abarca 350 hectáreas y se utiliza para la educación y la investigación de los estudiantes; los senderos son públicos y son apropiados para los viajes a pie, las carreras y las bicicletas de montaña.El objetivo de las zonas protegidas es mejorar la formación de biólogos y científicos ambientales mediante sus cursos, investigaciones independientes y visitas ocasionales a las zonas protegidas, lo que se logra ofreciendo la oportunidad de realizar estudios sobre el terreno de la flora y la fauna locales.Habida cuenta de la historia del uso de la tierra en las zonas protegidas y de los recursos de DuPont, el Estado de Ohio y, en la medida de lo posible, las comunidades biológicas separadas, uno de los objetivos generales de las zonas protegidas es aumentar al máximo el número de hábitats representativos y especies que las apoyan.Sí.",
+    9: "La Universidad de dennison es una de las principales escuelas de artes y oficios, en las que profesores y estudiantes participan en la investigación, la participación cívica y el pensamiento independiente.Es competitivo preparar a los estudiantes para una vida personal, profesional y cívica satisfactoria.",
+    10: 'Cuando llegues al Hotel Doubletree, Hilton Newark, Ohio, con un pastel de chocolate recién hecho, podrás disfrutar del Wi - Fi gratis en una de nuestras 117 habitaciones.Un televisor de 37 pulgadas y un refrigerador, que se elevan a una suite amplia con una zona de vida independiente (en lo sucesivo "Suite modular"), que es la opción ideal para la familia y la residencia permanente, nadan en piscinas térmicas interiores, hacen ejercicio las 24 horas del día en el Centro de gimnasia o se relajan en una cómoda chimenea de patio, o en un hotel de dos árboles en Hilton Newark.Su objetivo es ofrecerle un equipo profesional y leal, así como unos recursos de planificación cómodos, para que su próxima experiencia sea un éxito.Ya sea que reserve una Sala de conferencias o un salón de banquetes grande, encontrará en este hotel la Sala de conferencias más perfecta.',
+    11: "En 1885 se construyó el ayuntamiento para la plaza pública de Johnston, y el segundo piso es un hermoso teatro de ópera, uno de los cinco que quedan en Ohio.",
+    12: "Newwork Space es una comunidad cooperativa y asequible de trabajadores independientes, empresarios, pequeñas empresas, viajeros y académicos, y tenemos acceso rápido a WiFi, impresión y todos los servicios que necesita.Nuestra Oficina, de 6.000 m2, ofrece una amplia gama de oficinas en un edificio de larga data y bien amueblado en la plaza Newark.Nos ocupamos de los asientos y las Salas de conferencias privadas.",
+    13: "El proyecto de ocho ángulos consiste en una casa rodante que está conectada a una casa rodante de ocho ángulos por medio de un pequeño muro paralelo, que forma parte del proyecto de tierras de Newark, el mayor proyecto geométrico de los Estados Unidos, que abarca desde la Cultura Hopewell (100 a 500 a.C.).El círculo tiene unas 20 hectáreas y un octágono de unas 50 hectáreas.",
+    14: "La Universidad Estatal de Ohio, con sede en Newark, ofrece acceso a la Universidad a muchas comunidades de Ohio ampliando sus programas, proyectos, investigaciones y servicios.",
+    15: "El teatro Midland tiene 1.200 asientos.El teatro, que ha sido objeto de importantes obras de renovación, es ahora un lugar y un salón de música de última generación, y Midland puede actuar como su próximo moderador funcional.",
+    16: "Desde 1970, JH olde Mill ha sido un destino de helados deliciosos, comida y recuerdos, y los ha acompañado durante un día de helados en Utica.Todos los años, más de 15.000 personas llegan al condado de Leck, Ohio, para unirse a la naturaleza y disfrutar del helado más fresco que hayan probado en yeodemir, que posee 20 hectáreas de lindas colinas y bosques densos y ofrece un entorno perfecto para la recreación familiar, las fiestas, las bodas, etc.",
   }
 }
 
@@ -83,103 +101,82 @@ const townarray = [
     id: 1,
     img: village,
     // name: "Newark, Ohio",
-    boldtext: "Village Flower Basket is a boutique flower shop located in the rural village of Granville, OH. Village Flower Basket is known for their personal approach to designing, and offering a mindful and individual experience with flowers.",
     // text: "Sip a latte on a sun-dappled patio just below a hip loft apartment; spend an afternoon browsing the latest art exhibit at the Denison Art Space; beat the rush for a peck of peaches at the Canal Market District. Rainy day? The Works has you covered with a gamut of hands-on STEM activities for all ages, including the 30-foot, 4K projection SciDome planetarium. A seamless marriage of history, culture and the arts with a distinct nod toward the future, Newark is a place where great things are happening--and it shows in a tangible sense of community pride.",
     link: "HTTPS://WWW.FACEBOOK.COM/VILLAGE-FLOWER-BASKET-117288926750/" //use this to kick users to the phone app, so there needs to be some kind of function here
   },
   {
     id: 2,
     img: bouncin,
-    boldtext: "Bouncin’ Bean Coffee & Tea Café is a local coffee shop in the heart of Croton, Ohio, set out to serve great customers with delicious coffee, tea, and food. Bouncin’ Bean Café is committed to using the freshest quality ingredients, including premium beans ground fresh daily, to craft a menu full of the most refreshing and eye-opening drinks around. And you’ll find all your favorites here, including robustly flavored espresso, lattes, smoothies, and even a selection of fine teas. But that’s not all. Bouncin’ Bean offers breakfast sandwiches, as well as lunch sandwiches, Velvet ice cream, pastries and so much more!  Find us right down the road from The Biggest Little Fair In The World; the Hartford Fairgrounds.",
     link: "HTTPS://WWW.FACEBOOK.COM/BOUNCINBEAN/"
   },
   {
     id: 3,
     img: oldschool,
-    boldtext: "Old School Bakery Cafe serves gourmet coffee made with locally roasted, small-batch beans. Old School opened in September of 2019 and knew from the start that supporting other local businesses was a top priority. They shopped around and found the best local bean, and customers agree.\n" +
-        "Old School Bakery Cafe is proud to be a part of the Johnstown community. They sell locally made goods and host crafts and book clubs to engage with the community.",
     link: "https://explorelc.org/guide/heath"
   },
   {
     id: 4,
     img: north,
-    boldtext: "North Shore Coffee is a locally owned, locally operated coffee shop, proudly serving organic, locally roasted One Line Coffee. Each and every bean is Fair Trade Certified and comes directly from farm, to roasters, to your cup! North Shore Coffee’s goal is to serve quality coffee to the Buckeye Lake Region. Being a lake community creates such a fun and unique environment, in efforts to promote a clean Buckeye Lake we also use biodegradable, compostable and eco-friendly products.",
     link: "https://m.facebook.com/North-Shore-Coffee-Co"
   },
   {
     id: 5,
     img: plaza,
-    boldtext: "Mouthwatering pizza done right is what you can expect with every trip you make to Plaza Pizza. When you have an insatiable hankering for the tastiest, most-delectable pizza around, plan a trip today to our family-owned and -operated pizza restaurant in Newark, OH.",
     link: "HTTPS://WWW.FACEBOOK.COM/PLAZA-PIZZA-129063147189527/"
   },
   {
     id: 6,
     img: black,
-    boldtext: "Black Run Farm is a 280+ acre farm that features three ceremony sites and a reception hall. Black Run is also home to the historic Heisey Lodge that was first built in 1880. The surrounding woods and rustic charm of the farm offer a beautiful and unique backdrop to your special day!",
     link: "HTTPS://WWW.FACEBOOK.COM/BLACKRUNFARMSEVENTS/"
   },
   {
     id: 7,
     img: cornell,
-    boldtext: "Cornell School is a classic example of how public education functioned in Rural America in the late 20th century. This one-room schoolhouse was built in 1886 and served students until 1923. The structure was donated to the Friends of Cornell School by Tom and Gloria Miller of Alexandria, Ohio. It was moved from their property to its present location in May of 1991. Cornell School has been operating as a living history program for area schools since 1996.",
     link: "HTTPS://WWW.FACEBOOK.COM/CORNELLSCHOOL"
   },
   {
     id: 8,
     img: denbio,
-    boldtext: "The Denison University Biological Reserve is a 350 acre site used for student education and research. Hiking trails are open to the public and are suitable for walking, running and mountain biking. The reserve is locate on the east side of SR 661, on the north end of the Village of Granville. Trail Map. Video Tour.\n" +
-        "\n" +
-        "The purpose of the Reserve is to enhance the education of students in Biology and the Environmental Sciences through their courses, independent research and casual visitation to the Reserve. This is accomplished by providing opportunities for field studies of native Ohio flora and fauna as well as discrete biological communities that are maintained in as intact a condition as is possible given the land use history of the Reserve and the resources of DU. Consequently, one of the general goals of the Reserve is to maximize the number of representative habitats and species that the area can support.",
     link: ""
   },
   {
     id: 9,
     img: dension,
-    boldtext: "Denison University is a leading liberal arts college where faculty and students collaborate in research, civic engagement, & cultivation of independent thinking. As a leader among the nation's top residential liberal arts colleges, Denison has earned a reputation for academic rigor that is rivaled only by its commitment to preparing students for a lifetime of personal, professional and civic success.",
     link: "HTTPS://WWW.FACEBOOK.COM/DENISONUNIVERSITY/"
   },
   {
     id: 10,
     img: doubletree,
-    boldtext: "Feel welcome the moment you arrive at DoubleTree by Hilton Newark, Ohio with a freshly baked chocolate chip cookie on arrival. Make yourself at home at this hotel in one of our 117 inviting guest rooms equipped with complimentary WiFi, a 37-inch TV, and a refrigerator. Upgrade to a spacious suite with a separate living area – ideal for families and extended stays. Swim in the heated indoor pool, work out in the 24-hour fitness center, or simply relax beside the welcoming patio fireplace.\n" +
-        "\n" +
-        "Also at DoubleTree by Hilton Newark, they understand how critical meetings and events are to the success of an organization.  Their goal is to provide you with both the most professional and engaging teams as well as convenient planning resources to make your next experience a success. Whether reserving a boardroom or the grand ballroom, you’re sure to find the perfect meeting space at this hotel.",
     link: ""
   },
   {
     id: 11,
     img: johnstown,
-    boldtext: "The Town Hall was dedicated in 1885 on the public square in Johnstown. On the second floor of the building is a fine Opera House, one of the only five remaining in Ohio.",
     link: ""
   },
   {
     id: 12,
     img: nework,
-    boldtext: "NEWORK Space is an affordable coworking community of freelancers, entrepreneurs, small businesses, commuters, and academics. We have fast Wifi, printing and all the amenities you need to have a productive workday. We accommodate small and large meetings and events. Located on the downtown Newark Square in a historic, beautifully renovated building, our three-story, 6,000 square foot office space provides a variety of offices, seating areas, and private meeting rooms. We accommodate small and large meetings and events.",
     link: "HTTPS://WWW.FACEBOOK.COM/NEWORKSPACE/"
   },
   {
     id: 13,
     img: octogon,
-    boldtext: "The Octagon Earthworks consist of a circular earthen enclosure connected to an octagonal enclosure by a short segment of parallel walls. The Octagon Earthworks formed one part of the Newark Earthworks, the largest set of geometric earthworks built by the Hopewell culture (100 B.C. to 500 A.D.) of pre-contact American Indian people. The circle encloses about 20 acres and the octagon about 50 acres.",
     link: ""
   },
   {
     id: 14,
     img: ohio,
-    boldtext: "The Ohio State University at Newark provides access to the university by extending Ohio State courses, programs, research, and service to many Ohio communities.",
     link: "HTTPS://WWW.FACEBOOK.COM/OHIOSTATEUNIVERSITYNEWARK/"
   },
   {
     id: 15,
     img: midland,
-    boldtext: "Beautifully anchoring the north side of the historic downtown Newark Square, The Midland Theatre an 1,200-seat theatre built in 1928.  After extensive renovations, the Theatre is now a state of the art performance venue and concert hall.  The Midland also can be the host for your next function.  With private bookings available, the theatre can take an everyday meeting and turn it into a one of a kind event.",
     link: "HTTPS://WWW.FACEBOOK.COM/THEMIDLANDTHEATRE/"
   },
   {
     id: 16,
     img: velvet,
-    boldtext: "Since 1970, Velvet’s Ye Olde Mill has been a destination serving up delicious ice cream, food and memories. Join them in Utica to spend a day surrounded by ice cream!  Each year, more than 150,000 come to Licking County Ohio to be at one with nature and get their fill of the freshest ice cream they’ve ever tasted at Ye Olde Mill. With 20 picturesque acres of rolling hills and thick forests, Ye Olde Mill provides the perfect setting for family fun, reunions, weddings and more.",
     link: "HTTPS://WWW.FACEBOOK.COM/VELVETICECREAM"
   },
 ]

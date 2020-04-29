@@ -1,9 +1,9 @@
 export default {
     langs: {
-        en: 'Englisch',
-        de: 'Deutsch',
-        fr: 'Französisch',
-        es: 'Spanisch',
+        en: 'Ingles',
+        de: 'Alemán',
+        fr: 'Francés',
+        es: 'Español',
     },
     navs: {
         guides: 'Führungen',
@@ -19,6 +19,6 @@ export default {
     directory: {
         explore: 'Entdecken Sie Ihr Gerät',
         moreInformation: "Weitere Informationen",
-        stop: 'Stop',
+        stop: 'Stopp!',
     },
 }

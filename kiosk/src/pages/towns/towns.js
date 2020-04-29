@@ -97,7 +97,7 @@ function Towns(props) { //provide for translation to different languages
   const toggleLang = ()=>{
       return (
         <div>
-          <div className="dieslayFlex LRPadding10">
+          <div className="displayFlex LRPadding10">
               <button
                   type="button"
                   onClick={()=>setLang('en')}
@@ -161,17 +161,15 @@ function Towns(props) { //provide for translation to different languages
               onAbout={props.onAbout}
           />
       </section>
-      <section className="dieslayBlock">
+      <section className="displayBlock">
           {toggleLang()}
         </section>
 
-        <section className = "LRPadding10">
+        <section className="LRPadding10 directory-list">
 
-          <div className = "clearB"/>
             {
               renderCardsWithTranslation()
             }
-            <div className = "clearB"/>
         </section>
       </div>
   )

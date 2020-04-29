@@ -129,7 +129,9 @@ const Guides = (props)=>{
                 {toggleLang()}
                 <div>
                     <div className="clearB"/>
+                    <section className="LRPadding10 directory-list">
                         {renderGuidesCards()}
+                    </section>
                     <div className="clearB"/>
                 </div>
                 {/* <div className="width60perc">

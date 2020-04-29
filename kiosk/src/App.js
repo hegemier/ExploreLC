@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Guides, Organization } from './pages/guides';
 import { Towns } from './pages/towns';
 import { About, LouisSullivan, Leadership, Collaborators } from './pages/about/about.js';
 import { Events } from './pages/events/';
 import { Directory } from './pages/directory'
+import { stopSpeech } from './utils/index'; 
+import { setLocalFn } from './langs/index'
 
 /*
   I have made this page for other pages to fill in
@@ -25,107 +27,51 @@ import { Directory } from './pages/directory'
 
 const App = ()=>{
   const { Provider, Consumer } = React.createContext();
-  const [state, updateState] = useState('home');//you can change part
-
+  const [state, setState] = useState('home');//you can change part
+  const [local, setLocal] = useState('en');
+  const updateState = (name) => {
+    stopSpeech()
+    setState(name)
+  }
+  useEffect(() => {
+    setLocalFn(local, setLocal)
+  }, [])
   return (
     <div>
-    <Provider value={{value:state, updateState}}>
+    <Provider value={{value:state, updateState, local}}>
       <Consumer>
         {props=>{
-          const { value, updateState } = props;
+          const { value, updateState,local } = props;
+          const mapProps = {
+            local,
+            onHome: ()=>updateState('home'),
+            onGuides: ()=>updateState('guides'),
+            onTowns: ()=>updateState('towns'),
+            onEvents: ()=>updateState('events'),
+            onDirectory: ()=>updateState('directory'),
+            onAbout: ()=>updateState('about'),
+            onAbout_LouisSullivan: ()=>updateState('louisSullivan'),
+            onAbout_Leadership: ()=>updateState('leadership'),
+            onAbout_Collaborators: ()=>updateState('collaborators'),
+          }
           if (value === 'home')//change the component name to use different page
-            return <Events
-                  onHome={()=>updateState('home')}
-                  onGuides={()=>updateState('guides')}
-                  onTowns={()=>updateState('towns')}
-                  onEvents={()=>updateState('events')}
-                  onDirectory={()=>updateState('directory')}
-                  onAbout={()=>updateState('about')}
-              />;
+            return <Events {...mapProps} />;
           else if (value === 'guides')//change the component name to use different page
-            return <Guides
-                onHome={()=>updateState('home')}
-                onGuides={()=>updateState('guides')}
-                onTowns={()=>updateState('towns')}
-                onEvents={()=>updateState('events')}
-                onDirectory={()=>updateState('directory')}
-                onAbout={()=>updateState('about')}
-            />;
+            return <Guides {...mapProps} />;
           else if (value === 'towns')//change the component name to use different page
-            return <Towns
-                onHome={()=>updateState('home')}
-                onGuides={()=>updateState('guides')}
-                onTowns={()=>updateState('towns')}
-                onEvents={()=>updateState('events')}
-                onDirectory={()=>updateState('directory')}
-                onAbout={()=>updateState('about')}
-            />;
+            return <Towns {...mapProps} />;
           else if (value === 'about')//change the component name to use different page
-            return <About
-                onHome={()=>updateState('home')}
-                onGuides={()=>updateState('guides')}
-                onTowns={()=>updateState('towns')}
-                onEvents={()=>updateState('events')}
-                onDirectory={()=>updateState('directory')}
-                onAbout={()=>updateState('about')}
-                onAbout_LouisSullivan={()=>updateState('louisSullivan')}
-                onAbout_Leadership={()=>updateState('leadership')}
-                onAbout_Collaborators={()=>updateState('collaborators')}
-            />;
+            return <About {...mapProps} />;
           else if (value === 'louisSullivan')
-            return<LouisSullivan
-              onHome={()=>updateState('home')}
-              onGuides={()=>updateState('guides')}
-              onTowns={()=>updateState('towns')}
-              onEvents={()=>updateState('events')}
-              onDirectory={()=>updateState('directory')}
-              onAbout={()=>updateState('about')}
-              onAbout_LouisSullivan={()=>updateState('louisSullivan')}
-              onAbout_Leadership={()=>updateState('leadership')}
-              onAbout_Collaborators={()=>updateState('collaborators')}
-            />
+            return <LouisSullivan {...mapProps} />;
           else if (value === 'leadership')
-            return<Leadership
-              onHome={()=>updateState('home')}
-              onGuides={()=>updateState('guides')}
-              onTowns={()=>updateState('towns')}
-              onEvents={()=>updateState('events')}
-              onDirectory={()=>updateState('directory')}
-              onAbout={()=>updateState('about')}
-              onAbout_LouisSullivan={()=>updateState('louisSullivan')}
-              onAbout_Leadership={()=>updateState('leadership')}
-              onAbout_Collaborators={()=>updateState('collaborators')}
-            />
+            return <Leadership {...mapProps} />;
           else if (value === 'collaborators')
-          return<Collaborators
-            onHome={()=>updateState('home')}
-            onGuides={()=>updateState('guides')}
-            onTowns={()=>updateState('towns')}
-            onEvents={()=>updateState('events')}
-            onDirectory={()=>updateState('directory')}
-            onAbout={()=>updateState('about')}
-            onAbout_LouisSullivan={()=>updateState('louisSullivan')}
-            onAbout_Leadership={()=>updateState('leadership')}
-            onAbout_Collaborators={()=>updateState('collaborators')}
-          />
+          return <Collaborators {...mapProps} />;
           else if (value === 'events')//change the component name to use different page
-            return <Events
-                onHome={()=>updateState('home')}
-                onGuides={()=>updateState('guides')}
-                onTowns={()=>updateState('towns')}
-                onEvents={()=>updateState('events')}
-                onDirectory={()=>updateState('directory')}
-                onAbout={()=>updateState('about')}
-            />;
+            return <Events {...mapProps} />;
           else if (value === 'directory')//change the component name to use different page
-            return <Directory
-                onHome={()=>updateState('home')}
-                onGuides={()=>updateState('guides')}
-                onTowns={()=>updateState('towns')}
-                onEvents={()=>updateState('events')}
-                onDirectory={()=>updateState('directory')}
-                onAbout={()=>updateState('about')}
-            />;
+            return <Directory {...mapProps} />;
         }}
       </Consumer>
     </Provider>

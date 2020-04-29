@@ -1,4 +1,10 @@
 export default {
+    langs: {
+        en: 'Anglais',
+        de: 'Allemand',
+        fr: 'Français',
+        es: 'Espagnol',
+    },
     navs: {
         guides: 'Guide',
         towns: 'Ville',
@@ -12,6 +18,7 @@ export default {
     },
     directory: {
         explore: 'Explorer votre périphérique',
-        moreInformation: "Plus d'informations."
+        moreInformation: "Plus d'informations.",
+        stop: 'Arrêter',
     },
 }

@@ -11,7 +11,7 @@
 }
 
 .towns-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("https://images.squarespace-cdn.com/content/v1/5bc6137be6666940992e5e76/1557889801073-93CL917AO7291T5EVJFI/ke17ZwdGBToddI8pDm48kMi38tw7zkfDmGvlHU-hVvIUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2drlbiNfk3EruvL6ooucMUl0-iAqFf4IJ2-8-m4UxZV6gG6v6ULRah83RgHXAWD5lbQ/about-community.jpg?format=2500w");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("https://images.squarespace-cdn.com/content/v1/5bc6137be6666940992e5e76/1559499025037-C1W0AKL29XGVP8OIWRD2/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/directory-cover-01.jpg?format=2500w");
   background-size: cover;
 }
 
@@ -32,29 +32,31 @@
 }
 
 .fixedheight{
-  height: 22%;
+  height: 25%;
 }
 //these values will be changed to reflect the Kiosk's specific resolution, but for now are adapted for the development amchine.
 .imgprops{
   height:250px;
-  width: 520px;
+  width: 553px;
 }
 
 .card{
-  height: 1000px;
-  width: 520px;
-  padding-bottom: 20px;
+  height: 1200px;
+  width: 553px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 p{
   font-size: 15px;
 }
 
-.card-body{
-  height: 1000px;
-  padding-bottom: 20px;
-}
-
-.card-body{
-  padding-bottom: 30px;
+.directory-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 60px;
+  .card{
+    margin: 20px 10px;
+  }
 }
