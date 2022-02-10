@@ -9,7 +9,7 @@
     "bootstrap": "^4.4.1",
     "cheerio": "^1.0.0-rc.3",
     "nightmare": "^3.0.2",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "qrcode-react": "^0.1.16",
     "react": "^16.13.0",
     "react-add": "^1.1.5",
